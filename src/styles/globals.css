@@ -9,8 +9,16 @@
 }
 
 html {
-  scroll-behavior: smooth;
-  /* compensa o header fixo ao pular para uma âncora */
+  /*
+   * Sem scroll-behavior: smooth.
+   *
+   * O roteador do Next leva a página ao topo com window.scrollTo(0, 0) a cada
+   * troca de rota, e o smooth transformava isso numa animação: saindo do fim da
+   * Home, meio segundo depois do clique a página nova ainda estava a 164px do
+   * topo, e quem tocasse a tela nesse intervalo cancelava a rolagem e ficava no
+   * meio da página. A única âncora interna do site é o link de pular conteúdo,
+   * onde ir direto é melhor.
+   */
   scroll-padding-top: calc(var(--header-height) + var(--space-4));
 }
 
@@ -93,10 +101,6 @@ select {
  * carrega informação que o resto da página já não diga.
  */
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
   *,
   *::before,
   *::after {

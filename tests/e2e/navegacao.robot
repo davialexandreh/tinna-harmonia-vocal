@@ -46,3 +46,21 @@ Rodapé Leva Para As Páginas Legais
     Click    footer >> text=Política de privacidade
     Get Url    contains    /privacidade/
     Get Text    h1    ==    Política de privacidade
+
+Trocar De Rota Leva Ao Topo Na Hora
+    [Documentation]    Regressão: com scroll-behavior smooth no html, o "ir ao
+    ...    topo" do roteador virava animação, e meio segundo depois do clique a
+    ...    página nova ainda aparecia pelo meio. Aqui se verifica a causa, que
+    ...    é determinística, e o resultado depois da navegação.
+    Abrir Site No Desktop
+    ${comportamento} =    Evaluate JavaScript    ${None}
+    ...    () => getComputedStyle(document.documentElement).scrollBehavior
+    Should Be Equal    ${comportamento}    auto
+
+    Evaluate JavaScript    ${None}
+    ...    () => window.scrollTo({ top: document.body.scrollHeight, behavior: 'instant' })
+    Sleep    0.3s
+    Click    footer >> text=Sobre a Tinna
+    Get Url    contains    /sobre/
+    ${y} =    Evaluate JavaScript    ${None}    () => Math.round(window.scrollY)
+    Should Be Equal As Integers    ${y}    0
