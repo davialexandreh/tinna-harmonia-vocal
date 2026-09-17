@@ -1,0 +1,127 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  background: color-mix(in srgb, var(--surface-page) 88%, transparent);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  height: var(--header-height);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 19px;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+.mark {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand), var(--brand-deep));
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 14px;
+  flex: none;
+}
+
+.desktopNav {
+  display: flex;
+  gap: var(--space-6);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.desktopNav a {
+  text-decoration: none;
+  color: var(--text-secondary);
+}
+
+.desktopNav a:hover {
+  color: var(--brand);
+}
+
+.acoes {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.botaoMenu {
+  display: none;
+  background: none;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.botaoMenu span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 2px;
+}
+
+/* painel mobile */
+.painel {
+  position: fixed;
+  inset: var(--header-height) 0 0;
+  z-index: var(--z-menu);
+  background: var(--surface-page);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  overflow-y: auto;
+}
+
+.painel a {
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: var(--tracking-tighter);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.painelCta {
+  margin-top: var(--space-6);
+}
+
+@media (max-width: 900px) {
+  .desktopNav,
+  .acoes .ctaDesktop {
+    display: none;
+  }
+
+  .botaoMenu {
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 901px) {
+  .painel {
+    display: none;
+  }
+}
