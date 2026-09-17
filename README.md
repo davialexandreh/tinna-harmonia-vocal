@@ -47,17 +47,8 @@ python3 -m venv .venv-e2e
 
 npm run build:teste   # com IDs falsos: sem eles o banner de cookies não existe
 python3 -m http.server 4321 --directory out &
-.venv-e2e/bin/robot --outputdir tests/e2e/relatorios --exclude pendente-cliente tests/e2e
+.venv-e2e/bin/robot --outputdir tests/e2e/relatorios tests/e2e
 ```
-
-A tag `pendente-cliente` isola as travas que dependem de dado que a cliente
-ainda não enviou, hoje o número de WhatsApp. Rode antes de publicar:
-
-```bash
-.venv-e2e/bin/robot --include pendente-cliente tests/e2e
-```
-
-Enquanto esse teste falhar, o site não está pronto para ir ao ar.
 
 Orçamento de performance (Lighthouse CI, exige Chrome):
 

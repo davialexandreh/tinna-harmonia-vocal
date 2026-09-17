@@ -5,33 +5,25 @@
 :root {
   /* cores base */
   --ink: #140a10;
-  --paper: #fbf8f6;
-  --white: #fff;
 
   /* marca */
   --brand: #e11d62;
   --brand-deep: #8e0f3c;
-  --brand-soft: #fbd9e5;
-  /* Versão clara da marca, usada no tema escuro: #e11d62 sobre o fundo escuro
-     dá 4,21:1 e reprova no AA para texto pequeno. */
   --brand-claro: #f2568d;
-  --gold: #d9a441;
-
-  /* neutros */
-  --n-100: #f5f3f2;
-  --n-300: #dfdbd9;
-  --n-500: #766d69;
-  --n-600: #6e6663;
-
-  /* superfícies e texto (trocam no tema escuro) */
-  --surface-page: var(--white);
-  --surface-paper: var(--paper);
-  --surface-card: var(--white);
-  --surface-sunken: var(--n-100);
-  --text-primary: var(--ink);
-  --text-secondary: var(--n-600);
-  --text-tertiary: var(--n-500);
-  --border-subtle: var(--n-300);
+  /* Preenchimento discreto da marca sobre superfície escura. */
+  --brand-tenue: color-mix(in srgb, var(--brand) 16%, transparent);
+  /* superfícies e texto
+     O site é escuro por decisão de produto, não por preferência do sistema.
+     Os três níveis de superfície são o que separa um bloco do outro: página,
+     bloco alternado e cartão. */
+  --surface-page: var(--ink);
+  --surface-paper: #1a0f14;
+  --surface-card: #221419;
+  --surface-sunken: #0e0609;
+  --text-primary: #fff;
+  --text-secondary: #c8bec2;
+  --text-tertiary: #a79e9a;
+  --border-subtle: rgba(255, 255, 255, 0.14);
 
   /* espaçamento */
   --space-1: 4px;
@@ -61,39 +53,24 @@
   --radius-pill: 999px;
 
   /* sombra e movimento */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
-  --shadow-xl: 0 24px 60px rgba(0, 0, 0, 0.14);
+  /* Sobre fundo escuro, sombra clara não existe: o preto precisa de opacidade
+     alta para separar duas superfícies quase da mesma cor. */
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.45);
+  --shadow-xl: 0 24px 60px rgba(0, 0, 0, 0.6);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 
   /* tipografia: as duas primeiras vêm do next/font em app/layout.tsx */
   --font-display: var(--font-inter-tight), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-sans: var(--font-archivo), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   /* Cor da marca quando usada como TEXTO.
-     O rosa da marca (#e11d62) só alcança 4,17:1 sobre os fundos alternados,
-     abaixo do AA para texto pequeno, então texto usa um tom levemente mais
-     fechado, e o rosa original fica para fundos e bordas. */
-  --brand-texto: #d51559;
+     O rosa da marca (#e11d62) dá 4,21:1 sobre o fundo escuro e reprova no AA
+     para texto pequeno; a variante clara resolve. O rosa original fica para
+     fundos, bordas e preenchimento de botão. */
+  --brand-texto: var(--brand-claro);
   --tracking-tighter: -0.03em;
   --tracking-caps: 0.12em;
 
   /* z-index */
   --z-header: 100;
   --z-menu: 200;
-}
-
-/* Tema escuro segue o sistema. Sem toggle: menos código para manter
-   e o público é quase todo mobile, onde o SO já decide. */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --surface-page: var(--ink);
-    --surface-paper: #1c1016;
-    --surface-card: #1c1016;
-    --surface-sunken: #180c12;
-    --text-primary: #fff;
-    --text-secondary: #c8bec2;
-    --text-tertiary: #a79e9a;
-    --border-subtle: rgba(255, 255, 255, 0.14);
-    --brand-texto: var(--brand-claro);
-  }
 }

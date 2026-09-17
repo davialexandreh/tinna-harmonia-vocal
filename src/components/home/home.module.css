@@ -4,10 +4,6 @@
   position: relative;
   overflow: hidden;
   padding: var(--space-20) 0;
-
-  /* Bloco sempre escuro, nos dois temas: o rosa de texto precisa ser o claro.
-     O rosa da marca sobre esse fundo dá 3,78:1 e reprova no AA. */
-  --brand-texto: var(--brand-claro);
 }
 
 /* fundo de vídeo */

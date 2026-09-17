@@ -37,9 +37,9 @@
 }
 
 .chip[aria-pressed='true'] {
-  background: var(--brand-soft);
-  border-color: var(--brand-texto);
-  color: var(--brand-deep);
+  background: var(--brand-tenue);
+  border-color: var(--brand);
+  color: var(--brand-texto);
 }
 
 .rotulo {
@@ -112,7 +112,7 @@
 }
 
 .voz[aria-pressed='true'] {
-  border-color: var(--brand-texto);
+  border-color: var(--brand);
   background: var(--surface-card);
 }
 
@@ -160,12 +160,12 @@
 
 .batidaAtiva {
   background: var(--brand);
-  border-color: var(--brand-texto);
+  border-color: var(--brand);
   transform: scale(1.35);
 }
 
 .batidaAcentuada {
-  border-color: var(--brand-texto);
+  border-color: var(--brand);
 }
 
 /* treino de ouvido */
@@ -177,7 +177,7 @@
 }
 
 .certo {
-  color: var(--brand-deep);
+  color: var(--brand-texto);
   font-weight: 600;
 }
 

@@ -1,6 +1,8 @@
 .footer {
+  /* Mesmo fundo da página: a linha é o que separa o rodapé do conteúdo. */
   background: var(--ink);
-  color: #b9a9af;
+  border-top: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
   padding: var(--space-16) 0 var(--space-10);
   margin-top: auto;
 }
@@ -15,6 +17,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  white-space: nowrap;
   color: #fff;
   font-family: var(--font-display);
   font-weight: 700;
@@ -52,7 +55,7 @@
 
 .coluna a {
   display: block;
-  color: #b9a9af;
+  color: var(--text-secondary);
   text-decoration: none;
   font-size: 15px;
   margin-bottom: 10px;
@@ -71,11 +74,11 @@
   gap: var(--space-4);
   flex-wrap: wrap;
   font-size: 13px;
-  color: #90838a;
+  color: var(--text-tertiary);
 }
 
 .base a {
-  color: #90838a;
+  color: var(--text-tertiary);
 }
 
 @media (max-width: 800px) {

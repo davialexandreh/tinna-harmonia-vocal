@@ -54,7 +54,7 @@ select {
 
 /* Acessibilidade: foco visível em tudo que é navegável por teclado. */
 :focus-visible {
-  outline: 3px solid var(--brand);
+  outline: 3px solid var(--brand-texto);
   outline-offset: 2px;
   border-radius: var(--radius-sm);
 }

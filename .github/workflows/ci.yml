@@ -63,10 +63,8 @@ jobs:
           python -m http.server 4321 --directory out &
           for i in $(seq 1 30); do curl -sf http://localhost:4321/ -o /dev/null && break; sleep 1; done
 
-      # A tag pendente-cliente cobre dados que ainda não vieram da cliente
-      # (número de WhatsApp). Roda à parte, antes do deploy de produção.
       - name: Rodar a suíte
-        run: robot --outputdir tests/e2e/relatorios --exclude pendente-cliente tests/e2e
+        run: robot --outputdir tests/e2e/relatorios tests/e2e
 
       - name: Guardar o relatório
         if: always()

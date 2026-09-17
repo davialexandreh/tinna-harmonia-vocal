@@ -16,7 +16,7 @@ código de produção).
 | Captação | Só `wa.me`. Sem formulário, sem e-mail marketing |
 | Áudio | Web Audio API puro, sem Tone.js |
 | Testes | Vitest na lógica de áudio, Robot Framework + Playwright nos fluxos |
-| Tema escuro | Segue `prefers-color-scheme`. Sem toggle |
+| Tema | Só escuro. Sem alternância, sem `prefers-color-scheme` |
 
 ## Convenções
 
