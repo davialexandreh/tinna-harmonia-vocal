@@ -10,13 +10,14 @@
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-xl);
-  padding: var(--space-5);
+  padding: var(--space-4) var(--space-5);
 }
 
 .texto {
-  font-size: 14.5px;
+  font-size: 14px;
+  line-height: 1.4;
   color: var(--text-secondary);
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-3);
 }
 
 .texto a {
@@ -30,5 +31,6 @@
 }
 
 .acoes > * {
-  flex: 1 1 140px;
+  flex: 1 1 120px;
+  padding-block: 10px;
 }

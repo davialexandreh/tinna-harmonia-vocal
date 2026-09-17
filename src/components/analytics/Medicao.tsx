@@ -7,9 +7,7 @@ import {
   lerConsentimento,
   lerConsentimentoNoServidor,
 } from '@/lib/consentimento';
-
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
-const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
+import { GA_ID, PIXEL_ID } from '@/lib/medicao';
 
 /**
  * GA4 e Pixel da Meta, carregados só depois do aceite — e só se os IDs

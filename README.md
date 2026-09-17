@@ -31,7 +31,7 @@ python3 -m venv .venv-e2e
 .venv-e2e/bin/pip install -r tests/e2e/requirements.txt
 .venv-e2e/bin/rfbrowser init
 
-npm run build
+npm run build:teste   # com IDs falsos: sem eles o banner de cookies não existe
 python3 -m http.server 4321 --directory out &
 .venv-e2e/bin/robot --outputdir tests/e2e/relatorios --exclude pendente-cliente tests/e2e
 ```
@@ -76,6 +76,6 @@ dados reais (anos de experiência, ministérios atendidos, depoimentos).
 | `NEXT_PUBLIC_GA_ID` | ID do Google Analytics 4. Opcional |
 | `NEXT_PUBLIC_META_PIXEL_ID` | ID do Pixel da Meta. Opcional |
 
-As duas últimas são lidas no build. Sem elas, nenhum script de terceiro entra
-na página — e, mesmo com elas, nada carrega antes do aceite no banner de
-consentimento.
+As duas últimas são lidas no build. **Sem elas o site não carrega script de
+terceiro nenhum e o banner de cookies não aparece** — não há o que consentir.
+Com elas, o banner aparece e nada carrega antes do aceite.

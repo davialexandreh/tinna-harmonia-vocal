@@ -46,11 +46,12 @@ jobs:
           python-version: '3.12'
           cache: pip
 
-      - name: Baixar o site construído
-        uses: actions/download-artifact@v4
-        with:
-          name: site
-          path: out
+      # A suíte de consentimento precisa de IDs de medição no build: sem eles,
+      # o banner não existe (e é assim que a produção roda hoje).
+      - name: Construir com medição de teste
+        run: |
+          npm ci
+          npm run build:teste
 
       - name: Instalar o Robot Framework
         run: |
