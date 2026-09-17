@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   title: 'Contato',
   description:
     'Fale com a Tinna Silva sobre workshops de harmonia vocal, imersões e acompanhamento do seu ministério de louvor.',
+  alternates: { canonical: '/contato/' },
 };
 
 export default function Contato() {

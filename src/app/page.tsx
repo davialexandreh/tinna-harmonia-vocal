@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { CtaFinal } from '@/components/home/CtaFinal';
 import { Depoimentos } from '@/components/home/Depoimentos';
 import { Faq } from '@/components/home/Faq';
@@ -10,10 +11,17 @@ import { ProblemaSolucao } from '@/components/home/ProblemaSolucao';
 import { ProvaSocial } from '@/components/home/ProvaSocial';
 import { SobreResumo } from '@/components/home/SobreResumo';
 import { WorkshopsChamada } from '@/components/home/WorkshopsChamada';
+import { FaqLd, PessoaESericoLd } from '@/components/seo/DadosEstruturados';
+
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+};
 
 export default function Home() {
   return (
     <>
+      <PessoaESericoLd />
+      <FaqLd />
       <Hero />
       <ProvaSocial />
       <ProblemaSolucao />

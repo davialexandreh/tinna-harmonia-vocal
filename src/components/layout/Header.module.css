@@ -51,7 +51,7 @@
 }
 
 .desktopNav a:hover {
-  color: var(--brand);
+  color: var(--brand-texto);
 }
 
 .acoes {

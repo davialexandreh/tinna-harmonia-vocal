@@ -9,6 +9,7 @@ import { site } from '@/content/site';
 export const metadata: Metadata = {
   title: 'Termos de uso',
   description: 'Condições de uso do site de Tinna Silva e das ferramentas gratuitas.',
+  alternates: { canonical: '/termos/' },
 };
 
 /*

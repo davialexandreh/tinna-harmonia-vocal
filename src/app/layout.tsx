@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Archivo, Inter_Tight } from 'next/font/google';
+import { BannerConsentimento } from '@/components/analytics/BannerConsentimento';
+import { Medicao } from '@/components/analytics/Medicao';
 import { Footer } from '@/components/layout/Footer';
 import { Header } from '@/components/layout/Header';
 import { site } from '@/content/site';
@@ -52,6 +54,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main id="conteudo">{children}</main>
         <Footer />
+        <BannerConsentimento />
+        <Medicao />
       </body>
     </html>
   );

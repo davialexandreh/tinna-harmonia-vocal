@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   title: 'Workshops presenciais',
   description:
     'Workshops e imersões de harmonia vocal dentro da sua igreja: diagnóstico de vozes, uma música montada em três vozes e um roteiro de ensaio para o ministério seguir sozinho.',
+  alternates: { canonical: '/workshops/' },
 };
 
 export default function Workshops() {

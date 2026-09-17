@@ -10,15 +10,16 @@ export const metadata: Metadata = {
   title: 'Política de privacidade',
   description:
     'Como os seus dados são tratados no site de Tinna Silva, conforme a Lei Geral de Proteção de Dados.',
+  alternates: { canonical: '/privacidade/' },
 };
 
 /*
  * ⚠️ MINUTA. Precisa de revisão jurídica e dos dados do controlador
  * (nome/razão social, CPF ou CNPJ, e-mail do encarregado) antes do deploy.
  *
- * Esta versão descreve o site como ele está HOJE: sem formulário, sem cadastro
- * e sem analytics. Quando o Pixel e o GA entrarem (Fase 3), a seção "Cookies e
- * medição" precisa ser reescrita junto com o banner de consentimento.
+ * A seção "Cookies e medição" descreve o comportamento real do código: os
+ * scripts do GA4 e do Pixel só carregam depois do aceite no banner, e só se as
+ * variáveis NEXT_PUBLIC_GA_ID / NEXT_PUBLIC_META_PIXEL_ID existirem no build.
  */
 export default function Privacidade() {
   return (
@@ -29,8 +30,8 @@ export default function Privacidade() {
         <Prosa>
           <h2>Resumo em uma frase</h2>
           <p>
-            Este site não pede cadastro, não tem formulário e não guarda dados seus. Se
-            você quiser falar comigo, o contato acontece pelo WhatsApp.
+            Este site não pede cadastro e não tem formulário. Os cookies de medição só
+            existem se você aceitar, e o contato acontece pelo WhatsApp.
           </p>
 
           <h2>Quem controla os dados</h2>
@@ -67,15 +68,36 @@ export default function Privacidade() {
 
           <h2>Cookies e medição</h2>
           <p>
-            O site não usa cookies de publicidade nem ferramentas de medição de audiência
-            no momento. Se isso mudar, esta política será atualizada e você verá um aviso
-            de consentimento antes de qualquer coleta.
+            Ao entrar, você vê um aviso perguntando se aceita cookies de medição.
+            Enquanto você não aceitar, <b>nenhum script de terceiro é carregado</b> — nem
+            o Google Analytics, nem o Pixel da Meta.
+          </p>
+          <p>Se você aceitar, passam a funcionar:</p>
+          <ul>
+            <li>
+              <b>Google Analytics 4</b>, para saber quantas pessoas visitam o site, por
+              quais páginas entram e de onde vêm. O endereço IP é anonimizado.
+            </li>
+            <li>
+              <b>Pixel da Meta</b>, que registra visitas e cliques nos botões de WhatsApp,
+              para eu entender quais conteúdos do Instagram trazem gente até aqui.
+            </li>
+          </ul>
+          <p>
+            A sua escolha fica guardada apenas no seu navegador. Para mudá-la, limpe os
+            dados do site no seu navegador e escolha de novo quando o aviso aparecer.
+          </p>
+          <p>
+            O que é registrado é o clique no botão e a seção de onde ele partiu — nunca o
+            conteúdo da sua conversa no WhatsApp.
           </p>
 
           <h2>Compartilhamento</h2>
           <p>
-            Seus dados não são vendidos nem cedidos. O site depende de prestadores de
-            infraestrutura, como a hospedagem, que atuam apenas para manter o site no ar.
+            Seus dados não são vendidos nem cedidos. O site depende de prestadores que
+            atuam como operadores: a hospedagem, que mantém o site no ar, e — caso você
+            aceite os cookies — o Google e a Meta, que recebem dados de navegação
+            conforme as políticas de privacidade deles.
           </p>
 
           <h2>Seus direitos</h2>

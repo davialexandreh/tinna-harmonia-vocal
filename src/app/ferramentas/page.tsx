@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   title: 'Ferramentas gratuitas de canto',
   description:
     'Ferramentas gratuitas para treinar harmonia vocal no navegador: tocador de naipes, nota-guia, metrônomo e treino de ouvido. Sem cadastro e sem instalar nada.',
+  alternates: { canonical: '/ferramentas/' },
 };
 
 export default function Ferramentas() {

@@ -71,11 +71,11 @@
   gap: var(--space-4);
   flex-wrap: wrap;
   font-size: 13px;
-  color: #7e7076;
+  color: #90838a;
 }
 
 .base a {
-  color: #7e7076;
+  color: #90838a;
 }
 
 @media (max-width: 800px) {

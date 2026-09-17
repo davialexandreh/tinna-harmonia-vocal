@@ -38,7 +38,7 @@
 
 .chip[aria-pressed='true'] {
   background: var(--brand-soft);
-  border-color: var(--brand);
+  border-color: var(--brand-texto);
   color: var(--brand-deep);
 }
 
@@ -59,7 +59,7 @@
   letter-spacing: var(--tracking-tighter);
   line-height: 1;
   text-align: center;
-  color: var(--brand);
+  color: var(--brand-texto);
   margin: var(--space-6) 0;
 }
 
@@ -80,7 +80,7 @@
 
 .controle input[type='range'] {
   flex: 1;
-  accent-color: var(--brand);
+  accent-color: var(--brand-texto);
   min-width: 140px;
 }
 
@@ -112,7 +112,7 @@
 }
 
 .voz[aria-pressed='true'] {
-  border-color: var(--brand);
+  border-color: var(--brand-texto);
   background: var(--surface-card);
 }
 
@@ -139,7 +139,7 @@
   font-family: var(--font-display);
   font-size: 20px;
   font-weight: 600;
-  color: var(--brand);
+  color: var(--brand-texto);
 }
 
 /* indicador de batida do metrônomo */
@@ -160,12 +160,12 @@
 
 .batidaAtiva {
   background: var(--brand);
-  border-color: var(--brand);
+  border-color: var(--brand-texto);
   transform: scale(1.35);
 }
 
 .batidaAcentuada {
-  border-color: var(--brand);
+  border-color: var(--brand-texto);
 }
 
 /* treino de ouvido */
@@ -236,7 +236,7 @@
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 13px;
-  color: var(--brand);
+  color: var(--brand-texto);
   flex: none;
   padding-top: 3px;
 }

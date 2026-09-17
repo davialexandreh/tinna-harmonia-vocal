@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   title: 'Sobre',
   description:
     'Tinna Silva: back vocal, compositora e professora de harmonia vocal há mais de dez anos, com foco em ministérios de louvor.',
+  alternates: { canonical: '/sobre/' },
 };
 
 export default function Sobre() {
