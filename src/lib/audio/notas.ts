@@ -1,6 +1,6 @@
 /**
  * Conversões de nota, frequência e afinação.
- * Tudo aqui é função pura — é o que os testes da Fase 4 cobrem.
+ * Tudo aqui é função pura: é o que os testes da Fase 4 cobrem.
  */
 
 export const NOTAS_PT = [

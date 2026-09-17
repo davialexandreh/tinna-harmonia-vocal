@@ -1,4 +1,4 @@
-# Site Tinna Silva — Harmonia Vocal
+# Site Tinna Silva · Harmonia Vocal
 
 Site institucional + funil de captação para workshops presenciais de harmonia
 vocal. Contexto completo do projeto em `docs/prompt-claude-code-tinna-silva.md`;
@@ -9,9 +9,9 @@ código de produção).
 
 | Tema | Decisão |
 | --- | --- |
-| Framework | Next.js 16 (App Router) com `output: 'export'` — estático puro |
+| Framework | Next.js 16 (App Router) com `output: 'export'`, estático puro |
 | Estilo | CSS Modules + tokens em `src/styles/tokens.css` |
-| CMS | Nenhum. Conteúdo em `src/content/` — toda edição passa por deploy |
+| CMS | Nenhum. Conteúdo em `src/content/`, toda edição passa por deploy |
 | Hospedagem | Netlify, publish `out/` |
 | Captação | Só `wa.me`. Sem formulário, sem e-mail marketing |
 | Áudio | Web Audio API puro, sem Tone.js |
@@ -22,7 +22,7 @@ código de produção).
 
 - Todo conteúdo visível em português do Brasil; código e nomes de arquivo também.
 - Nenhum valor cru de cor, espaçamento ou raio fora de `tokens.css`.
-- Todo CTA de conversão passa por `WhatsAppCTA` — é o ponto único de troca se um
+- Todo CTA de conversão passa por `WhatsAppCTA`, o ponto único de troca se um
   dia entrar formulário.
 - Dado de cliente (número, depoimento, preço) nunca é inventado: fica marcado
   como `PENDENTE` em `src/content/site.ts`.
@@ -54,15 +54,5 @@ npm run test:e2e   # Robot Framework (precisa do site servido em :4321)
 | Foto e vídeo | troque em `assets/` e rode `npm run midia` |
 
 O vídeo do hero não carrega quando a pessoa pediu menos movimento no sistema,
-está em economia de dados ou tem conexão lenta — nesses casos fica o pôster.
+está em economia de dados ou tem conexão lenta. Nesses casos fica o pôster.
 A regra está em `src/components/home/FundoDoHero.tsx`.
-
-<!-- BEGIN:nextjs-agent-rules -->
-
-# This is NOT the Next.js you know
-
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
-
-This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
-
-<!-- END:nextjs-agent-rules -->

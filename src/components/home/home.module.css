@@ -25,7 +25,7 @@
 
 /*
  * Véu sobre o vídeo. Mesmo que passe um quadro totalmente branco, o texto
- * branco mantém 13,5:1 no lado esquerdo — bem acima do AA.
+ * branco mantém 13,5:1 no lado esquerdo, bem acima do AA.
  */
 .veu {
   position: absolute;
@@ -60,7 +60,7 @@
   max-width: 620px;
 }
 
-/* Bloco de conteúdo com imagem ao lado — hoje o "quem ensina". */
+/* Bloco de conteúdo com imagem ao lado: hoje o "quem ensina". */
 .blocoComMidia {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;

@@ -177,7 +177,7 @@ export function TreinoDeOuvido() {
 
       {placar.total > 0 && (
         <p className={styles.placar} aria-live="polite">
-          {placar.acertos} de {placar.total} —{' '}
+          {placar.acertos} de {placar.total} ·{' '}
           {Math.round((placar.acertos / placar.total) * 100)}% de acerto
         </p>
       )}

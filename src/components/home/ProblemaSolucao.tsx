@@ -16,7 +16,7 @@ export function ProblemaSolucao() {
             </p>
             <p>
               Aí a conclusão é sempre a mesma: <em>“o pessoal não tem ouvido”</em>. Só que
-              não é ouvido. É <b className={styles.destaque}>coordenação</b> — e coordenação
+              não é ouvido. É <b className={styles.destaque}>coordenação</b>, e coordenação
               se treina.
             </p>
           </div>

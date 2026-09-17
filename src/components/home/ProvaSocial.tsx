@@ -4,7 +4,7 @@ import styles from './home.module.css';
 
 /**
  * Só renderiza quando houver dado real. Hoje as listas estão vazias
- * de propósito — ver PENDENTE em src/content/home.ts.
+ * de propósito. Ver PENDENTE em src/content/home.ts.
  */
 export function ProvaSocial() {
   const temNumeros = provaSocial.numeros.length > 0;

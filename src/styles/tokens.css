@@ -1,5 +1,5 @@
 /*
- * Tokens de design — portados do protótipo docs/tinna-silva-v2.html
+ * Tokens de design, portados do protótipo docs/tinna-silva-v2.html
  * Fonte única de verdade visual. Não usar valor cru fora daqui.
  */
 :root {
@@ -66,12 +66,12 @@
   --shadow-xl: 0 24px 60px rgba(0, 0, 0, 0.14);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 
-  /* tipografia — as duas primeiras vêm do next/font em app/layout.tsx */
+  /* tipografia: as duas primeiras vêm do next/font em app/layout.tsx */
   --font-display: var(--font-inter-tight), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-sans: var(--font-archivo), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   /* Cor da marca quando usada como TEXTO.
      O rosa da marca (#e11d62) só alcança 4,17:1 sobre os fundos alternados,
-     abaixo do AA para texto pequeno — então texto usa um tom levemente mais
+     abaixo do AA para texto pequeno, então texto usa um tom levemente mais
      fechado, e o rosa original fica para fundos e bordas. */
   --brand-texto: #d51559;
   --tracking-tighter: -0.03em;

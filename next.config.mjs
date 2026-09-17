@@ -26,6 +26,9 @@ const nextConfig = {
   // Gera /rota/index.html em vez de /rota.html — URL canônica estável.
   trailingSlash: true,
   allowedDevOrigins: enderecosDaRedeLocal,
+  // O `next dev` reescreve um bloco próprio no CLAUDE.md a cada execução.
+  // Como o arquivo é nosso, a geração fica desligada.
+  agentRules: false,
 };
 
 export default nextConfig;

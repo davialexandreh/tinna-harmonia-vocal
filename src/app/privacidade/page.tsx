@@ -69,7 +69,7 @@ export default function Privacidade() {
           <h2>Cookies e medição</h2>
           <p>
             Ao entrar, você vê um aviso perguntando se aceita cookies de medição.
-            Enquanto você não aceitar, <b>nenhum script de terceiro é carregado</b> — nem
+            Enquanto você não aceitar, <b>nenhum script de terceiro é carregado</b>: nem
             o Google Analytics, nem o Pixel da Meta.
           </p>
           <p>Se você aceitar, passam a funcionar:</p>
@@ -88,15 +88,15 @@ export default function Privacidade() {
             dados do site no seu navegador e escolha de novo quando o aviso aparecer.
           </p>
           <p>
-            O que é registrado é o clique no botão e a seção de onde ele partiu — nunca o
+            O que é registrado é o clique no botão e a seção de onde ele partiu, nunca o
             conteúdo da sua conversa no WhatsApp.
           </p>
 
           <h2>Compartilhamento</h2>
           <p>
             Seus dados não são vendidos nem cedidos. O site depende de prestadores que
-            atuam como operadores: a hospedagem, que mantém o site no ar, e — caso você
-            aceite os cookies — o Google e a Meta, que recebem dados de navegação
+            atuam como operadores: a hospedagem, que mantém o site no ar, e, caso você
+            aceite os cookies, o Google e a Meta, que recebem dados de navegação
             conforme as políticas de privacidade deles.
           </p>
 

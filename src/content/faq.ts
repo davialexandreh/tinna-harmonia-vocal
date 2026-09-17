@@ -2,7 +2,7 @@
  * FAQ da Home. Cada pergunta mata uma objeção.
  *
  * Nenhuma resposta afirma logística específica (valores, deslocamento,
- * capacidade) — isso é informação da cliente e ainda está em aberto.
+ * capacidade): isso é informação da cliente e ainda está em aberto.
  * Onde seria necessário, a resposta empurra para a conversa no WhatsApp.
  */
 export const faq = [
@@ -34,7 +34,7 @@ export const faq = [
   {
     pergunta: 'Nosso ministério é pequeno. Funciona mesmo assim?',
     resposta:
-      'Funciona. Três vozes já formam harmonia. O que muda com o tamanho do grupo é o formato do encontro — me chame no WhatsApp e eu monto do jeito que cabe no seu ministério.',
+      'Funciona. Três vozes já formam harmonia. O que muda com o tamanho do grupo é o formato do encontro. Me chame no WhatsApp e eu monto do jeito que cabe no seu ministério.',
   },
   {
     pergunta: 'Dá para trabalhar só com o naipe de back vocal?',

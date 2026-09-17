@@ -1,4 +1,4 @@
-# Site Tinna Silva — Harmonia Vocal
+# Site Tinna Silva · Harmonia Vocal
 
 Site estático em Next.js 16 (App Router, `output: 'export'`), publicado no Netlify.
 
@@ -19,7 +19,7 @@ npm run preview # serve out/ em http://localhost:3000
 ## Mídia
 
 As fotos e vídeos originais ficam em `assets/`. O build é estático, então nada
-é otimizado em tempo de execução — o que está em `public/midia/` é exatamente o
+é otimizado em tempo de execução: o que está em `public/midia/` é exatamente o
 que o visitante baixa.
 
 ```bash
@@ -51,7 +51,7 @@ python3 -m http.server 4321 --directory out &
 ```
 
 A tag `pendente-cliente` isola as travas que dependem de dado que a cliente
-ainda não enviou — hoje, o número de WhatsApp. Rode antes de publicar:
+ainda não enviou, hoje o número de WhatsApp. Rode antes de publicar:
 
 ```bash
 .venv-e2e/bin/robot --include pendente-cliente tests/e2e
@@ -69,7 +69,7 @@ npm run build && npx @lhci/cli autorun
 
 1. Suba o repositório para o GitHub.
 2. No Netlify: **Add new site → Import an existing project**.
-3. Build command `npm run build`, publish directory `out` — já estão em
+3. Build command `npm run build`, publish directory `out` já estão em
    `netlify.toml`, não precisa preencher à mão.
 4. Deploy Previews por branch vêm ligados por padrão.
 
@@ -91,5 +91,5 @@ dados reais (anos de experiência, ministérios atendidos, depoimentos).
 | `NEXT_PUBLIC_META_PIXEL_ID` | ID do Pixel da Meta. Opcional |
 
 As duas últimas são lidas no build. **Sem elas o site não carrega script de
-terceiro nenhum e o banner de cookies não aparece** — não há o que consentir.
+terceiro nenhum e o banner de cookies não aparece**, porque não há o que consentir.
 Com elas, o banner aparece e nada carrega antes do aceite.

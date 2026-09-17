@@ -26,7 +26,7 @@ export default function Workshops() {
             O encontro acontece <em>na sua igreja</em>, com o ministério inteiro
           </h1>
           <p>
-            Um dia de trabalho com o grupo que já canta junto todo domingo — e que vai
+            Um dia de trabalho com o grupo que já canta junto todo domingo, e que vai
             sair cantando em três vozes.
           </p>
           <WhatsAppCTA

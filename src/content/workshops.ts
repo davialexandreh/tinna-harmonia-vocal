@@ -1,5 +1,5 @@
 /**
- * Conteúdo da página de workshops presenciais — o produto que já gera caixa.
+ * Conteúdo da página de workshops presenciais: o produto que já gera caixa.
  *
  * ⚠️ VALIDAR COM A CLIENTE antes do deploy: os campos `detalhe` de cada formato
  * (duração e capacidade) vieram do protótipo e ainda não foram confirmados

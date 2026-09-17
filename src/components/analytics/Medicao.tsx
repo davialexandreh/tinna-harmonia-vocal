@@ -10,7 +10,7 @@ import {
 import { GA_ID, PIXEL_ID } from '@/lib/medicao';
 
 /**
- * GA4 e Pixel da Meta, carregados só depois do aceite — e só se os IDs
+ * GA4 e Pixel da Meta, carregados só depois do aceite, e só se os IDs
  * existirem no build. Sem variável de ambiente, nada é injetado.
  *
  * Também registra o clique de WhatsApp, que é a única conversão do site.

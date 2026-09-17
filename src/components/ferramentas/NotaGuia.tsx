@@ -7,7 +7,7 @@ import { tocarVoz, type VozTocando } from '@/lib/audio/vozes';
 import { AvisoSemAudio } from './AvisoSemAudio';
 import styles from './ferramentas.module.css';
 
-/** Uma oitava a partir do Dó3 — região confortável para a maioria das vozes. */
+/** Uma oitava a partir do Dó3, região confortável para a maioria das vozes. */
 const NOTAS = Array.from({ length: 13 }, (_, i) => 48 + i);
 
 export function NotaGuia() {

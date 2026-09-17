@@ -2,7 +2,7 @@
  * Consentimento de cookies (LGPD).
  *
  * Nada de medição carrega antes do "aceito". A escolha fica no localStorage
- * do próprio navegador — não sai do aparelho e não vai para servidor nenhum.
+ * do próprio navegador: não sai do aparelho e não vai para servidor nenhum.
  */
 
 export const CHAVE_CONSENTIMENTO = 'tinna:consentimento:v1';

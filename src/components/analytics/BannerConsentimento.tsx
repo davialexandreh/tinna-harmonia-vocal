@@ -24,7 +24,7 @@ export function BannerConsentimento() {
 
   /*
    * O banner é fixo no rodapé e, sem isso, fica por cima dos controles das
-   * ferramentas — o visitante clica e nada acontece. Reservar o espaço no fim
+   * ferramentas: o visitante clica e nada acontece. Reservar o espaço no fim
    * da página garante que tudo continue alcançável enquanto ele estiver ali.
    */
   useEffect(() => {

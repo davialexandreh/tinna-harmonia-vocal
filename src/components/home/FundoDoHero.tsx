@@ -12,7 +12,7 @@ type ConexaoDoNavegador = {
  * Decide se vale a pena baixar o vídeo de fundo.
  *
  * Diz não quando a pessoa pediu menos movimento no sistema, quando o celular
- * está em economia de dados ou quando a conexão é lenta — o vídeo é decoração,
+ * está em economia de dados ou quando a conexão é lenta. O vídeo é decoração,
  * e 1,3 MB no 4G de alguém que veio do link da bio não é decoração barata.
  */
 function podeTocarVideo(): boolean {

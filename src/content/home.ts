@@ -99,16 +99,16 @@ export const niveis = [
 
 export const paraQuem = {
   sim: [
-    'Seu ministério canta junto, mas tudo em uníssono — e vocês querem três vozes de verdade.',
+    'Seu ministério canta junto, mas tudo em uníssono, e vocês querem três vozes de verdade.',
     'A segunda voz começa certa e escorrega de volta para a melodia no meio da música.',
     'Você canta back vocal e perde o fôlego antes do fim da frase.',
     'Você lidera o louvor e precisa de um roteiro de ensaio que funcione com gente ocupada.',
-    'Você acha que não tem ouvido — e nunca teve alguém para te mostrar o caminho.',
+    'Você acha que não tem ouvido, e nunca teve alguém para te mostrar o caminho.',
   ],
   nao: [
     'Você procura formação erudita, canto lírico ou preparação para conservatório.',
     'Você quer resultado sem ensaiar entre um encontro e outro.',
-    'Você espera um curso online pronto para assistir hoje — o atendimento agora é presencial.',
+    'Você espera um curso online pronto para assistir hoje: o atendimento agora é presencial.',
     'Você quer aprender teoria musical pela teoria, não para cantar melhor no culto.',
   ],
 };

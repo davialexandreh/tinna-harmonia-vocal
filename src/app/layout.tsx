@@ -24,7 +24,7 @@ const archivo = Archivo({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.nome} — ${site.tagline}`,
+    default: `${site.nome} · ${site.tagline}`,
     template: `%s · ${site.nome}`,
   },
   description: site.descricao,
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'pt_BR',
     siteName: site.nome,
-    title: `${site.nome} — ${site.tagline}`,
+    title: `${site.nome} · ${site.tagline}`,
     description: site.descricao,
   },
 };

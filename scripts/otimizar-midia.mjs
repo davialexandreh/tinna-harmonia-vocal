@@ -3,7 +3,7 @@
  *
  * O build é estático (`output: 'export'`), então o next/image não otimiza nada:
  * o que for para `public/` é exatamente o que o visitante baixa. Este script é
- * a etapa que falta — rode sempre que a Tinna mandar foto ou vídeo novo.
+ * a etapa que falta. Rode sempre que a Tinna mandar foto ou vídeo novo.
  *
  *   node scripts/otimizar-midia.mjs
  *
@@ -95,7 +95,7 @@ async function gerarVideo() {
 
   // Sem WebM de propósito: neste material o VP9 ficou MAIOR que o H.264
   // (1490 KB contra 1319 KB). Se um vídeo novo se comportar diferente, vale
-  // testar de novo — mas não adianta servir dois arquivos se o segundo não
+  // testar de novo, mas não adianta servir dois arquivos se o segundo não
   // economiza nada.
 
   // Poster: é o que aparece no celular, com movimento reduzido, e antes do

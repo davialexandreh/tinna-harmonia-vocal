@@ -7,7 +7,7 @@ import styles from './home.module.css';
 
 /**
  * Preparado para vídeo vertical: quando `video` existir, troca-se o
- * placeholder por um <video> com poster. Hoje a lista está vazia — nenhum
+ * placeholder por um <video> com poster. Hoje a lista está vazia: nenhum
  * depoimento real foi fornecido (PENDENTE em src/content/home.ts).
  */
 export function Depoimentos() {

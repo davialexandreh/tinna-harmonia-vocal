@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Consentimento: nada de medição antes do aceite.
 ...                 Esta suíte precisa de um build com IDs de medição
-...                 (npm run build:teste) — sem eles o banner não existe.
+...                 (npm run build:teste). Sem eles o banner não existe.
 Resource            resources/comum.resource
 Test Teardown       Close Browser    ALL
 
