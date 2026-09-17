@@ -347,3 +347,51 @@
 .marcaErro {
   color: var(--text-tertiary);
 }
+
+/* ---------- osciloscópio ---------- */
+
+/*
+ * A harmonia virando imagem: uma faixa por naipe e, embaixo, a soma.
+ * Fica entre as vozes e o botão porque é o resultado do que se ligou ali em
+ * cima, e some junto com o som.
+ */
+.osciloscopio {
+  margin: 0 0 var(--space-6);
+  padding: var(--space-5) var(--space-5) var(--space-4);
+  background: var(--surface-sunken);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.onda {
+  display: block;
+  width: 100%;
+}
+
+.legendaOnda {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-4);
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border-subtle);
+  font-size: 13px;
+  color: var(--text-tertiary);
+}
+
+.legendaVozes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.legendaVozes b {
+  font-family: var(--font-display);
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.legendaSoma {
+  color: var(--brand-texto);
+}

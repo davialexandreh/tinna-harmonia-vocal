@@ -1,8 +1,10 @@
-import { obterContexto } from './contexto';
+import { obterBarramento, obterContexto } from './contexto';
 
 export type VozTocando = {
   parar: (segundos?: number) => void;
   definirVolume: (volume: number) => void;
+  /** Permite ler a forma de onda desta voz enquanto ela soa. */
+  analisador: AnalyserNode;
 };
 
 type OpcoesVoz = {
@@ -31,8 +33,14 @@ export function tocarVoz(frequencia: number, opcoes: OpcoesVoz = {}): VozTocando
   filtro.frequency.value = 2400;
   filtro.Q.value = 0.6;
 
+  // Sem suavização: a onda desenhada precisa ser a onda que está soando.
+  const analisador = ctx.createAnalyser();
+  analisador.fftSize = 4096;
+  analisador.smoothingTimeConstant = 0;
+
   saida.connect(filtro);
-  filtro.connect(ctx.destination);
+  filtro.connect(analisador);
+  analisador.connect(obterBarramento());
   saida.gain.linearRampToValueAtTime(volume, agora + ataque);
 
   const fontes: OscillatorNode[] = [];
@@ -95,5 +103,6 @@ export function tocarVoz(frequencia: number, opcoes: OpcoesVoz = {}): VozTocando
       if (parado) return;
       saida.gain.setTargetAtTime(novo, ctx.currentTime, 0.05);
     },
+    analisador,
   };
 }

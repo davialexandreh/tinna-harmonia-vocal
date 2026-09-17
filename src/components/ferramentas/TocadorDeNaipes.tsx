@@ -4,8 +4,10 @@ import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { Icone } from '@/components/ui/Icone';
 import { acordes, naipes, type NaipeId } from '@/content/acordes';
+import { obterAnalisadorMestre } from '@/lib/audio/contexto';
 import { midiParaFrequencia, nomeDaNota, vozesDoAcorde } from '@/lib/audio/notas';
 import { tocarVoz, type VozTocando } from '@/lib/audio/vozes';
+import { Osciloscopio, type FaixaDeOnda } from './Osciloscopio';
 import { AvisoSemAudio } from './AvisoSemAudio';
 import { Soando } from './Soando';
 import styles from './ferramentas.module.css';
@@ -24,6 +26,8 @@ export function TocadorDeNaipes() {
     tenor: true,
   });
   const [tocando, setTocando] = useState(false);
+  const [faixas, setFaixas] = useState<FaixaDeOnda[]>([]);
+  const [mestre, setMestre] = useState<AnalyserNode | null>(null);
   const vozesRef = useRef<VozTocando[]>([]);
 
   const acorde = acordes[indiceAcorde];
@@ -36,6 +40,7 @@ export function TocadorDeNaipes() {
   function silenciar(rapido = false) {
     vozesRef.current.forEach((v) => v.parar(rapido ? 0.05 : 0.15));
     vozesRef.current = [];
+    setFaixas([]);
   }
 
   function soar(
@@ -45,14 +50,24 @@ export function TocadorDeNaipes() {
     const alvo = acordes[indice];
     const notasAlvo = vozesDoAcorde(alvo.fundamental, alvo.terca);
 
-    vozesRef.current = naipes
-      .filter((naipe) => quaisAtivos[naipe.id])
-      .map((naipe, i) =>
-        tocarVoz(midiParaFrequencia(notasAlvo[naipe.id]), {
-          volume: VOLUME_POR_NAIPE[naipe.id],
-          vibrato: 4.6 + i * 0.5,
-        }),
-      );
+    const ligadas = naipes.filter((naipe) => quaisAtivos[naipe.id]);
+
+    vozesRef.current = ligadas.map((naipe, i) =>
+      tocarVoz(midiParaFrequencia(notasAlvo[naipe.id]), {
+        volume: VOLUME_POR_NAIPE[naipe.id],
+        vibrato: 4.6 + i * 0.5,
+      }),
+    );
+
+    setFaixas(
+      ligadas.map((naipe, i) => ({
+        id: naipe.id,
+        nome: naipe.nome,
+        nota: nomeDaNota(notasAlvo[naipe.id]),
+        analisador: vozesRef.current[i].analisador,
+      })),
+    );
+    setMestre(obterAnalisadorMestre());
     setTocando(true);
   }
 
@@ -122,6 +137,13 @@ export function TocadorDeNaipes() {
           </button>
         ))}
       </div>
+
+      <Osciloscopio
+        faixas={faixas}
+        mestre={mestre}
+        fundamental={midiParaFrequencia(acorde.fundamental)}
+        tocando={tocando}
+      />
 
       <Button onClick={alternarReproducao} bloco>
         <Icone nome={tocando ? 'parar' : 'tocar'} tamanho={18} />

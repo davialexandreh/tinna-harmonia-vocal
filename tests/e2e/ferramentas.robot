@@ -55,3 +55,18 @@ Treino De Ouvido Marca A Resposta Escolhida
     # valer sempre é que o clique fica marcado e que o naipe correto aparece.
     Get Attribute    button:has-text("Contralto")    aria-pressed    ==    true
     Get Text    body    contains    era esta
+
+Osciloscópio Mostra Uma Faixa Por Voz Ligada
+    [Documentation]    O canvas só existe enquanto há som, e some ao parar:
+    ...    nada de laço de desenho rodando em silêncio.
+    Abrir Site No Celular    /ferramentas/tocador-de-naipes/
+    Get Element Count    canvas    ==    0
+    Click    button >> text=Tocar acorde
+    Sleep    1.2s
+    ${desenho} =    Evaluate JavaScript    ${None}
+    ...    () => { const c = document.querySelector('canvas'); const ctx = c.getContext('2d'); const d = ctx.getImageData(0, 0, c.width, c.height).data; let pintados = 0; for (let i = 3; i < d.length; i += 4) if (d[i] > 12) pintados++; return JSON.stringify({ pintou: pintados > 500, faixas: document.querySelectorAll('figcaption span b').length }); }
+    Should Contain    ${desenho}    "pintou":true
+    Should Contain    ${desenho}    "faixas":3
+    Click    button >> text=Parar
+    Sleep    0.5s
+    Get Element Count    canvas    ==    0

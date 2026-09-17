@@ -382,6 +382,19 @@ lado da nota. Aparece só enquanto o áudio toca e some quando ele para, então
 nada fica em laço no silêncio. É o único lugar do site onde a tela mostra que há
 som, e por isso conta como estado, não como enfeite.
 
+### Osciloscópio de naipes (componente de assinatura)
+
+A harmonia desenhada em tempo real, dentro do tocador de naipes: uma faixa por
+voz ligada, em branco a 70%, e embaixo a soma em Magenta Vivo, com marcas
+tracejadas onde a fundamental fecha o ciclo. A janela mostra três ciclos da
+fundamental, e é isso que faz a lição aparecer: no mesmo trecho de tempo o tenor
+desenha três ondas, a contralto quatro e meia e a soprano sete e meia. A
+proporção entre elas é o intervalo.
+
+Cada faixa de voz é normalizada pelo próprio pico, porque ali interessa a forma;
+a soma mantém o nível real, porque ali o nível significa alguma coisa. Fundo
+afundado, raio de 12px, e existe só enquanto há som.
+
 ### Painel de ferramenta (componente de assinatura)
 
 O bloco que abriga as ferramentas de áudio é o que este site tem de próprio:
