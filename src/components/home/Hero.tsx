@@ -10,8 +10,8 @@ export function Hero() {
     <section className={styles.hero}>
       <FundoDoHero />
 
-      <Container className={styles.heroGrid}>
-        <div>
+      <Container className={styles.heroInterno}>
+        <div className={styles.heroTexto}>
           <span className={styles.eyebrow}>{site.tagline}</span>
           <h1 className={styles.titulo}>
             Cantar em harmonia <em>não é dom.</em> É método — e o seu grupo pode aprender.
@@ -34,18 +34,6 @@ export function Hero() {
           </div>
         </div>
 
-        {/* eslint-disable-next-line @next/next/no-img-element -- export estático: sem otimizador, o srcset é montado à mão */}
-        <img
-          className={styles.retrato}
-          src="/midia/tinna-800.jpg"
-          srcSet="/midia/tinna-480.webp 480w, /midia/tinna-800.webp 800w, /midia/tinna-1200.webp 1200w"
-          sizes="(max-width: 900px) 70vw, 380px"
-          width={800}
-          height={1067}
-          alt="Tinna Silva sorrindo, segurando um microfone"
-          fetchPriority="high"
-          decoding="async"
-        />
       </Container>
     </section>
   );

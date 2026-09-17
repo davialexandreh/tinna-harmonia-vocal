@@ -49,11 +49,21 @@
   }
 }
 
-.heroGrid {
+.heroInterno {
   position: relative;
   z-index: 2;
+}
+
+/* Sem foto ao lado, o texto não pode esticar a linha até 1120px.
+   620px é mais ou menos a largura que a coluna de texto tinha antes. */
+.heroTexto {
+  max-width: 620px;
+}
+
+/* Bloco de conteúdo com imagem ao lado — hoje o "quem ensina". */
+.blocoComMidia {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 0.85fr 1.15fr;
   gap: var(--space-16);
   align-items: center;
 }
@@ -100,34 +110,6 @@
   background: linear-gradient(160deg, #3a1a27, #140a10);
 }
 
-/* placeholder ainda usado no bloco "quem ensina" da Home */
-.retratoPlaceholder {
-  aspect-ratio: 4 / 5;
-  border-radius: var(--radius-2xl);
-  background:
-    radial-gradient(120% 90% at 30% 15%, rgba(225, 29, 98, 0.55), transparent 60%),
-    linear-gradient(160deg, #3a1a27, #140a10);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  display: grid;
-  place-items: center;
-  text-align: center;
-  padding: var(--space-8);
-  color: #fff;
-}
-
-.retratoPlaceholder span {
-  font-size: 12px;
-  color: #b9a9af;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.retratoPlaceholder strong {
-  display: block;
-  font-size: 58px;
-  margin-bottom: var(--space-4);
-}
-
 .proximo {
   padding: var(--space-16) 0;
 }
@@ -143,7 +125,7 @@
 }
 
 @media (max-width: 900px) {
-  .heroGrid {
+  .blocoComMidia {
     grid-template-columns: 1fr;
     gap: var(--space-10);
   }

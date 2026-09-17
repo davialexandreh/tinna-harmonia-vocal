@@ -8,17 +8,19 @@ import styles from './home.module.css';
 export function SobreResumo() {
   return (
     <Secao>
-      <Container className={styles.heroGrid}>
-        <div className={styles.retratoPlaceholder}>
-          <div>
-            <strong aria-hidden="true">📖</strong>
-            <span>
-              Placeholder
-              <br />
-              vídeo de apresentação
-            </span>
-          </div>
-        </div>
+      <Container className={styles.blocoComMidia}>
+        {/* eslint-disable-next-line @next/next/no-img-element -- export estático: sem otimizador, o srcset é montado à mão */}
+        <img
+          className={styles.retrato}
+          src="/midia/tinna-800.jpg"
+          srcSet="/midia/tinna-480.webp 480w, /midia/tinna-800.webp 800w, /midia/tinna-1200.webp 1200w"
+          sizes="(max-width: 900px) 78vw, 400px"
+          width={800}
+          height={1067}
+          alt="Tinna Silva sorrindo, segurando um microfone"
+          loading="lazy"
+          decoding="async"
+        />
         <div>
           <SecHead
             eyebrow="Quem ensina"

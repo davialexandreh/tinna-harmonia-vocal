@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <!--
   ============================================================================
   PROTÓTIPO DE REFERÊNCIA — Site Tinna Silva (Harmonia Vocal)
@@ -35,912 +35,2453 @@
   ============================================================================
 -->
 <html lang="pt-BR" data-theme="light">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tinna Silva — Harmonia Vocal na Prática</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --ink:#140A10; --paper:#FBF8F6; --white:#fff;
-  --brand:#E11D62; --brand-deep:#8E0F3C; --brand-soft:#FBD9E5; --gold:#D9A441;
-  --n-100:#F5F3F2; --n-300:#DFDBD9; --n-500:#9C9490; --n-600:#6E6663;
-  --surface-page:var(--white); --surface-paper:var(--paper); --surface-card:var(--white);
-  --surface-sunken:var(--n-100);
-  --text-primary:var(--ink); --text-secondary:var(--n-600); --text-tertiary:var(--n-500);
-  --border-subtle:var(--n-300);
-  --space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:20px;--space-6:24px;
-  --space-8:32px;--space-10:40px;--space-12:48px;--space-16:64px;--space-20:80px;--space-24:96px;
-  --container-lg:1120px;
-  --radius-sm:8px;--radius-md:12px;--radius-lg:16px;--radius-xl:24px;--radius-2xl:32px;--radius-pill:999px;
-  --shadow-sm:0 1px 3px rgba(0,0,0,.06);--shadow-md:0 4px 12px rgba(0,0,0,.08);
-  --shadow-xl:0 24px 60px rgba(0,0,0,.14);
-  --ease-out:cubic-bezier(.16,1,.3,1);
-  --font-display:"Inter Tight",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  --font-sans:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  --tracking-tighter:-.03em;--tracking-caps:.12em;
-}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --surface-page:var(--ink);--surface-paper:#1C1016;--surface-card:#1C1016;--surface-sunken:#180C12;
-  --text-primary:#fff;--text-secondary:#C8BEC2;--text-tertiary:#9C9490;--border-subtle:rgba(255,255,255,.14);}}
-:root[data-theme="dark"]{
-  --surface-page:var(--ink);--surface-paper:#1C1016;--surface-card:#1C1016;--surface-sunken:#180C12;
-  --text-primary:#fff;--text-secondary:#C8BEC2;--text-tertiary:#9C9490;--border-subtle:rgba(255,255,255,.14);}
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tinna Silva — Harmonia Vocal na Prática</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&family=Archivo:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #140a10;
+        --paper: #fbf8f6;
+        --white: #fff;
+        --brand: #e11d62;
+        --brand-deep: #8e0f3c;
+        --brand-soft: #fbd9e5;
+        --gold: #d9a441;
+        --n-100: #f5f3f2;
+        --n-300: #dfdbd9;
+        --n-500: #9c9490;
+        --n-600: #6e6663;
+        --surface-page: var(--white);
+        --surface-paper: var(--paper);
+        --surface-card: var(--white);
+        --surface-sunken: var(--n-100);
+        --text-primary: var(--ink);
+        --text-secondary: var(--n-600);
+        --text-tertiary: var(--n-500);
+        --border-subtle: var(--n-300);
+        --space-1: 4px;
+        --space-2: 8px;
+        --space-3: 12px;
+        --space-4: 16px;
+        --space-5: 20px;
+        --space-6: 24px;
+        --space-8: 32px;
+        --space-10: 40px;
+        --space-12: 48px;
+        --space-16: 64px;
+        --space-20: 80px;
+        --space-24: 96px;
+        --container-lg: 1120px;
+        --radius-sm: 8px;
+        --radius-md: 12px;
+        --radius-lg: 16px;
+        --radius-xl: 24px;
+        --radius-2xl: 32px;
+        --radius-pill: 999px;
+        --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+        --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+        --shadow-xl: 0 24px 60px rgba(0, 0, 0, 0.14);
+        --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+        --font-display:
+          "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        --font-sans:
+          "Archivo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        --tracking-tighter: -0.03em;
+        --tracking-caps: 0.12em;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --surface-page: var(--ink);
+          --surface-paper: #1c1016;
+          --surface-card: #1c1016;
+          --surface-sunken: #180c12;
+          --text-primary: #fff;
+          --text-secondary: #c8bec2;
+          --text-tertiary: #9c9490;
+          --border-subtle: rgba(255, 255, 255, 0.14);
+        }
+      }
+      :root[data-theme="dark"] {
+        --surface-page: var(--ink);
+        --surface-paper: #1c1016;
+        --surface-card: #1c1016;
+        --surface-sunken: #180c12;
+        --text-primary: #fff;
+        --text-secondary: #c8bec2;
+        --text-tertiary: #9c9490;
+        --border-subtle: rgba(255, 255, 255, 0.14);
+      }
 
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--font-sans);font-size:17px;line-height:1.5;color:var(--text-primary);
-  background:var(--surface-page);-webkit-font-smoothing:antialiased}
-h1,h2,h3,h4{font-family:var(--font-display);letter-spacing:var(--tracking-tighter);line-height:1.05;font-weight:600}
-a{color:inherit}
-.wrap{max-width:var(--container-lg);margin:0 auto;padding:0 var(--space-6)}
-.narrow{max-width:880px}
-.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:var(--tracking-caps);font-weight:700;color:var(--brand)}
-.muted{color:var(--text-secondary)}
-.center{text-align:center}
-section{padding:var(--space-24) 0}
-@media(max-width:760px){section{padding:var(--space-16) 0}}
-.alt{background:var(--surface-paper)}
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: var(--font-sans);
+        font-size: 17px;
+        line-height: 1.5;
+        color: var(--text-primary);
+        background: var(--surface-page);
+        -webkit-font-smoothing: antialiased;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: var(--font-display);
+        letter-spacing: var(--tracking-tighter);
+        line-height: 1.05;
+        font-weight: 600;
+      }
+      a {
+        color: inherit;
+      }
+      .wrap {
+        max-width: var(--container-lg);
+        margin: 0 auto;
+        padding: 0 var(--space-6);
+      }
+      .narrow {
+        max-width: 880px;
+      }
+      .eyebrow {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: var(--tracking-caps);
+        font-weight: 700;
+        color: var(--brand);
+      }
+      .muted {
+        color: var(--text-secondary);
+      }
+      .center {
+        text-align: center;
+      }
+      section {
+        padding: var(--space-24) 0;
+      }
+      @media (max-width: 760px) {
+        section {
+          padding: var(--space-16) 0;
+        }
+      }
+      .alt {
+        background: var(--surface-paper);
+      }
 
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--space-2);font-family:var(--font-sans);
-  font-size:15px;font-weight:600;padding:14px 26px;border-radius:var(--radius-pill);border:1.5px solid transparent;
-  cursor:pointer;text-decoration:none;transition:all .2s var(--ease-out);white-space:nowrap}
-.btn-primary{background:var(--brand);color:#fff}
-.btn-primary:hover{background:var(--brand-deep);transform:translateY(-1px);box-shadow:var(--shadow-md)}
-.btn-ghost{background:transparent;color:var(--text-primary);border-color:var(--border-subtle)}
-.btn-ghost:hover{border-color:var(--text-primary)}
-.btn-inverse{background:#fff;color:var(--ink)}
-.btn-inverse:hover{transform:translateY(-1px);box-shadow:var(--shadow-md)}
-.btn-sm{padding:9px 16px;font-size:14px}
-.btn-lg{padding:18px 34px;font-size:17px}
-.btn-block{width:100%}
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-2);
+        font-family: var(--font-sans);
+        font-size: 15px;
+        font-weight: 600;
+        padding: 14px 26px;
+        border-radius: var(--radius-pill);
+        border: 1.5px solid transparent;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.2s var(--ease-out);
+        white-space: nowrap;
+      }
+      .btn-primary {
+        background: var(--brand);
+        color: #fff;
+      }
+      .btn-primary:hover {
+        background: var(--brand-deep);
+        transform: translateY(-1px);
+        box-shadow: var(--shadow-md);
+      }
+      .btn-ghost {
+        background: transparent;
+        color: var(--text-primary);
+        border-color: var(--border-subtle);
+      }
+      .btn-ghost:hover {
+        border-color: var(--text-primary);
+      }
+      .btn-inverse {
+        background: #fff;
+        color: var(--ink);
+      }
+      .btn-inverse:hover {
+        transform: translateY(-1px);
+        box-shadow: var(--shadow-md);
+      }
+      .btn-sm {
+        padding: 9px 16px;
+        font-size: 14px;
+      }
+      .btn-lg {
+        padding: 18px 34px;
+        font-size: 17px;
+      }
+      .btn-block {
+        width: 100%;
+      }
 
-header.nav{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--surface-page) 88%,transparent);
-  backdrop-filter:blur(14px);border-bottom:1px solid var(--border-subtle)}
-.nav-in{display:flex;align-items:center;justify-content:space-between;gap:var(--space-6);height:72px}
-.logo{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:19px;
-  letter-spacing:-.02em;text-decoration:none;cursor:pointer}
-.logo .mark{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand-deep));
-  display:grid;place-items:center;color:#fff;font-size:14px}
-.nav-links{display:flex;gap:var(--space-6);font-size:15px;font-weight:500}
-.nav-links a{text-decoration:none;color:var(--text-secondary);cursor:pointer}
-.nav-links a:hover{color:var(--brand)}
-.nav-cta{display:flex;gap:var(--space-3);align-items:center}
-@media(max-width:1000px){.nav-links{display:none}}
-@media(max-width:560px){.nav-cta .btn-ghost{display:none}}
+      header.nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: color-mix(in srgb, var(--surface-page) 88%, transparent);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--border-subtle);
+      }
+      .nav-in {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-6);
+        height: 72px;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 19px;
+        letter-spacing: -0.02em;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .logo .mark {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--brand), var(--brand-deep));
+        display: grid;
+        place-items: center;
+        color: #fff;
+        font-size: 14px;
+      }
+      .nav-links {
+        display: flex;
+        gap: var(--space-6);
+        font-size: 15px;
+        font-weight: 500;
+      }
+      .nav-links a {
+        text-decoration: none;
+        color: var(--text-secondary);
+        cursor: pointer;
+      }
+      .nav-links a:hover {
+        color: var(--brand);
+      }
+      .nav-cta {
+        display: flex;
+        gap: var(--space-3);
+        align-items: center;
+      }
+      @media (max-width: 1000px) {
+        .nav-links {
+          display: none;
+        }
+      }
+      @media (max-width: 560px) {
+        .nav-cta .btn-ghost {
+          display: none;
+        }
+      }
 
-.hero{background:var(--ink);color:#fff;position:relative;overflow:hidden;padding:var(--space-24) 0 var(--space-20)}
-.hero .wrap{position:relative;z-index:2}
-.wavefield{position:absolute;inset:0;opacity:.3;pointer-events:none}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:var(--space-16);align-items:center}
-.hero h1{font-size:clamp(36px,5.4vw,66px);font-weight:600;margin:var(--space-5) 0}
-.hero h1 em{font-style:normal;color:var(--brand)}
-.hero p.lead{font-size:19px;color:#D8CCD1;max-width:46ch;margin-bottom:var(--space-8)}
-.hero-actions{display:flex;gap:var(--space-3);flex-wrap:wrap}
-.hero-note{font-size:13px;color:#A99AA1;margin-top:var(--space-4)}
-.hero-stats{display:flex;gap:var(--space-10);margin-top:var(--space-12);flex-wrap:wrap}
-.hero-stats b{display:block;font-family:var(--font-display);font-size:32px;font-weight:600;letter-spacing:-.03em}
-.hero-stats span{font-size:12px;color:#A99AA1;text-transform:uppercase;letter-spacing:.08em}
-.portrait{aspect-ratio:4/5;border-radius:var(--radius-2xl);
-  background:radial-gradient(120% 90% at 30% 15%,rgba(225,29,98,.55),transparent 60%),linear-gradient(160deg,#3A1A27,#140A10);
-  border:1px solid rgba(255,255,255,.12);display:grid;place-items:center;text-align:center;padding:var(--space-8)}
-.portrait .mic{font-size:58px;margin-bottom:var(--space-4)}
-.portrait .ph{font-size:12px;color:#B9A9AF;letter-spacing:.06em;text-transform:uppercase}
-@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:var(--space-10)}.portrait{max-width:340px}}
+      .hero {
+        background: var(--ink);
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+        padding: var(--space-24) 0 var(--space-20);
+      }
+      .hero .wrap {
+        position: relative;
+        z-index: 2;
+      }
+      .wavefield {
+        position: absolute;
+        inset: 0;
+        opacity: 0.3;
+        pointer-events: none;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: var(--space-16);
+        align-items: center;
+      }
+      .hero h1 {
+        font-size: clamp(36px, 5.4vw, 66px);
+        font-weight: 600;
+        margin: var(--space-5) 0;
+      }
+      .hero h1 em {
+        font-style: normal;
+        color: var(--brand);
+      }
+      .hero p.lead {
+        font-size: 19px;
+        color: #d8ccd1;
+        max-width: 46ch;
+        margin-bottom: var(--space-8);
+      }
+      .hero-actions {
+        display: flex;
+        gap: var(--space-3);
+        flex-wrap: wrap;
+      }
+      .hero-note {
+        font-size: 13px;
+        color: #a99aa1;
+        margin-top: var(--space-4);
+      }
+      .hero-stats {
+        display: flex;
+        gap: var(--space-10);
+        margin-top: var(--space-12);
+        flex-wrap: wrap;
+      }
+      .hero-stats b {
+        display: block;
+        font-family: var(--font-display);
+        font-size: 32px;
+        font-weight: 600;
+        letter-spacing: -0.03em;
+      }
+      .hero-stats span {
+        font-size: 12px;
+        color: #a99aa1;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+      .portrait {
+        aspect-ratio: 4/5;
+        border-radius: var(--radius-2xl);
+        background:
+          radial-gradient(
+            120% 90% at 30% 15%,
+            rgba(225, 29, 98, 0.55),
+            transparent 60%
+          ),
+          linear-gradient(160deg, #3a1a27, #140a10);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        display: grid;
+        place-items: center;
+        text-align: center;
+        padding: var(--space-8);
+      }
+      .portrait .mic {
+        font-size: 58px;
+        margin-bottom: var(--space-4);
+      }
+      .portrait .ph {
+        font-size: 12px;
+        color: #b9a9af;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+      @media (max-width: 900px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+          gap: var(--space-10);
+        }
+        .portrait {
+          max-width: 340px;
+        }
+      }
 
-.strip{background:var(--surface-paper);border-block:1px solid var(--border-subtle);padding:var(--space-8) 0}
-.strip-in{display:flex;gap:var(--space-8);justify-content:center;flex-wrap:wrap;align-items:center;
-  font-family:var(--font-display);font-size:15px;color:var(--text-tertiary)}
+      .strip {
+        background: var(--surface-paper);
+        border-block: 1px solid var(--border-subtle);
+        padding: var(--space-8) 0;
+      }
+      .strip-in {
+        display: flex;
+        gap: var(--space-8);
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        font-family: var(--font-display);
+        font-size: 15px;
+        color: var(--text-tertiary);
+      }
 
-.grid{display:grid;gap:var(--space-6)}
-.g-2{grid-template-columns:repeat(2,1fr)}
-.g-3{grid-template-columns:repeat(3,1fr)}
-.g-4{grid-template-columns:repeat(4,1fr)}
-.g-5{grid-template-columns:repeat(5,1fr)}
-@media(max-width:1000px){.g-3,.g-4,.g-5{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:680px){.g-2,.g-3,.g-4,.g-5{grid-template-columns:1fr}}
-.card{background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);
-  padding:var(--space-6);transition:all .25s var(--ease-out)}
-.card h3{font-size:20px;margin-bottom:var(--space-2)}
-.card p{font-size:15px;color:var(--text-secondary)}
-.card .ico{width:42px;height:42px;border-radius:var(--radius-md);background:var(--brand-soft);color:var(--brand-deep);
-  display:grid;place-items:center;font-size:20px;margin-bottom:var(--space-4)}
-.num{font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--brand);letter-spacing:.1em;
-  display:block;margin-bottom:var(--space-3)}
-.sec-head{max-width:720px;margin-bottom:var(--space-12)}
-.sec-head h2{font-size:clamp(29px,4vw,46px);margin:var(--space-3) 0}
-.sec-head h2 em{font-style:normal;color:var(--brand)}
-.sec-head p{color:var(--text-secondary);font-size:18px}
-.sec-head.center{margin-left:auto;margin-right:auto}
+      .grid {
+        display: grid;
+        gap: var(--space-6);
+      }
+      .g-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .g-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .g-4 {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .g-5 {
+        grid-template-columns: repeat(5, 1fr);
+      }
+      @media (max-width: 1000px) {
+        .g-3,
+        .g-4,
+        .g-5 {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 680px) {
+        .g-2,
+        .g-3,
+        .g-4,
+        .g-5 {
+          grid-template-columns: 1fr;
+        }
+      }
+      .card {
+        background: var(--surface-card);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-lg);
+        padding: var(--space-6);
+        transition: all 0.25s var(--ease-out);
+      }
+      .card h3 {
+        font-size: 20px;
+        margin-bottom: var(--space-2);
+      }
+      .card p {
+        font-size: 15px;
+        color: var(--text-secondary);
+      }
+      .card .ico {
+        width: 42px;
+        height: 42px;
+        border-radius: var(--radius-md);
+        background: var(--brand-soft);
+        color: var(--brand-deep);
+        display: grid;
+        place-items: center;
+        font-size: 20px;
+        margin-bottom: var(--space-4);
+      }
+      .num {
+        font-family: var(--font-display);
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--brand);
+        letter-spacing: 0.1em;
+        display: block;
+        margin-bottom: var(--space-3);
+      }
+      .sec-head {
+        max-width: 720px;
+        margin-bottom: var(--space-12);
+      }
+      .sec-head h2 {
+        font-size: clamp(29px, 4vw, 46px);
+        margin: var(--space-3) 0;
+      }
+      .sec-head h2 em {
+        font-style: normal;
+        color: var(--brand);
+      }
+      .sec-head p {
+        color: var(--text-secondary);
+        font-size: 18px;
+      }
+      .sec-head.center {
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-.pillar{background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:var(--space-6)}
-.pillar .letter{font-family:var(--font-display);font-size:42px;font-weight:700;color:var(--brand);line-height:1;letter-spacing:-.04em}
-.pillar h3{font-size:19px;margin:var(--space-3) 0 var(--space-2)}
-.pillar p{font-size:14.5px;color:var(--text-secondary)}
-.pillar .analogy{font-size:13.5px;color:var(--text-tertiary);font-style:italic;margin-top:var(--space-3);
-  padding-top:var(--space-3);border-top:1px solid var(--border-subtle)}
+      .pillar {
+        background: var(--surface-card);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-lg);
+        padding: var(--space-6);
+      }
+      .pillar .letter {
+        font-family: var(--font-display);
+        font-size: 42px;
+        font-weight: 700;
+        color: var(--brand);
+        line-height: 1;
+        letter-spacing: -0.04em;
+      }
+      .pillar h3 {
+        font-size: 19px;
+        margin: var(--space-3) 0 var(--space-2);
+      }
+      .pillar p {
+        font-size: 14.5px;
+        color: var(--text-secondary);
+      }
+      .pillar .analogy {
+        font-size: 13.5px;
+        color: var(--text-tertiary);
+        font-style: italic;
+        margin-top: var(--space-3);
+        padding-top: var(--space-3);
+        border-top: 1px solid var(--border-subtle);
+      }
 
-.level{border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:var(--space-6);background:var(--surface-card)}
-.level ul{list-style:none;margin-top:var(--space-4);display:flex;flex-direction:column;gap:10px;font-size:15px}
-.level li{display:flex;gap:10px;color:var(--text-secondary)}
-.level li::before{content:"♪";color:var(--brand);flex:none}
+      .level {
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-lg);
+        padding: var(--space-6);
+        background: var(--surface-card);
+      }
+      .level ul {
+        list-style: none;
+        margin-top: var(--space-4);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 15px;
+      }
+      .level li {
+        display: flex;
+        gap: 10px;
+        color: var(--text-secondary);
+      }
+      .level li::before {
+        content: "♪";
+        color: var(--brand);
+        flex: none;
+      }
 
-.fitbox{border-radius:var(--radius-lg);padding:var(--space-8);border:1px solid var(--border-subtle);background:var(--surface-card)}
-.fitbox.no{background:var(--surface-sunken)}
-.fitbox ol{list-style:none;counter-reset:i;margin-top:var(--space-5);display:flex;flex-direction:column;gap:var(--space-4)}
-.fitbox li{counter-increment:i;display:flex;gap:var(--space-4);font-size:15.5px;color:var(--text-secondary)}
-.fitbox li::before{content:counter(i,decimal-leading-zero);font-family:var(--font-display);font-weight:700;
-  font-size:13px;color:var(--brand);flex:none;padding-top:3px}
-.fitbox.no li::before{color:var(--text-tertiary)}
+      .fitbox {
+        border-radius: var(--radius-lg);
+        padding: var(--space-8);
+        border: 1px solid var(--border-subtle);
+        background: var(--surface-card);
+      }
+      .fitbox.no {
+        background: var(--surface-sunken);
+      }
+      .fitbox ol {
+        list-style: none;
+        counter-reset: i;
+        margin-top: var(--space-5);
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-4);
+      }
+      .fitbox li {
+        counter-increment: i;
+        display: flex;
+        gap: var(--space-4);
+        font-size: 15.5px;
+        color: var(--text-secondary);
+      }
+      .fitbox li::before {
+        content: counter(i, decimal-leading-zero);
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 13px;
+        color: var(--brand);
+        flex: none;
+        padding-top: 3px;
+      }
+      .fitbox.no li::before {
+        color: var(--text-tertiary);
+      }
 
-.offer{border:2px solid var(--brand);border-radius:var(--radius-2xl);padding:var(--space-12) var(--space-10);
-  background:var(--surface-card);box-shadow:var(--shadow-xl);max-width:640px;margin:0 auto;text-align:center}
-.offer ul{list-style:none;text-align:left;margin:var(--space-8) 0;display:flex;flex-direction:column;gap:var(--space-3)}
-.offer li{display:flex;justify-content:space-between;gap:var(--space-4);font-size:15px;padding-bottom:var(--space-3);
-  border-bottom:1px dashed var(--border-subtle)}
-.offer li s{color:var(--text-tertiary);flex:none}
-.price-old{color:var(--text-tertiary);text-decoration:line-through;font-size:16px}
-.price-big{font-family:var(--font-display);font-size:58px;font-weight:600;letter-spacing:-.04em;color:var(--brand);line-height:1}
-.guarantee{display:flex;gap:var(--space-5);align-items:center;background:var(--surface-sunken);
-  border-radius:var(--radius-lg);padding:var(--space-6);max-width:640px;margin:var(--space-8) auto 0}
-.seal{width:76px;height:76px;border-radius:50%;border:2px solid var(--brand);color:var(--brand);flex:none;
-  display:grid;place-items:center;text-align:center;font-family:var(--font-display);font-weight:700;line-height:1.1;font-size:19px}
+      .offer {
+        border: 2px solid var(--brand);
+        border-radius: var(--radius-2xl);
+        padding: var(--space-12) var(--space-10);
+        background: var(--surface-card);
+        box-shadow: var(--shadow-xl);
+        max-width: 640px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .offer ul {
+        list-style: none;
+        text-align: left;
+        margin: var(--space-8) 0;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-3);
+      }
+      .offer li {
+        display: flex;
+        justify-content: space-between;
+        gap: var(--space-4);
+        font-size: 15px;
+        padding-bottom: var(--space-3);
+        border-bottom: 1px dashed var(--border-subtle);
+      }
+      .offer li s {
+        color: var(--text-tertiary);
+        flex: none;
+      }
+      .price-old {
+        color: var(--text-tertiary);
+        text-decoration: line-through;
+        font-size: 16px;
+      }
+      .price-big {
+        font-family: var(--font-display);
+        font-size: 58px;
+        font-weight: 600;
+        letter-spacing: -0.04em;
+        color: var(--brand);
+        line-height: 1;
+      }
+      .guarantee {
+        display: flex;
+        gap: var(--space-5);
+        align-items: center;
+        background: var(--surface-sunken);
+        border-radius: var(--radius-lg);
+        padding: var(--space-6);
+        max-width: 640px;
+        margin: var(--space-8) auto 0;
+      }
+      .seal {
+        width: 76px;
+        height: 76px;
+        border-radius: 50%;
+        border: 2px solid var(--brand);
+        color: var(--brand);
+        flex: none;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        font-family: var(--font-display);
+        font-weight: 700;
+        line-height: 1.1;
+        font-size: 19px;
+      }
 
-.quote{background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);overflow:hidden}
-.vidph{aspect-ratio:9/11;background:linear-gradient(150deg,#2A1420,#4A1E33);display:grid;place-items:center;color:#fff}
-.vidph .play{width:54px;height:54px;border-radius:50%;background:rgba(255,255,255,.16);border:2px solid rgba(255,255,255,.5);
-  display:grid;place-items:center;font-size:19px}
-.quote .qb{padding:var(--space-5)}
-.quote .qb p{font-size:15px;line-height:1.55;margin-bottom:var(--space-4)}
-.who b{display:block;font-size:14px}.who span{font-size:13px;color:var(--text-tertiary)}
-.stars{color:var(--gold);font-size:13px;letter-spacing:2px;margin-bottom:var(--space-2)}
+      .quote {
+        background: var(--surface-card);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+      }
+      .vidph {
+        aspect-ratio: 9/11;
+        background: linear-gradient(150deg, #2a1420, #4a1e33);
+        display: grid;
+        place-items: center;
+        color: #fff;
+      }
+      .vidph .play {
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.16);
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        display: grid;
+        place-items: center;
+        font-size: 19px;
+      }
+      .quote .qb {
+        padding: var(--space-5);
+      }
+      .quote .qb p {
+        font-size: 15px;
+        line-height: 1.55;
+        margin-bottom: var(--space-4);
+      }
+      .who b {
+        display: block;
+        font-size: 14px;
+      }
+      .who span {
+        font-size: 13px;
+        color: var(--text-tertiary);
+      }
+      .stars {
+        color: var(--gold);
+        font-size: 13px;
+        letter-spacing: 2px;
+        margin-bottom: var(--space-2);
+      }
 
-.faq{border-top:1px solid var(--border-subtle)}
-.faq details{border-bottom:1px solid var(--border-subtle)}
-.faq summary{cursor:pointer;padding:var(--space-5) 0;font-family:var(--font-display);font-size:19px;font-weight:500;
-  list-style:none;display:flex;justify-content:space-between;gap:var(--space-4)}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";color:var(--brand);font-size:24px;line-height:1}
-.faq details[open] summary::after{content:"−"}
-.faq p{padding-bottom:var(--space-5);color:var(--text-secondary);font-size:16px;max-width:72ch}
+      .faq {
+        border-top: 1px solid var(--border-subtle);
+      }
+      .faq details {
+        border-bottom: 1px solid var(--border-subtle);
+      }
+      .faq summary {
+        cursor: pointer;
+        padding: var(--space-5) 0;
+        font-family: var(--font-display);
+        font-size: 19px;
+        font-weight: 500;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        gap: var(--space-4);
+      }
+      .faq summary::-webkit-details-marker {
+        display: none;
+      }
+      .faq summary::after {
+        content: "+";
+        color: var(--brand);
+        font-size: 24px;
+        line-height: 1;
+      }
+      .faq details[open] summary::after {
+        content: "−";
+      }
+      .faq p {
+        padding-bottom: var(--space-5);
+        color: var(--text-secondary);
+        font-size: 16px;
+        max-width: 72ch;
+      }
 
-.cta-band{background:var(--brand);color:#fff;border-radius:var(--radius-2xl);padding:var(--space-16) var(--space-10);text-align:center}
-.cta-band h2{font-size:clamp(28px,4vw,44px);margin-bottom:var(--space-4)}
-.cta-band h2 em{font-style:normal;opacity:.78}
-.cta-band p{opacity:.92;max-width:52ch;margin:0 auto var(--space-8)}
+      .cta-band {
+        background: var(--brand);
+        color: #fff;
+        border-radius: var(--radius-2xl);
+        padding: var(--space-16) var(--space-10);
+        text-align: center;
+      }
+      .cta-band h2 {
+        font-size: clamp(28px, 4vw, 44px);
+        margin-bottom: var(--space-4);
+      }
+      .cta-band h2 em {
+        font-style: normal;
+        opacity: 0.78;
+      }
+      .cta-band p {
+        opacity: 0.92;
+        max-width: 52ch;
+        margin: 0 auto var(--space-8);
+      }
 
-footer{background:var(--ink);color:#B9A9AF;padding:var(--space-16) 0 var(--space-10)}
-footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:var(--space-10)}
-@media(max-width:800px){footer .cols{grid-template-columns:1fr 1fr}}
-footer h4{color:#fff;font-size:12px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:var(--space-4);
-  font-family:var(--font-sans);font-weight:700}
-footer a{display:block;color:#B9A9AF;text-decoration:none;font-size:15px;margin-bottom:10px;cursor:pointer}
-footer a:hover{color:#fff}
-.fbot{border-top:1px solid rgba(255,255,255,.12);margin-top:var(--space-12);padding-top:var(--space-6);
-  display:flex;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap;font-size:13px;color:#7E7076}
+      footer {
+        background: var(--ink);
+        color: #b9a9af;
+        padding: var(--space-16) 0 var(--space-10);
+      }
+      footer .cols {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: var(--space-10);
+      }
+      @media (max-width: 800px) {
+        footer .cols {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      footer h4 {
+        color: #fff;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: var(--space-4);
+        font-family: var(--font-sans);
+        font-weight: 700;
+      }
+      footer a {
+        display: block;
+        color: #b9a9af;
+        text-decoration: none;
+        font-size: 15px;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+      footer a:hover {
+        color: #fff;
+      }
+      .fbot {
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        margin-top: var(--space-12);
+        padding-top: var(--space-6);
+        display: flex;
+        justify-content: space-between;
+        gap: var(--space-4);
+        flex-wrap: wrap;
+        font-size: 13px;
+        color: #7e7076;
+      }
 
-.leadform{display:flex;gap:var(--space-3);flex-wrap:wrap;max-width:560px;margin:var(--space-6) auto 0}
-.leadform input{flex:1 1 210px;padding:14px 16px;border:1.5px solid var(--border-subtle);border-radius:var(--radius-pill);
-  font-family:var(--font-sans);font-size:15px;background:var(--surface-page);color:var(--text-primary)}
-.leadform input:focus{outline:none;border-color:var(--brand)}
-.lgpd{font-size:12.5px;color:var(--text-tertiary);margin-top:var(--space-4);max-width:52ch;margin-inline:auto}
+      .leadform {
+        display: flex;
+        gap: var(--space-3);
+        flex-wrap: wrap;
+        max-width: 560px;
+        margin: var(--space-6) auto 0;
+      }
+      .leadform input {
+        flex: 1 1 210px;
+        padding: 14px 16px;
+        border: 1.5px solid var(--border-subtle);
+        border-radius: var(--radius-pill);
+        font-family: var(--font-sans);
+        font-size: 15px;
+        background: var(--surface-page);
+        color: var(--text-primary);
+      }
+      .leadform input:focus {
+        outline: none;
+        border-color: var(--brand);
+      }
+      .lgpd {
+        font-size: 12.5px;
+        color: var(--text-tertiary);
+        margin-top: var(--space-4);
+        max-width: 52ch;
+        margin-inline: auto;
+      }
 
-.tool{background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-xl);
-  padding:var(--space-8);box-shadow:var(--shadow-sm)}
-.tool h3{font-size:24px;margin-bottom:var(--space-2)}
-.tool .toolsub{color:var(--text-secondary);font-size:15px;margin-bottom:var(--space-6)}
-@media(max-width:560px){.tool{padding:var(--space-5)}}
+      .tool {
+        background: var(--surface-card);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-xl);
+        padding: var(--space-8);
+        box-shadow: var(--shadow-sm);
+      }
+      .tool h3 {
+        font-size: 24px;
+        margin-bottom: var(--space-2);
+      }
+      .tool .toolsub {
+        color: var(--text-secondary);
+        font-size: 15px;
+        margin-bottom: var(--space-6);
+      }
+      @media (max-width: 560px) {
+        .tool {
+          padding: var(--space-5);
+        }
+      }
 
-.tuner-display{background:var(--ink);border-radius:var(--radius-lg);padding:var(--space-8) var(--space-5);text-align:center;color:#fff}
-.tuner-note{font-family:var(--font-display);font-size:clamp(54px,12vw,76px);font-weight:600;letter-spacing:-.04em;
-  line-height:1;transition:color .2s}
-.tuner-note.ok{color:#4ADE80}
-.tuner-freq{font-size:13px;color:#A99AA1;margin-top:var(--space-2);font-variant-numeric:tabular-nums}
-.gauge{position:relative;height:60px;margin:var(--space-6) auto 0;max-width:420px}
-.gauge-track{position:absolute;top:26px;left:0;right:0;height:4px;background:rgba(255,255,255,.14);border-radius:2px}
-.gauge-zone{position:absolute;top:24px;left:calc(50% - 22px);width:44px;height:8px;background:rgba(74,222,128,.28);border-radius:4px}
-.gauge-center{position:absolute;top:14px;left:50%;width:2px;height:28px;background:rgba(255,255,255,.6)}
-.needle{position:absolute;top:8px;width:4px;height:40px;background:var(--brand);border-radius:2px;left:50%;
-  transform:translateX(-50%);transition:left .09s linear,background .2s}
-.needle.ok{background:#4ADE80}
-.gauge-labels{position:absolute;bottom:0;left:0;right:0;display:flex;justify-content:space-between;
-  font-size:11px;color:#7E7076;letter-spacing:.04em}
-.cents{font-size:14px;color:#D8CCD1;margin-top:var(--space-5);font-variant-numeric:tabular-nums}
-.mic-state{margin-top:var(--space-5);display:flex;gap:var(--space-3);align-items:center;flex-wrap:wrap}
-.alertbox{background:var(--brand-soft);color:var(--brand-deep);border-radius:var(--radius-md);
-  padding:var(--space-4) var(--space-5);font-size:14px;margin-top:var(--space-5);display:none;line-height:1.5}
-.alertbox.on{display:block}
+      .tuner-display {
+        background: var(--ink);
+        border-radius: var(--radius-lg);
+        padding: var(--space-8) var(--space-5);
+        text-align: center;
+        color: #fff;
+      }
+      .tuner-note {
+        font-family: var(--font-display);
+        font-size: clamp(54px, 12vw, 76px);
+        font-weight: 600;
+        letter-spacing: -0.04em;
+        line-height: 1;
+        transition: color 0.2s;
+      }
+      .tuner-note.ok {
+        color: #4ade80;
+      }
+      .tuner-freq {
+        font-size: 13px;
+        color: #a99aa1;
+        margin-top: var(--space-2);
+        font-variant-numeric: tabular-nums;
+      }
+      .gauge {
+        position: relative;
+        height: 60px;
+        margin: var(--space-6) auto 0;
+        max-width: 420px;
+      }
+      .gauge-track {
+        position: absolute;
+        top: 26px;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.14);
+        border-radius: 2px;
+      }
+      .gauge-zone {
+        position: absolute;
+        top: 24px;
+        left: calc(50% - 22px);
+        width: 44px;
+        height: 8px;
+        background: rgba(74, 222, 128, 0.28);
+        border-radius: 4px;
+      }
+      .gauge-center {
+        position: absolute;
+        top: 14px;
+        left: 50%;
+        width: 2px;
+        height: 28px;
+        background: rgba(255, 255, 255, 0.6);
+      }
+      .needle {
+        position: absolute;
+        top: 8px;
+        width: 4px;
+        height: 40px;
+        background: var(--brand);
+        border-radius: 2px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition:
+          left 0.09s linear,
+          background 0.2s;
+      }
+      .needle.ok {
+        background: #4ade80;
+      }
+      .gauge-labels {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        font-size: 11px;
+        color: #7e7076;
+        letter-spacing: 0.04em;
+      }
+      .cents {
+        font-size: 14px;
+        color: #d8ccd1;
+        margin-top: var(--space-5);
+        font-variant-numeric: tabular-nums;
+      }
+      .mic-state {
+        margin-top: var(--space-5);
+        display: flex;
+        gap: var(--space-3);
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .alertbox {
+        background: var(--brand-soft);
+        color: var(--brand-deep);
+        border-radius: var(--radius-md);
+        padding: var(--space-4) var(--space-5);
+        font-size: 14px;
+        margin-top: var(--space-5);
+        display: none;
+        line-height: 1.5;
+      }
+      .alertbox.on {
+        display: block;
+      }
 
-.chordpick{display:flex;gap:var(--space-2);flex-wrap:wrap;margin-bottom:var(--space-6)}
-.chip{padding:9px 16px;border-radius:var(--radius-pill);border:1.5px solid var(--border-subtle);background:transparent;
-  font-family:var(--font-sans);font-size:14px;font-weight:600;cursor:pointer;color:var(--text-secondary)}
-.chip.on{background:var(--brand);border-color:var(--brand);color:#fff}
-.voices{display:grid;gap:var(--space-3);margin-bottom:var(--space-6)}
-.voice{display:flex;align-items:center;gap:var(--space-4);padding:var(--space-4) var(--space-5);
-  border:1.5px solid var(--border-subtle);border-radius:var(--radius-lg);background:var(--surface-page);
-  transition:all .2s var(--ease-out);cursor:pointer}
-.voice.active{border-color:var(--brand);background:var(--brand-soft)}
-.voice.muted{opacity:.42}
-.voice .vname{flex:1}
-.voice .vname b{display:block;font-size:16px}
-.voice .vname span{font-size:13px;color:var(--text-secondary)}
-.voice .vnote{font-family:var(--font-display);font-size:25px;font-weight:600;letter-spacing:-.03em;color:var(--brand)}
-.bars{display:flex;gap:3px;align-items:flex-end;height:26px;width:32px;flex:none}
-.bars i{flex:1;background:var(--brand);border-radius:2px;height:22%}
-.voice.playing .bars i:nth-child(1){animation:b1 .8s infinite alternate}
-.voice.playing .bars i:nth-child(2){animation:b2 .62s infinite alternate}
-.voice.playing .bars i:nth-child(3){animation:b3 .94s infinite alternate}
-@keyframes b1{to{height:95%}}@keyframes b2{to{height:62%}}@keyframes b3{to{height:100%}}
-.toolbar{display:flex;gap:var(--space-3);flex-wrap:wrap;align-items:center}
-.slider{display:flex;align-items:center;gap:var(--space-3);font-size:13px;color:var(--text-tertiary)}
-input[type=range]{accent-color:var(--brand)}
+      .chordpick {
+        display: flex;
+        gap: var(--space-2);
+        flex-wrap: wrap;
+        margin-bottom: var(--space-6);
+      }
+      .chip {
+        padding: 9px 16px;
+        border-radius: var(--radius-pill);
+        border: 1.5px solid var(--border-subtle);
+        background: transparent;
+        font-family: var(--font-sans);
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        color: var(--text-secondary);
+      }
+      .chip.on {
+        background: var(--brand);
+        border-color: var(--brand);
+        color: #fff;
+      }
+      .voices {
+        display: grid;
+        gap: var(--space-3);
+        margin-bottom: var(--space-6);
+      }
+      .voice {
+        display: flex;
+        align-items: center;
+        gap: var(--space-4);
+        padding: var(--space-4) var(--space-5);
+        border: 1.5px solid var(--border-subtle);
+        border-radius: var(--radius-lg);
+        background: var(--surface-page);
+        transition: all 0.2s var(--ease-out);
+        cursor: pointer;
+      }
+      .voice.active {
+        border-color: var(--brand);
+        background: var(--brand-soft);
+      }
+      .voice.muted {
+        opacity: 0.42;
+      }
+      .voice .vname {
+        flex: 1;
+      }
+      .voice .vname b {
+        display: block;
+        font-size: 16px;
+      }
+      .voice .vname span {
+        font-size: 13px;
+        color: var(--text-secondary);
+      }
+      .voice .vnote {
+        font-family: var(--font-display);
+        font-size: 25px;
+        font-weight: 600;
+        letter-spacing: -0.03em;
+        color: var(--brand);
+      }
+      .bars {
+        display: flex;
+        gap: 3px;
+        align-items: flex-end;
+        height: 26px;
+        width: 32px;
+        flex: none;
+      }
+      .bars i {
+        flex: 1;
+        background: var(--brand);
+        border-radius: 2px;
+        height: 22%;
+      }
+      .voice.playing .bars i:nth-child(1) {
+        animation: b1 0.8s infinite alternate;
+      }
+      .voice.playing .bars i:nth-child(2) {
+        animation: b2 0.62s infinite alternate;
+      }
+      .voice.playing .bars i:nth-child(3) {
+        animation: b3 0.94s infinite alternate;
+      }
+      @keyframes b1 {
+        to {
+          height: 95%;
+        }
+      }
+      @keyframes b2 {
+        to {
+          height: 62%;
+        }
+      }
+      @keyframes b3 {
+        to {
+          height: 100%;
+        }
+      }
+      .toolbar {
+        display: flex;
+        gap: var(--space-3);
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .slider {
+        display: flex;
+        align-items: center;
+        gap: var(--space-3);
+        font-size: 13px;
+        color: var(--text-tertiary);
+      }
+      input[type="range"] {
+        accent-color: var(--brand);
+      }
 
-.demobar{background:var(--ink);color:#fff;font-size:12.5px;padding:9px var(--space-4);text-align:center}
-.demobar b{color:var(--brand)}
-.demobar button{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;
-  border-radius:var(--radius-pill);font-size:11px;padding:3px 10px;margin-left:8px;cursor:pointer;font-family:var(--font-sans)}
-.page{display:none}.page.on{display:block}
-</style>
-</head>
-<body>
-
-<div class="demobar">PROTÓTIPO — textos, números e depoimentos são <b>fictícios</b>. As duas ferramentas de áudio são reais e funcionam.
-<button onclick="toggleTheme()">alternar tema</button></div>
-
-<header class="nav">
-  <div class="wrap nav-in">
-    <a class="logo" onclick="go('home')"><span class="mark">♪</span> Tinna Silva</a>
-    <nav class="nav-links">
-      <a onclick="go('home','metodo')">O método</a>
-      <a onclick="go('home','conteudo')">Conteúdo</a>
-      <a onclick="go('workshops')">Workshops</a>
-      <a onclick="go('ferramentas')">Ferramentas grátis</a>
-      <a onclick="go('home','faq')">Dúvidas</a>
-    </nav>
-    <div class="nav-cta">
-      <a class="btn btn-ghost btn-sm" onclick="alertaAluno()">Área do aluno</a>
-      <a class="btn btn-primary btn-sm" onclick="go('home','oferta')">Quero começar</a>
+      .demobar {
+        background: var(--ink);
+        color: #fff;
+        font-size: 12.5px;
+        padding: 9px var(--space-4);
+        text-align: center;
+      }
+      .demobar b {
+        color: var(--brand);
+      }
+      .demobar button {
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        color: #fff;
+        border-radius: var(--radius-pill);
+        font-size: 11px;
+        padding: 3px 10px;
+        margin-left: 8px;
+        cursor: pointer;
+        font-family: var(--font-sans);
+      }
+      .page {
+        display: none;
+      }
+      .page.on {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="demobar">
+      PROTÓTIPO — textos, números e depoimentos são <b>fictícios</b>. As duas
+      ferramentas de áudio são reais e funcionam.
+      <button onclick="toggleTheme()">alternar tema</button>
     </div>
-  </div>
-</header>
 
-<!-- ============ HOME ============ -->
-<div class="page on" id="p-home">
-
-<section class="hero">
-  <svg class="wavefield" viewBox="0 0 1200 600" preserveAspectRatio="none" aria-hidden="true">
-    <g fill="none" stroke="#E11D62" stroke-width="1.2">
-      <path d="M0 460 Q 100 380 200 460 T 400 460 T 600 460 T 800 460 T 1000 460 T 1200 460"/>
-      <path d="M0 500 Q 100 420 200 500 T 400 500 T 600 500 T 800 500 T 1000 500 T 1200 500" opacity=".7"/>
-      <path d="M0 540 Q 100 460 200 540 T 400 540 T 600 540 T 800 540 T 1000 540 T 1200 540" opacity=".45"/>
-      <path d="M0 420 Q 100 340 200 420 T 400 420 T 600 420 T 800 420 T 1000 420 T 1200 420" opacity=".3"/>
-    </g>
-  </svg>
-  <div class="wrap">
-    <div class="hero-grid">
-      <div>
-        <span class="eyebrow">Harmonia vocal na prática</span>
-        <h1>Cantar em harmonia <em>não é dom.</em> É método — e o seu grupo pode aprender.</h1>
-        <p class="lead">Se o seu ministério canta junto mas a segunda voz sempre escorrega de volta para a melodia,
-          o problema nunca foi talento. Foi caminho. E caminho se ensina.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary btn-lg" onclick="go('home','oferta')">Quero aprender harmonia</a>
-          <a class="btn btn-inverse btn-lg" onclick="go('workshops')">Levar à minha igreja</a>
+    <header class="nav">
+      <div class="wrap nav-in">
+        <a class="logo" onclick="go('home')"
+          ><span class="mark">♪</span> Tinna Silva</a
+        >
+        <nav class="nav-links">
+          <a onclick="go('home', 'metodo')">O método</a>
+          <a onclick="go('home', 'conteudo')">Conteúdo</a>
+          <a onclick="go('workshops')">Workshops</a>
+          <a onclick="go('ferramentas')">Ferramentas grátis</a>
+          <a onclick="go('home', 'faq')">Dúvidas</a>
+        </nav>
+        <div class="nav-cta">
+          <a class="btn btn-ghost btn-sm" onclick="alertaAluno()"
+            >Área do aluno</a
+          >
+          <a class="btn btn-primary btn-sm" onclick="go('home', 'oferta')"
+            >Quero começar</a
+          >
         </div>
-        <p class="hero-note">Garantia de 7 dias · Acesso vitalício · Pix, boleto ou 12x no cartão</p>
-        <div class="hero-stats">
-          <div><b>10+</b><span>anos ensinando</span></div>
-          <div><b>9.600</b><span>seguidores</span></div>
-          <div><b>12</b><span>ministérios formados</span></div>
-          <div><b>4,9★</b><span>avaliação</span></div>
+      </div>
+    </header>
+
+    <!-- ============ HOME ============ -->
+    <div class="page on" id="p-home">
+      <section class="hero">
+        <svg
+          class="wavefield"
+          viewBox="0 0 1200 600"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <g fill="none" stroke="#E11D62" stroke-width="1.2">
+            <path
+              d="M0 460 Q 100 380 200 460 T 400 460 T 600 460 T 800 460 T 1000 460 T 1200 460"
+            />
+            <path
+              d="M0 500 Q 100 420 200 500 T 400 500 T 600 500 T 800 500 T 1000 500 T 1200 500"
+              opacity=".7"
+            />
+            <path
+              d="M0 540 Q 100 460 200 540 T 400 540 T 600 540 T 800 540 T 1000 540 T 1200 540"
+              opacity=".45"
+            />
+            <path
+              d="M0 420 Q 100 340 200 420 T 400 420 T 600 420 T 800 420 T 1000 420 T 1200 420"
+              opacity=".3"
+            />
+          </g>
+        </svg>
+        <div class="wrap">
+          <div class="hero-grid">
+            <div>
+              <span class="eyebrow">Harmonia vocal na prática</span>
+              <h1>
+                Cantar em harmonia <em>não é dom.</em> É método e o seu grupo
+                pode aprender.
+              </h1>
+              <p class="lead">
+                Se o seu ministério canta junto mas a segunda voz sempre
+                escorrega de volta para a melodia, o problema nunca foi talento.
+                Foi caminho. E caminho se ensina.
+              </p>
+              <div class="hero-actions">
+                <a class="btn btn-primary btn-lg" onclick="go('home', 'oferta')"
+                  >Quero aprender harmonia</a
+                >
+                <a class="btn btn-inverse btn-lg" onclick="go('workshops')"
+                  >Levar à minha igreja</a
+                >
+              </div>
+              <p class="hero-note">
+                Garantia de 7 dias · Acesso vitalício · Pix, boleto ou 12x no
+                cartão
+              </p>
+              <div class="hero-stats">
+                <div><b>10+</b><span>anos ensinando</span></div>
+                <div><b>9.600</b><span>seguidores</span></div>
+                <div><b>12</b><span>ministérios formados</span></div>
+                <div><b>4,9★</b><span>avaliação</span></div>
+              </div>
+            </div>
+            <div class="portrait">
+              <div>
+                <div class="mic">🎤</div>
+                <div class="ph">Foto profissional<br />da Tinna</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="strip">
+        <div class="wrap strip-in">
+          <span>Ministério Louvor Kairós</span><span>·</span
+          ><span>IBC Vila Nova</span><span>·</span>
+          <span>Grupo Vocal Adonai</span><span>·</span
+          ><span>Ministério Resgate</span><span>·</span
+          ><span>Coral Vozes da Fé</span>
         </div>
       </div>
-      <div class="portrait"><div><div class="mic">🎤</div><div class="ph">Foto profissional<br>da Tinna</div></div></div>
-    </div>
-  </div>
-</section>
 
-<div class="strip"><div class="wrap strip-in">
-  <span>Ministério Louvor Kairós</span><span>·</span><span>IBC Vila Nova</span><span>·</span>
-  <span>Grupo Vocal Adonai</span><span>·</span><span>Ministério Resgate</span><span>·</span><span>Coral Vozes da Fé</span>
-</div></div>
-
-<section>
-  <div class="wrap">
-    <div class="grid g-2" style="gap:var(--space-16);align-items:start">
-      <div>
-        <span class="eyebrow">O problema</span>
-        <h2 style="font-size:clamp(27px,3.4vw,40px);margin:var(--space-3) 0">Vocês ensaiam há anos e a segunda voz ainda não para em pé</h2>
-        <p class="muted" style="margin-bottom:var(--space-4)">Todo mundo começa certo. No meio da música o naipe
-          inteiro escorrega de volta para a melodia principal, e ninguém sabe dizer onde exatamente perdeu.</p>
-        <p class="muted">Aí a conclusão é sempre a mesma: <em>“o pessoal não tem ouvido”</em>.
-          Só que não é ouvido. É <b style="color:var(--text-primary)">coordenação</b> — e coordenação se treina.</p>
-      </div>
-      <div>
-        <span class="eyebrow">A solução</span>
-        <h2 style="font-size:clamp(27px,3.4vw,40px);margin:var(--space-3) 0">Um caminho na ordem certa, aplicado ao ensaio real</h2>
-        <p class="muted" style="margin-bottom:var(--space-4)">Você aprende a encontrar sua voz dentro do arranjo,
-          sustentá-la com o grupo cantando em volta e levar isso para a segunda-feira de ensaio.</p>
-        <p class="muted">Sem teoria musical como pré-requisito, sem exercício de conservatório solto.
-          Feito para quem canta servindo.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="alt" id="metodo">
-  <div class="wrap">
-    <div class="sec-head center">
-      <span class="eyebrow">A metodologia</span>
-      <h2>Conheça o método <em>N.A.I.P.E</em></h2>
-      <p>Cinco bases, na ordem exata, sem pular etapa. É o que separa um grupo que canta junto de um grupo que canta em harmonia.</p>
-    </div>
-    <div class="grid g-5" id="pillars"></div>
-    <p class="center muted" style="margin-top:var(--space-8);font-size:13.5px">
-      ⚠️ O nome do método é uma sugestão deste protótipo — precisa ser validado com a Tinna.</p>
-  </div>
-</section>
-
-<section id="conteudo">
-  <div class="wrap">
-    <div class="sec-head center">
-      <span class="eyebrow">Conteúdo</span>
-      <h2>Do primeiro naipe ao <em>arranjo completo</em></h2>
-      <p>Um caminho só, do absoluto zero até conduzir o ministério inteiro.</p>
-    </div>
-    <div class="grid g-3" id="levels"></div>
-  </div>
-</section>
-
-<section class="alt">
-  <div class="wrap">
-    <div class="sec-head center">
-      <span class="eyebrow">Grátis · sem cadastro</span>
-      <h2>Experimente as ferramentas <em>antes de decidir</em></h2>
-      <p>Duas ferramentas que funcionam direto no navegador. Teste agora e sinta a diferença no seu estudo.</p>
-    </div>
-    <div class="grid g-2" style="max-width:820px;margin:0 auto">
-      <div class="card"><div class="ico">🎯</div><h3>Afinador de voz</h3>
-        <p>Cante e veja em tempo real qual nota está saindo e se você está afinado. Usa o microfone do seu aparelho.</p>
-        <div style="margin-top:var(--space-5)"><button class="btn btn-primary btn-sm" onclick="go('ferramentas','afinador')">Abrir afinador</button></div></div>
-      <div class="card"><div class="ico">🎼</div><h3>Tocador de naipes</h3>
-        <p>Ouça soprano, contralto e tenor separados ou juntos. Isole a sua voz e treine sustentar contra o grupo.</p>
-        <div style="margin-top:var(--space-5)"><button class="btn btn-primary btn-sm" onclick="go('ferramentas','naipes')">Abrir tocador</button></div></div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="hero-grid">
-      <div class="portrait" style="aspect-ratio:1/1"><div><div class="mic">📖</div><div class="ph">Vídeo de<br>apresentação</div></div></div>
-      <div>
-        <span class="eyebrow">Quem ensina</span>
-        <h2 style="font-size:clamp(28px,4vw,44px);margin:var(--space-3) 0">Tinna Silva</h2>
-        <p class="muted" style="margin-bottom:var(--space-4)">Comecei cantando no fundo do palco, como back vocal,
-          num ministério pequeno. Levei anos para entender que cantar em harmonia não é questão de ouvido privilegiado.</p>
-        <p class="muted" style="margin-bottom:var(--space-4)">De lá para cá são mais de 10 anos servindo ministérios
-          através da música, formando grupos que hoje sustentam três vozes sem precisar de mim no ensaio.</p>
-        <p class="muted">O método nasceu no ensaio de segunda-feira, não na sala de aula. É de lá que vem tudo o que eu ensino:
-          direto, prático e para quem canta servindo.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="alt">
-  <div class="wrap">
-    <div class="sec-head center">
-      <span class="eyebrow">Alunos reais</span>
-      <h2>O que mudou no <em>ensaio deles</em></h2>
-      <p>Gente que ensaiava há anos sem sair do lugar. Dá o play e ouça.</p>
-    </div>
-    <div class="grid g-4" id="quotes"></div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="grid g-2">
-      <div class="fitbox">
-        <span class="eyebrow">A escolha certa</span>
-        <h3 style="font-size:26px;margin-top:var(--space-2)">É pra você que…</h3>
-        <ol>
-          <li>Canta na igreja e quer segurança para sustentar a sua voz sem medo de errar</li>
-          <li>Lidera um ministério e quer que o grupo pare de cantar tudo em uníssono</li>
-          <li>É back vocal e sente que atrapalha mais do que ajuda</li>
-          <li>Já tentou aprender por vídeos soltos e não saiu do lugar</li>
-          <li>Tem 20 ou 30 minutos por dia para treinar com consistência</li>
-        </ol>
-      </div>
-      <div class="fitbox no">
-        <span class="eyebrow" style="color:var(--text-tertiary)">Porta errada</span>
-        <h3 style="font-size:26px;margin-top:var(--space-2)">Não é pra você que…</h3>
-        <ol>
-          <li>Procura resultado em uma semana, sem praticar</li>
-          <li>Quer virar cantor solo profissional — aqui o foco é o grupo</li>
-          <li>Não pretende aplicar nada no ensaio do seu ministério</li>
-          <li>Prefere depender só de aula presencial e não quer estudar online</li>
-          <li>Não quer ser corrigido nem seguir uma ordem de estudo</li>
-        </ol>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="alt" id="oferta">
-  <div class="wrap">
-    <div class="sec-head center">
-      <span class="eyebrow">Sua matrícula</span>
-      <h2>Tudo que entra <em>no seu acesso</em></h2>
-      <p>Pagamento único. Sem mensalidade, sem pegadinha.</p>
-    </div>
-    <div class="offer">
-      <h3 style="font-size:26px">Curso Harmonia Vocal na Prática</h3>
-      <p class="muted" style="font-size:15px;margin-top:var(--space-2)">Acesso completo ao método N.A.I.P.E, com 3 bônus inclusos.</p>
-      <ul>
-        <li><span>Curso completo — 5 módulos, 62 aulas</span><s>R$ 697</s></li>
-        <li><span>Kit Voz: áudios de aquecimento para baixar</span><s>R$ 197</s></li>
-        <li><span>Bônus: roteiro de ensaio para ministérios</span><s>R$ 247</s></li>
-        <li><span>Bônus: arranjos prontos de 3 vozes</span><s>R$ 297</s></li>
-        <li><span>Comunidade fechada de alunos</span><s>R$ 197</s></li>
-        <li style="border:none"><span>Acesso vitalício + atualizações</span><s>R$ 397</s></li>
-      </ul>
-      <p class="price-old">Separado: R$ 2.032</p>
-      <p class="muted" style="font-size:14px;margin:var(--space-3) 0">você paga hoje</p>
-      <div class="price-big">R$ 497</div>
-      <p class="muted" style="margin:var(--space-3) 0 var(--space-6)">ou 12x de R$ 49,90 no cartão</p>
-      <button class="btn btn-primary btn-lg btn-block" onclick="alertaCheckout()">Quero me matricular</button>
-      <p class="muted" style="font-size:13px;margin-top:var(--space-4)">Pagamento seguro pela Hotmart · Acesso imediato · Cartão, Pix e boleto</p>
-    </div>
-    <div class="guarantee">
-      <div class="seal">07<br><span style="font-size:10px;letter-spacing:.06em">DIAS</span></div>
-      <div><b style="font-size:17px">Garantia incondicional de 7 dias</b>
-        <p class="muted" style="font-size:15px;margin-top:6px">Entrou, assistiu e sentiu que não é para você?
-          Um e-mail resolve e a devolução é integral. O risco é todo nosso.</p></div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap narrow">
-    <div class="sec-head center"><span class="eyebrow">Simples assim</span><h2>São 4 passos</h2></div>
-    <div class="grid g-4">
-      <div class="card"><span class="num">01</span><p>Você se matricula pelo checkout seguro, com o meio de pagamento que preferir.</p></div>
-      <div class="card"><span class="num">02</span><p>Recebe o acesso à plataforma por e-mail, com login e senha, na hora.</p></div>
-      <div class="card"><span class="num">03</span><p>Estuda no seu ritmo, pelo celular ou computador, quantas vezes precisar.</p></div>
-      <div class="card"><span class="num">04</span><p>Aplica no ensaio de segunda e leva o grupo inteiro junto.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="alt">
-  <div class="wrap narrow center">
-    <span class="eyebrow">Ainda na dúvida?</span>
-    <h2 style="font-size:clamp(27px,3.4vw,40px);margin:var(--space-3) 0">Receba a aula aberta <em>“Ache a voz do soprano”</em></h2>
-    <p class="muted" style="max-width:52ch;margin:0 auto">Aula gratuita + o plano de estudo de 7 dias direto no seu e-mail.</p>
-    <div class="leadform">
-      <input type="text" placeholder="Seu nome">
-      <input type="email" placeholder="Seu melhor e-mail">
-      <button class="btn btn-primary" onclick="alertaLead()">Receber grátis</button>
-    </div>
-    <p class="lgpd">Ao enviar você concorda em receber conteúdos por e-mail e com a Política de Privacidade. Pode cancelar quando quiser.</p>
-  </div>
-</section>
-
-<section id="faq">
-  <div class="wrap narrow">
-    <div class="sec-head center"><span class="eyebrow">Dúvidas</span><h2>Perguntas <em>frequentes</em></h2></div>
-    <div class="faq" id="faqbox"></div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap"><div class="cta-band">
-    <h2>Pronto para o seu ministério <em>finalmente cantar em harmonia?</em></h2>
-    <p>Comece hoje. Sete dias para testar — se não for para você, devolvemos cada centavo.</p>
-    <button class="btn btn-inverse btn-lg" onclick="alertaCheckout()">Quero me matricular</button>
-  </div></div>
-</section>
-</div>
-
-<!-- ============ WORKSHOPS ============ -->
-<div class="page" id="p-workshops">
-<section class="hero" style="padding:var(--space-20) 0">
-  <div class="wrap">
-    <span class="eyebrow">Presencial</span>
-    <h1 style="font-size:clamp(32px,4.8vw,56px);max-width:20ch">Leve a harmonia vocal <em>para dentro da sua igreja</em></h1>
-    <p class="lead">Workshops e imersões para o ministério inteiro, no seu espaço e com o seu repertório.
-      Em um fim de semana o grupo sai cantando três vozes.</p>
-    <div class="hero-actions"><a class="btn btn-primary btn-lg" onclick="go('workshops','orcamento')">Pedir orçamento</a></div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="sec-head center"><span class="eyebrow">Formatos</span><h2>Escolha o que cabe <em>no seu ministério</em></h2></div>
-    <div class="grid g-3" id="formats"></div>
-  </div>
-</section>
-
-<section class="alt">
-  <div class="wrap">
-    <div class="grid g-2" style="gap:var(--space-16);align-items:center">
-      <div>
-        <span class="eyebrow">Como funciona</span>
-        <h2 style="font-size:clamp(27px,3.4vw,40px);margin:var(--space-3) 0">Atenção individual e trabalho em grupo, no mesmo encontro</h2>
-        <p class="muted" style="margin-bottom:var(--space-4)">Cada participante passa por teste de voz, classificação
-          de naipe e ajuste de respiração. Depois o grupo junta, e o trabalho vira de conjunto — com o repertório
-          que vocês já cantam no culto.</p>
-        <p class="muted">O ministério não sai com teoria. Sai com <b style="color:var(--text-primary)">uma música pronta,
-          dividida em três vozes</b>, e um roteiro de ensaio para continuar sozinho.</p>
-      </div>
-      <div class="grid" style="gap:var(--space-4)">
-        <div class="card"><h3 style="font-size:17px">1. Diagnóstico</h3><p>Teste de voz individual e classificação dos naipes do grupo.</p></div>
-        <div class="card"><h3 style="font-size:17px">2. Fundamentos</h3><p>Respiração, apoio e afinação aplicados ao contexto de culto.</p></div>
-        <div class="card"><h3 style="font-size:17px">3. Montagem</h3><p>Divisão de vozes numa música do repertório da igreja.</p></div>
-        <div class="card"><h3 style="font-size:17px">4. Continuidade</h3><p>Roteiro de ensaio e material para o grupo seguir sem a professora.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="orcamento">
-  <div class="wrap narrow center">
-    <span class="eyebrow">Agendamento</span>
-    <h2 style="font-size:clamp(27px,3.4vw,40px);margin:var(--space-3) 0">Peça um orçamento</h2>
-    <p class="muted" style="max-width:52ch;margin:0 auto">Conte quantas pessoas compõem o ministério,
-      a cidade e a data pretendida. Respondemos em até 48h.</p>
-    <div class="leadform" style="max-width:660px">
-      <input type="text" placeholder="Nome e igreja">
-      <input type="text" placeholder="Cidade / estado">
-      <input type="text" placeholder="WhatsApp">
-      <button class="btn btn-primary" onclick="alertaLead()">Enviar pedido</button>
-    </div>
-    <p class="lgpd">Seus dados são usados apenas para responder este contato, conforme a Política de Privacidade.</p>
-  </div>
-</section>
-</div>
-
-<!-- ============ FERRAMENTAS ============ -->
-<div class="page" id="p-ferramentas">
-<section style="padding-bottom:var(--space-8)">
-  <div class="wrap">
-    <div class="sec-head center">
-      <span class="eyebrow">Grátis · sem cadastro</span>
-      <h2>Ferramentas para <em>estudar em casa</em></h2>
-      <p>Funcionam direto no navegador, no celular ou no computador. Nada é gravado nem enviado para servidor nenhum.</p>
-    </div>
-  </div>
-</section>
-
-<section style="padding-top:0" id="afinador">
-  <div class="wrap narrow">
-    <div class="tool">
-      <span class="eyebrow">Ferramenta 01</span>
-      <h3 style="margin-top:var(--space-2)">Afinador de voz</h3>
-      <p class="toolsub">Cante uma nota sustentada e veja em tempo real qual é e o quanto está afinada.
-        O áudio é processado no seu próprio aparelho.</p>
-      <div class="tuner-display">
-        <div class="tuner-note" id="tNote">—</div>
-        <div class="tuner-freq" id="tFreq">microfone desligado</div>
-        <div class="gauge">
-          <div class="gauge-track"></div><div class="gauge-zone"></div><div class="gauge-center"></div>
-          <div class="needle" id="tNeedle"></div>
-          <div class="gauge-labels"><span>−50¢ grave</span><span>afinado</span><span>agudo +50¢</span></div>
+      <section>
+        <div class="wrap">
+          <div
+            class="grid g-2"
+            style="gap: var(--space-16); align-items: start"
+          >
+            <div>
+              <span class="eyebrow">O problema</span>
+              <h2
+                style="
+                  font-size: clamp(27px, 3.4vw, 40px);
+                  margin: var(--space-3) 0;
+                "
+              >
+                Vocês ensaiam há anos e a segunda voz ainda não para em pé
+              </h2>
+              <p class="muted" style="margin-bottom: var(--space-4)">
+                Todo mundo começa certo. No meio da música o naipe inteiro
+                escorrega de volta para a melodia principal, e ninguém sabe
+                dizer onde exatamente perdeu.
+              </p>
+              <p class="muted">
+                Aí a conclusão é sempre a mesma:
+                <em>“o pessoal não tem ouvido”</em>. Só que não é ouvido. É
+                <b style="color: var(--text-primary)">coordenação</b> — e
+                coordenação se treina.
+              </p>
+            </div>
+            <div>
+              <span class="eyebrow">A solução</span>
+              <h2
+                style="
+                  font-size: clamp(27px, 3.4vw, 40px);
+                  margin: var(--space-3) 0;
+                "
+              >
+                Um caminho na ordem certa, aplicado ao ensaio real
+              </h2>
+              <p class="muted" style="margin-bottom: var(--space-4)">
+                Você aprende a encontrar sua voz dentro do arranjo, sustentá-la
+                com o grupo cantando em volta e levar isso para a segunda-feira
+                de ensaio.
+              </p>
+              <p class="muted">
+                Sem teoria musical como pré-requisito, sem exercício de
+                conservatório solto. Feito para quem canta servindo.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="cents" id="tCents">&nbsp;</div>
+      </section>
+
+      <section class="alt" id="metodo">
+        <div class="wrap">
+          <div class="sec-head center">
+            <span class="eyebrow">A metodologia</span>
+            <h2>Conheça o método <em>N.A.I.P.E</em></h2>
+            <p>
+              Cinco bases, na ordem exata, sem pular etapa. É o que separa um
+              grupo que canta junto de um grupo que canta em harmonia.
+            </p>
+          </div>
+          <div class="grid g-5" id="pillars"></div>
+          <p
+            class="center muted"
+            style="margin-top: var(--space-8); font-size: 13.5px"
+          >
+            ⚠️ O nome do método é uma sugestão deste protótipo — precisa ser
+            validado com a Tinna.
+          </p>
+        </div>
+      </section>
+
+      <section id="conteudo">
+        <div class="wrap">
+          <div class="sec-head center">
+            <span class="eyebrow">Conteúdo</span>
+            <h2>Do primeiro naipe ao <em>arranjo completo</em></h2>
+            <p>
+              Um caminho só, do absoluto zero até conduzir o ministério inteiro.
+            </p>
+          </div>
+          <div class="grid g-3" id="levels"></div>
+        </div>
+      </section>
+
+      <section class="alt">
+        <div class="wrap">
+          <div class="sec-head center">
+            <span class="eyebrow">Grátis · sem cadastro</span>
+            <h2>Experimente as ferramentas <em>antes de decidir</em></h2>
+            <p>
+              Duas ferramentas que funcionam direto no navegador. Teste agora e
+              sinta a diferença no seu estudo.
+            </p>
+          </div>
+          <div class="grid g-2" style="max-width: 820px; margin: 0 auto">
+            <div class="card">
+              <div class="ico">🎯</div>
+              <h3>Afinador de voz</h3>
+              <p>
+                Cante e veja em tempo real qual nota está saindo e se você está
+                afinado. Usa o microfone do seu aparelho.
+              </p>
+              <div style="margin-top: var(--space-5)">
+                <button
+                  class="btn btn-primary btn-sm"
+                  onclick="go('ferramentas', 'afinador')"
+                >
+                  Abrir afinador
+                </button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="ico">🎼</div>
+              <h3>Tocador de naipes</h3>
+              <p>
+                Ouça soprano, contralto e tenor separados ou juntos. Isole a sua
+                voz e treine sustentar contra o grupo.
+              </p>
+              <div style="margin-top: var(--space-5)">
+                <button
+                  class="btn btn-primary btn-sm"
+                  onclick="go('ferramentas', 'naipes')"
+                >
+                  Abrir tocador
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="hero-grid">
+            <div class="portrait" style="aspect-ratio: 1/1">
+              <div>
+                <div class="mic">📖</div>
+                <div class="ph">Vídeo de<br />apresentação</div>
+              </div>
+            </div>
+            <div>
+              <span class="eyebrow">Quem ensina</span>
+              <h2
+                style="
+                  font-size: clamp(28px, 4vw, 44px);
+                  margin: var(--space-3) 0;
+                "
+              >
+                Tinna Silva
+              </h2>
+              <p class="muted" style="margin-bottom: var(--space-4)">
+                Comecei cantando no fundo do palco, como back vocal, num
+                ministério pequeno. Levei anos para entender que cantar em
+                harmonia não é questão de ouvido privilegiado.
+              </p>
+              <p class="muted" style="margin-bottom: var(--space-4)">
+                De lá para cá são mais de 10 anos servindo ministérios através
+                da música, formando grupos que hoje sustentam três vozes sem
+                precisar de mim no ensaio.
+              </p>
+              <p class="muted">
+                O método nasceu no ensaio de segunda-feira, não na sala de aula.
+                É de lá que vem tudo o que eu ensino: direto, prático e para
+                quem canta servindo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="alt">
+        <div class="wrap">
+          <div class="sec-head center">
+            <span class="eyebrow">Alunos reais</span>
+            <h2>O que mudou no <em>ensaio deles</em></h2>
+            <p>
+              Gente que ensaiava há anos sem sair do lugar. Dá o play e ouça.
+            </p>
+          </div>
+          <div class="grid g-4" id="quotes"></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="grid g-2">
+            <div class="fitbox">
+              <span class="eyebrow">A escolha certa</span>
+              <h3 style="font-size: 26px; margin-top: var(--space-2)">
+                É pra você que…
+              </h3>
+              <ol>
+                <li>
+                  Canta na igreja e quer segurança para sustentar a sua voz sem
+                  medo de errar
+                </li>
+                <li>
+                  Lidera um ministério e quer que o grupo pare de cantar tudo em
+                  uníssono
+                </li>
+                <li>É back vocal e sente que atrapalha mais do que ajuda</li>
+                <li>
+                  Já tentou aprender por vídeos soltos e não saiu do lugar
+                </li>
+                <li>
+                  Tem 20 ou 30 minutos por dia para treinar com consistência
+                </li>
+              </ol>
+            </div>
+            <div class="fitbox no">
+              <span class="eyebrow" style="color: var(--text-tertiary)"
+                >Porta errada</span
+              >
+              <h3 style="font-size: 26px; margin-top: var(--space-2)">
+                Não é pra você que…
+              </h3>
+              <ol>
+                <li>Procura resultado em uma semana, sem praticar</li>
+                <li>
+                  Quer virar cantor solo profissional — aqui o foco é o grupo
+                </li>
+                <li>Não pretende aplicar nada no ensaio do seu ministério</li>
+                <li>
+                  Prefere depender só de aula presencial e não quer estudar
+                  online
+                </li>
+                <li>Não quer ser corrigido nem seguir uma ordem de estudo</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="alt" id="oferta">
+        <div class="wrap">
+          <div class="sec-head center">
+            <span class="eyebrow">Sua matrícula</span>
+            <h2>Tudo que entra <em>no seu acesso</em></h2>
+            <p>Pagamento único. Sem mensalidade, sem pegadinha.</p>
+          </div>
+          <div class="offer">
+            <h3 style="font-size: 26px">Curso Harmonia Vocal na Prática</h3>
+            <p
+              class="muted"
+              style="font-size: 15px; margin-top: var(--space-2)"
+            >
+              Acesso completo ao método N.A.I.P.E, com 3 bônus inclusos.
+            </p>
+            <ul>
+              <li>
+                <span>Curso completo — 5 módulos, 62 aulas</span><s>R$ 697</s>
+              </li>
+              <li>
+                <span>Kit Voz: áudios de aquecimento para baixar</span
+                ><s>R$ 197</s>
+              </li>
+              <li>
+                <span>Bônus: roteiro de ensaio para ministérios</span
+                ><s>R$ 247</s>
+              </li>
+              <li>
+                <span>Bônus: arranjos prontos de 3 vozes</span><s>R$ 297</s>
+              </li>
+              <li><span>Comunidade fechada de alunos</span><s>R$ 197</s></li>
+              <li style="border: none">
+                <span>Acesso vitalício + atualizações</span><s>R$ 397</s>
+              </li>
+            </ul>
+            <p class="price-old">Separado: R$ 2.032</p>
+            <p class="muted" style="font-size: 14px; margin: var(--space-3) 0">
+              você paga hoje
+            </p>
+            <div class="price-big">R$ 497</div>
+            <p class="muted" style="margin: var(--space-3) 0 var(--space-6)">
+              ou 12x de R$ 49,90 no cartão
+            </p>
+            <button
+              class="btn btn-primary btn-lg btn-block"
+              onclick="alertaCheckout()"
+            >
+              Quero me matricular
+            </button>
+            <p
+              class="muted"
+              style="font-size: 13px; margin-top: var(--space-4)"
+            >
+              Pagamento seguro pela Hotmart · Acesso imediato · Cartão, Pix e
+              boleto
+            </p>
+          </div>
+          <div class="guarantee">
+            <div class="seal">
+              07<br /><span style="font-size: 10px; letter-spacing: 0.06em"
+                >DIAS</span
+              >
+            </div>
+            <div>
+              <b style="font-size: 17px">Garantia incondicional de 7 dias</b>
+              <p class="muted" style="font-size: 15px; margin-top: 6px">
+                Entrou, assistiu e sentiu que não é para você? Um e-mail resolve
+                e a devolução é integral. O risco é todo nosso.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap narrow">
+          <div class="sec-head center">
+            <span class="eyebrow">Simples assim</span>
+            <h2>São 4 passos</h2>
+          </div>
+          <div class="grid g-4">
+            <div class="card">
+              <span class="num">01</span>
+              <p>
+                Você se matricula pelo checkout seguro, com o meio de pagamento
+                que preferir.
+              </p>
+            </div>
+            <div class="card">
+              <span class="num">02</span>
+              <p>
+                Recebe o acesso à plataforma por e-mail, com login e senha, na
+                hora.
+              </p>
+            </div>
+            <div class="card">
+              <span class="num">03</span>
+              <p>
+                Estuda no seu ritmo, pelo celular ou computador, quantas vezes
+                precisar.
+              </p>
+            </div>
+            <div class="card">
+              <span class="num">04</span>
+              <p>Aplica no ensaio de segunda e leva o grupo inteiro junto.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="alt">
+        <div class="wrap narrow center">
+          <span class="eyebrow">Ainda na dúvida?</span>
+          <h2
+            style="
+              font-size: clamp(27px, 3.4vw, 40px);
+              margin: var(--space-3) 0;
+            "
+          >
+            Receba a aula aberta <em>“Ache a voz do soprano”</em>
+          </h2>
+          <p class="muted" style="max-width: 52ch; margin: 0 auto">
+            Aula gratuita + o plano de estudo de 7 dias direto no seu e-mail.
+          </p>
+          <div class="leadform">
+            <input type="text" placeholder="Seu nome" />
+            <input type="email" placeholder="Seu melhor e-mail" />
+            <button class="btn btn-primary" onclick="alertaLead()">
+              Receber grátis
+            </button>
+          </div>
+          <p class="lgpd">
+            Ao enviar você concorda em receber conteúdos por e-mail e com a
+            Política de Privacidade. Pode cancelar quando quiser.
+          </p>
+        </div>
+      </section>
+
+      <section id="faq">
+        <div class="wrap narrow">
+          <div class="sec-head center">
+            <span class="eyebrow">Dúvidas</span>
+            <h2>Perguntas <em>frequentes</em></h2>
+          </div>
+          <div class="faq" id="faqbox"></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="cta-band">
+            <h2>
+              Pronto para o seu ministério
+              <em>finalmente cantar em harmonia?</em>
+            </h2>
+            <p>
+              Comece hoje. Sete dias para testar — se não for para você,
+              devolvemos cada centavo.
+            </p>
+            <button class="btn btn-inverse btn-lg" onclick="alertaCheckout()">
+              Quero me matricular
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============ WORKSHOPS ============ -->
+    <div class="page" id="p-workshops">
+      <section class="hero" style="padding: var(--space-20) 0">
+        <div class="wrap">
+          <span class="eyebrow">Presencial</span>
+          <h1 style="font-size: clamp(32px, 4.8vw, 56px); max-width: 20ch">
+            Leve a harmonia vocal <em>para dentro da sua igreja</em>
+          </h1>
+          <p class="lead">
+            Workshops e imersões para o ministério inteiro, no seu espaço e com
+            o seu repertório. Em um fim de semana o grupo sai cantando três
+            vozes.
+          </p>
+          <div class="hero-actions">
+            <a
+              class="btn btn-primary btn-lg"
+              onclick="go('workshops', 'orcamento')"
+              >Pedir orçamento</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="sec-head center">
+            <span class="eyebrow">Formatos</span>
+            <h2>Escolha o que cabe <em>no seu ministério</em></h2>
+          </div>
+          <div class="grid g-3" id="formats"></div>
+        </div>
+      </section>
+
+      <section class="alt">
+        <div class="wrap">
+          <div
+            class="grid g-2"
+            style="gap: var(--space-16); align-items: center"
+          >
+            <div>
+              <span class="eyebrow">Como funciona</span>
+              <h2
+                style="
+                  font-size: clamp(27px, 3.4vw, 40px);
+                  margin: var(--space-3) 0;
+                "
+              >
+                Atenção individual e trabalho em grupo, no mesmo encontro
+              </h2>
+              <p class="muted" style="margin-bottom: var(--space-4)">
+                Cada participante passa por teste de voz, classificação de naipe
+                e ajuste de respiração. Depois o grupo junta, e o trabalho vira
+                de conjunto — com o repertório que vocês já cantam no culto.
+              </p>
+              <p class="muted">
+                O ministério não sai com teoria. Sai com
+                <b style="color: var(--text-primary)"
+                  >uma música pronta, dividida em três vozes</b
+                >, e um roteiro de ensaio para continuar sozinho.
+              </p>
+            </div>
+            <div class="grid" style="gap: var(--space-4)">
+              <div class="card">
+                <h3 style="font-size: 17px">1. Diagnóstico</h3>
+                <p>
+                  Teste de voz individual e classificação dos naipes do grupo.
+                </p>
+              </div>
+              <div class="card">
+                <h3 style="font-size: 17px">2. Fundamentos</h3>
+                <p>
+                  Respiração, apoio e afinação aplicados ao contexto de culto.
+                </p>
+              </div>
+              <div class="card">
+                <h3 style="font-size: 17px">3. Montagem</h3>
+                <p>Divisão de vozes numa música do repertório da igreja.</p>
+              </div>
+              <div class="card">
+                <h3 style="font-size: 17px">4. Continuidade</h3>
+                <p>
+                  Roteiro de ensaio e material para o grupo seguir sem a
+                  professora.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="orcamento">
+        <div class="wrap narrow center">
+          <span class="eyebrow">Agendamento</span>
+          <h2
+            style="
+              font-size: clamp(27px, 3.4vw, 40px);
+              margin: var(--space-3) 0;
+            "
+          >
+            Peça um orçamento
+          </h2>
+          <p class="muted" style="max-width: 52ch; margin: 0 auto">
+            Conte quantas pessoas compõem o ministério, a cidade e a data
+            pretendida. Respondemos em até 48h.
+          </p>
+          <div class="leadform" style="max-width: 660px">
+            <input type="text" placeholder="Nome e igreja" />
+            <input type="text" placeholder="Cidade / estado" />
+            <input type="text" placeholder="WhatsApp" />
+            <button class="btn btn-primary" onclick="alertaLead()">
+              Enviar pedido
+            </button>
+          </div>
+          <p class="lgpd">
+            Seus dados são usados apenas para responder este contato, conforme a
+            Política de Privacidade.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============ FERRAMENTAS ============ -->
+    <div class="page" id="p-ferramentas">
+      <section style="padding-bottom: var(--space-8)">
+        <div class="wrap">
+          <div class="sec-head center">
+            <span class="eyebrow">Grátis · sem cadastro</span>
+            <h2>Ferramentas para <em>estudar em casa</em></h2>
+            <p>
+              Funcionam direto no navegador, no celular ou no computador. Nada é
+              gravado nem enviado para servidor nenhum.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section style="padding-top: 0" id="afinador">
+        <div class="wrap narrow">
+          <div class="tool">
+            <span class="eyebrow">Ferramenta 01</span>
+            <h3 style="margin-top: var(--space-2)">Afinador de voz</h3>
+            <p class="toolsub">
+              Cante uma nota sustentada e veja em tempo real qual é e o quanto
+              está afinada. O áudio é processado no seu próprio aparelho.
+            </p>
+            <div class="tuner-display">
+              <div class="tuner-note" id="tNote">—</div>
+              <div class="tuner-freq" id="tFreq">microfone desligado</div>
+              <div class="gauge">
+                <div class="gauge-track"></div>
+                <div class="gauge-zone"></div>
+                <div class="gauge-center"></div>
+                <div class="needle" id="tNeedle"></div>
+                <div class="gauge-labels">
+                  <span>−50¢ grave</span><span>afinado</span
+                  ><span>agudo +50¢</span>
+                </div>
+              </div>
+              <div class="cents" id="tCents">&nbsp;</div>
+            </div>
+            <div class="mic-state">
+              <button class="btn btn-primary" id="tBtn" onclick="toggleTuner()">
+                Ligar microfone
+              </button>
+              <span class="muted" style="font-size: 13.5px" id="tHint"
+                >O navegador vai pedir permissão de acesso ao microfone.</span
+              >
+            </div>
+            <div class="alertbox" id="tErr"></div>
+            <p
+              class="muted"
+              style="
+                font-size: 13.5px;
+                margin-top: var(--space-6);
+                border-top: 1px solid var(--border-subtle);
+                padding-top: var(--space-5);
+              "
+            >
+              <b>Dica de uso:</b> fique num ambiente silencioso, a um palmo do
+              aparelho, e sustente a vogal “A” por 3 segundos. Ruído de fundo e
+              fone com cancelamento atrapalham a leitura.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section style="padding-top: var(--space-10)" id="naipes">
+        <div class="wrap narrow">
+          <div class="tool">
+            <span class="eyebrow">Ferramenta 02</span>
+            <h3 style="margin-top: var(--space-2)">Tocador de naipes</h3>
+            <p class="toolsub">
+              Escolha o acorde, ouça as três vozes juntas e depois isole a sua.
+              Toque nos naipes para ligar e desligar cada voz.
+            </p>
+            <div class="chordpick" id="chordPick"></div>
+            <div class="voices" id="voiceList"></div>
+            <div class="toolbar">
+              <button
+                class="btn btn-primary"
+                id="nPlay"
+                onclick="toggleChord()"
+              >
+                ▶ Tocar acorde
+              </button>
+              <button class="btn btn-ghost btn-sm" onclick="soloAll()">
+                Ouvir as três
+              </button>
+              <div class="slider">
+                <span>Volume</span
+                ><input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="55"
+                  oninput="setVol(this.value)"
+                />
+              </div>
+            </div>
+            <p
+              class="muted"
+              style="
+                font-size: 13.5px;
+                margin-top: var(--space-6);
+                border-top: 1px solid var(--border-subtle);
+                padding-top: var(--space-5);
+              "
+            >
+              <b>Como treinar:</b> toque só o seu naipe e cante junto até
+              memorizar. Depois ligue as três vozes e tente sustentar a sua sem
+              escorregar para a melodia. Esse exercício resolve boa parte do
+              problema.
+            </p>
+          </div>
+          <div class="card center" style="margin-top: var(--space-10)">
+            <h3>Quer o plano de estudo completo?</h3>
+            <p
+              style="
+                margin: var(--space-3) auto var(--space-5);
+                max-width: 46ch;
+              "
+            >
+              Receba a aula aberta e a sequência de 7 dias para treinar com
+              essas ferramentas.
+            </p>
+            <div class="leadform" style="margin-top: 0">
+              <input type="email" placeholder="Seu melhor e-mail" />
+              <button class="btn btn-primary" onclick="alertaLead()">
+                Receber grátis
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="wrap">
+        <div class="cols">
+          <div>
+            <a class="logo" style="color: #fff" onclick="go('home')"
+              ><span class="mark">♪</span> Tinna Silva</a
+            >
+            <p
+              style="
+                margin-top: var(--space-4);
+                font-size: 15px;
+                max-width: 34ch;
+              "
+            >
+              Harmonia vocal na prática. Servindo ministérios através da música.
+            </p>
+          </div>
+          <div>
+            <h4>Curso</h4>
+            <a onclick="go('home', 'metodo')">O método</a
+            ><a onclick="go('home', 'conteudo')">Conteúdo</a>
+            <a onclick="go('home', 'oferta')">Matrícula</a
+            ><a onclick="alertaAluno()">Área do aluno</a>
+          </div>
+          <div>
+            <h4>Presencial</h4>
+            <a onclick="go('workshops')">Workshops</a
+            ><a onclick="go('workshops', 'orcamento')">Orçamento</a>
+          </div>
+          <div>
+            <h4>Grátis</h4>
+            <a onclick="go('ferramentas', 'afinador')">Afinador de voz</a>
+            <a onclick="go('ferramentas', 'naipes')">Tocador de naipes</a
+            ><a>@tinnasilvaharmoniavocal</a><a>WhatsApp</a>
+          </div>
+        </div>
+        <div class="fbot">
+          <span>© 2026 Tinna Silva · Todos os direitos reservados</span>
+          <span>Termos de uso · Política de privacidade</span>
+        </div>
       </div>
-      <div class="mic-state">
-        <button class="btn btn-primary" id="tBtn" onclick="toggleTuner()">Ligar microfone</button>
-        <span class="muted" style="font-size:13.5px" id="tHint">O navegador vai pedir permissão de acesso ao microfone.</span>
-      </div>
-      <div class="alertbox" id="tErr"></div>
-      <p class="muted" style="font-size:13.5px;margin-top:var(--space-6);border-top:1px solid var(--border-subtle);padding-top:var(--space-5)">
-        <b>Dica de uso:</b> fique num ambiente silencioso, a um palmo do aparelho, e sustente a vogal “A” por 3 segundos.
-        Ruído de fundo e fone com cancelamento atrapalham a leitura.</p>
-    </div>
-  </div>
-</section>
+    </footer>
 
-<section style="padding-top:var(--space-10)" id="naipes">
-  <div class="wrap narrow">
-    <div class="tool">
-      <span class="eyebrow">Ferramenta 02</span>
-      <h3 style="margin-top:var(--space-2)">Tocador de naipes</h3>
-      <p class="toolsub">Escolha o acorde, ouça as três vozes juntas e depois isole a sua.
-        Toque nos naipes para ligar e desligar cada voz.</p>
-      <div class="chordpick" id="chordPick"></div>
-      <div class="voices" id="voiceList"></div>
-      <div class="toolbar">
-        <button class="btn btn-primary" id="nPlay" onclick="toggleChord()">▶ Tocar acorde</button>
-        <button class="btn btn-ghost btn-sm" onclick="soloAll()">Ouvir as três</button>
-        <div class="slider"><span>Volume</span><input type="range" min="0" max="100" value="55" oninput="setVol(this.value)"></div>
-      </div>
-      <p class="muted" style="font-size:13.5px;margin-top:var(--space-6);border-top:1px solid var(--border-subtle);padding-top:var(--space-5)">
-        <b>Como treinar:</b> toque só o seu naipe e cante junto até memorizar. Depois ligue as três vozes e tente
-        sustentar a sua sem escorregar para a melodia. Esse exercício resolve boa parte do problema.</p>
-    </div>
-    <div class="card center" style="margin-top:var(--space-10)">
-      <h3>Quer o plano de estudo completo?</h3>
-      <p style="margin:var(--space-3) auto var(--space-5);max-width:46ch">Receba a aula aberta e a sequência de 7 dias
-        para treinar com essas ferramentas.</p>
-      <div class="leadform" style="margin-top:0">
-        <input type="email" placeholder="Seu melhor e-mail">
-        <button class="btn btn-primary" onclick="alertaLead()">Receber grátis</button></div>
-    </div>
-  </div>
-</section>
-</div>
+    <script>
+      /* ---------- conteúdo ---------- */
+      const PILLARS = [
+        [
+          "N",
+          "Naipe",
+          "Descubra qual é a sua voz dentro do arranjo: soprano, contralto ou tenor. Tudo começa aqui.",
+          "É saber qual instrumento você toca antes de tocar.",
+        ],
+        [
+          "A",
+          "Apoio",
+          "Respiração, postura e fôlego para sustentar a nota até o fim da frase, sem tremer.",
+          "É a fundação da casa: sem ela nada se sustenta.",
+        ],
+        [
+          "I",
+          "Intervalo",
+          "Ouvido treinado para reconhecer as distâncias entre as vozes e não cair na melodia.",
+          "É aprender a enxergar no escuro.",
+        ],
+        [
+          "P",
+          "Prática",
+          "Aplicação em música real, com playback e os arranjos que vocês já cantam no culto.",
+          "É sair do simulador e dirigir na rua.",
+        ],
+        [
+          "E",
+          "Ensaio",
+          "Conduzir o grupo: dividir vozes, corrigir sem constranger e montar o roteiro de segunda.",
+          "É quando você deixa de precisar do professor.",
+        ],
+      ];
+      const LEVELS = [
+        [
+          "nível 01",
+          "iniciante",
+          [
+            "Conhecendo a própria voz",
+            "Classificação de naipe",
+            "Respiração e apoio",
+            "Aquecimento antes do culto",
+            "Afinação: primeiros passos",
+            "Cantando com playback",
+          ],
+        ],
+        [
+          "nível 02",
+          "intermediário",
+          [
+            "Segunda voz na prática",
+            "Terças e sextas",
+            "Sustentando contra a melodia",
+            "Microfone e retorno",
+            "Dinâmica no grupo",
+            "Resistência vocal",
+          ],
+        ],
+        [
+          "nível 03",
+          "avançado",
+          [
+            "Arranjo de três vozes",
+            "Harmonias de passagem",
+            "Conduzindo o naipe",
+            "Ensaio por naipe",
+            "Repertório do culto",
+            "Autonomia do grupo",
+          ],
+        ],
+      ];
+      const QUOTES = [
+        [
+          "Marcos Ribeiro",
+          "Líder de louvor · Guarulhos",
+          "Ensaiávamos há dois anos e a segunda voz nunca se sustentava. Em um mês o naipe parou de escorregar.",
+        ],
+        [
+          "Aline Souza",
+          "Back vocal · São Paulo",
+          "Eu tinha vergonha de cantar backing porque perdia o fôlego no meio da frase. Resolvi em três semanas.",
+        ],
+        [
+          "Juliana Paz",
+          "Ministra de música · Osasco",
+          "O roteiro de ensaio é o diferencial. Chego na segunda e todo mundo já sabe o que vai fazer.",
+        ],
+        [
+          "Pedro Lima",
+          "Tenor · Santo André",
+          "Achei a vida inteira que não tinha ouvido. Tinha, só não tinha método.",
+        ],
+      ];
+      const FAQ = [
+        [
+          "Preciso saber teoria musical?",
+          "Não. O curso começa do zero, por referência auditiva. A teoria aparece só quando ajuda a cantar melhor, nunca como pré-requisito.",
+        ],
+        [
+          "Funciona para quem canta sozinho, sem grupo?",
+          "Funciona. Os exercícios trazem as vozes gravadas separadamente, e o tocador de naipes permite treinar o seu naipe em casa contra as outras vozes.",
+        ],
+        [
+          "Sou muito desafinado, será que tem jeito?",
+          "Quase todo mundo que se acha desafinado apenas nunca treinou do jeito certo. Afinação é coordenação entre ouvido e voz, e coordenação se treina em qualquer idade.",
+        ],
+        [
+          "Em quanto tempo vejo resultado?",
+          "Com 20 a 30 minutos por dia, a maioria dos alunos percebe diferença na afinação e no fôlego em poucas semanas. Evolução de voz é processo, não evento.",
+        ],
+        [
+          "As aulas são ao vivo?",
+          "As aulas são gravadas, para você assistir na hora que der e rever quantas vezes precisar. Os encontros ao vivo acontecem na comunidade de alunos.",
+        ],
+        [
+          "Por quanto tempo tenho acesso?",
+          "O acesso é vitalício e inclui as atualizações futuras do curso.",
+        ],
+        [
+          "Dá para assistir pelo celular?",
+          "Sim. A plataforma funciona no celular, tablet, computador e TV, guardando o seu progresso.",
+        ],
+        [
+          "Quais são as formas de pagamento?",
+          "Cartão em até 12x, Pix e boleto, pelo checkout seguro da Hotmart. O acesso é liberado assim que o pagamento é confirmado.",
+        ],
+        [
+          "Vocês atendem o ministério presencialmente?",
+          "Sim, com workshops e imersões sob agendamento. Veja a página de workshops e peça um orçamento.",
+        ],
+        [
+          "E se eu não gostar?",
+          "Você tem 7 dias de garantia incondicional. Um e-mail e a devolução é integral, sem perguntas.",
+        ],
+      ];
+      const FORMATS = [
+        [
+          "🎤",
+          "Workshop de um dia",
+          "Seis horas com o ministério inteiro: diagnóstico de vozes, fundamentos e montagem de uma música em três vozes.",
+          "Até 20 pessoas · 1 dia",
+        ],
+        [
+          "🔥",
+          "Imersão de fim de semana",
+          "Sexta à noite e sábado inteiro. Aprofundamento em arranjo, ensaio por naipe e apresentação no culto de domingo.",
+          "Até 30 pessoas · 2 dias",
+        ],
+        [
+          "🌱",
+          "Acompanhamento mensal",
+          "Um encontro por mês com o grupo, para consolidar o método e evoluir o repertório ao longo do ano.",
+          "Grupo fixo · recorrente",
+        ],
+      ];
+      document.getElementById("pillars").innerHTML = PILLARS.map(
+        ([l, t, d, a]) =>
+          `<div class="pillar"><div class="letter">${l}</div><h3>${t}</h3><p>${d}</p><p class="analogy">${a}</p></div>`,
+      ).join("");
+      document.getElementById("levels").innerHTML = LEVELS.map(
+        ([n, t, items]) =>
+          `<div class="level"><span class="num">${n}</span><h3 style="font-size:24px">${t}</h3>
+  <ul>${items.map((i) => `<li>${i}</li>`).join("")}</ul></div>`,
+      ).join("");
+      document.getElementById("quotes").innerHTML = QUOTES.map(
+        ([n, r, q]) =>
+          `<div class="quote"><div class="vidph"><div class="play">▶</div></div>
+  <div class="qb"><div class="stars">★★★★★</div><p>${q}</p><div class="who"><b>${n}</b><span>${r}</span></div></div></div>`,
+      ).join("");
+      document.getElementById("faqbox").innerHTML = FAQ.map(
+        ([q, a], i) =>
+          `<details ${i === 0 ? "open" : ""}><summary>${q}</summary><p>${a}</p></details>`,
+      ).join("");
+      document.getElementById("formats").innerHTML = FORMATS.map(
+        ([e, t, d, m]) =>
+          `<div class="card"><div class="ico">${e}</div><h3>${t}</h3><p>${d}</p>
+  <p style="margin-top:var(--space-4);font-size:13px;color:var(--text-tertiary)">${m}</p></div>`,
+      ).join("");
 
-<footer>
-  <div class="wrap">
-    <div class="cols">
-      <div><a class="logo" style="color:#fff" onclick="go('home')"><span class="mark">♪</span> Tinna Silva</a>
-        <p style="margin-top:var(--space-4);font-size:15px;max-width:34ch">Harmonia vocal na prática.
-          Servindo ministérios através da música.</p></div>
-      <div><h4>Curso</h4><a onclick="go('home','metodo')">O método</a><a onclick="go('home','conteudo')">Conteúdo</a>
-        <a onclick="go('home','oferta')">Matrícula</a><a onclick="alertaAluno()">Área do aluno</a></div>
-      <div><h4>Presencial</h4><a onclick="go('workshops')">Workshops</a><a onclick="go('workshops','orcamento')">Orçamento</a></div>
-      <div><h4>Grátis</h4><a onclick="go('ferramentas','afinador')">Afinador de voz</a>
-        <a onclick="go('ferramentas','naipes')">Tocador de naipes</a><a>@tinnasilvaharmoniavocal</a><a>WhatsApp</a></div>
-    </div>
-    <div class="fbot"><span>© 2026 Tinna Silva · Todos os direitos reservados</span>
-      <span>Termos de uso · Política de privacidade</span></div>
-  </div>
-</footer>
+      /* ---------- navegação ---------- */
+      function go(page, anchor) {
+        if (tOn) stopTuner();
+        if (tocando) stopChord();
+        document
+          .querySelectorAll(".page")
+          .forEach((p) => p.classList.remove("on"));
+        document.getElementById("p-" + page).classList.add("on");
+        if (anchor) {
+          setTimeout(() => {
+            const el = document.getElementById(anchor);
+            if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+          }, 60);
+        } else window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+      function toggleTheme() {
+        const c = document.documentElement.getAttribute("data-theme");
+        document.documentElement.setAttribute(
+          "data-theme",
+          c === "dark" ? "light" : "dark",
+        );
+      }
+      function alertaCheckout() {
+        alert("Protótipo: este botão levaria para o checkout da Hotmart.");
+      }
+      function alertaAluno() {
+        alert(
+          "Protótipo: este link leva para a área de aluno da plataforma (Hotmart), fora do site.",
+        );
+      }
+      function alertaLead() {
+        alert(
+          "Protótipo: os dados seriam enviados para a ferramenta de e-mail marketing.",
+        );
+      }
 
-<script>
-/* ---------- conteúdo ---------- */
-const PILLARS=[
- ['N','Naipe','Descubra qual é a sua voz dentro do arranjo: soprano, contralto ou tenor. Tudo começa aqui.','É saber qual instrumento você toca antes de tocar.'],
- ['A','Apoio','Respiração, postura e fôlego para sustentar a nota até o fim da frase, sem tremer.','É a fundação da casa: sem ela nada se sustenta.'],
- ['I','Intervalo','Ouvido treinado para reconhecer as distâncias entre as vozes e não cair na melodia.','É aprender a enxergar no escuro.'],
- ['P','Prática','Aplicação em música real, com playback e os arranjos que vocês já cantam no culto.','É sair do simulador e dirigir na rua.'],
- ['E','Ensaio','Conduzir o grupo: dividir vozes, corrigir sem constranger e montar o roteiro de segunda.','É quando você deixa de precisar do professor.']
-];
-const LEVELS=[
- ['nível 01','iniciante',['Conhecendo a própria voz','Classificação de naipe','Respiração e apoio','Aquecimento antes do culto','Afinação: primeiros passos','Cantando com playback']],
- ['nível 02','intermediário',['Segunda voz na prática','Terças e sextas','Sustentando contra a melodia','Microfone e retorno','Dinâmica no grupo','Resistência vocal']],
- ['nível 03','avançado',['Arranjo de três vozes','Harmonias de passagem','Conduzindo o naipe','Ensaio por naipe','Repertório do culto','Autonomia do grupo']]
-];
-const QUOTES=[
- ['Marcos Ribeiro','Líder de louvor · Guarulhos','Ensaiávamos há dois anos e a segunda voz nunca se sustentava. Em um mês o naipe parou de escorregar.'],
- ['Aline Souza','Back vocal · São Paulo','Eu tinha vergonha de cantar backing porque perdia o fôlego no meio da frase. Resolvi em três semanas.'],
- ['Juliana Paz','Ministra de música · Osasco','O roteiro de ensaio é o diferencial. Chego na segunda e todo mundo já sabe o que vai fazer.'],
- ['Pedro Lima','Tenor · Santo André','Achei a vida inteira que não tinha ouvido. Tinha, só não tinha método.']
-];
-const FAQ=[
- ['Preciso saber teoria musical?','Não. O curso começa do zero, por referência auditiva. A teoria aparece só quando ajuda a cantar melhor, nunca como pré-requisito.'],
- ['Funciona para quem canta sozinho, sem grupo?','Funciona. Os exercícios trazem as vozes gravadas separadamente, e o tocador de naipes permite treinar o seu naipe em casa contra as outras vozes.'],
- ['Sou muito desafinado, será que tem jeito?','Quase todo mundo que se acha desafinado apenas nunca treinou do jeito certo. Afinação é coordenação entre ouvido e voz, e coordenação se treina em qualquer idade.'],
- ['Em quanto tempo vejo resultado?','Com 20 a 30 minutos por dia, a maioria dos alunos percebe diferença na afinação e no fôlego em poucas semanas. Evolução de voz é processo, não evento.'],
- ['As aulas são ao vivo?','As aulas são gravadas, para você assistir na hora que der e rever quantas vezes precisar. Os encontros ao vivo acontecem na comunidade de alunos.'],
- ['Por quanto tempo tenho acesso?','O acesso é vitalício e inclui as atualizações futuras do curso.'],
- ['Dá para assistir pelo celular?','Sim. A plataforma funciona no celular, tablet, computador e TV, guardando o seu progresso.'],
- ['Quais são as formas de pagamento?','Cartão em até 12x, Pix e boleto, pelo checkout seguro da Hotmart. O acesso é liberado assim que o pagamento é confirmado.'],
- ['Vocês atendem o ministério presencialmente?','Sim, com workshops e imersões sob agendamento. Veja a página de workshops e peça um orçamento.'],
- ['E se eu não gostar?','Você tem 7 dias de garantia incondicional. Um e-mail e a devolução é integral, sem perguntas.']
-];
-const FORMATS=[
- ['🎤','Workshop de um dia','Seis horas com o ministério inteiro: diagnóstico de vozes, fundamentos e montagem de uma música em três vozes.','Até 20 pessoas · 1 dia'],
- ['🔥','Imersão de fim de semana','Sexta à noite e sábado inteiro. Aprofundamento em arranjo, ensaio por naipe e apresentação no culto de domingo.','Até 30 pessoas · 2 dias'],
- ['🌱','Acompanhamento mensal','Um encontro por mês com o grupo, para consolidar o método e evoluir o repertório ao longo do ano.','Grupo fixo · recorrente']
-];
-document.getElementById('pillars').innerHTML=PILLARS.map(([l,t,d,a])=>
- `<div class="pillar"><div class="letter">${l}</div><h3>${t}</h3><p>${d}</p><p class="analogy">${a}</p></div>`).join('');
-document.getElementById('levels').innerHTML=LEVELS.map(([n,t,items])=>
- `<div class="level"><span class="num">${n}</span><h3 style="font-size:24px">${t}</h3>
-  <ul>${items.map(i=>`<li>${i}</li>`).join('')}</ul></div>`).join('');
-document.getElementById('quotes').innerHTML=QUOTES.map(([n,r,q])=>
- `<div class="quote"><div class="vidph"><div class="play">▶</div></div>
-  <div class="qb"><div class="stars">★★★★★</div><p>${q}</p><div class="who"><b>${n}</b><span>${r}</span></div></div></div>`).join('');
-document.getElementById('faqbox').innerHTML=FAQ.map(([q,a],i)=>
- `<details ${i===0?'open':''}><summary>${q}</summary><p>${a}</p></details>`).join('');
-document.getElementById('formats').innerHTML=FORMATS.map(([e,t,d,m])=>
- `<div class="card"><div class="ico">${e}</div><h3>${t}</h3><p>${d}</p>
-  <p style="margin-top:var(--space-4);font-size:13px;color:var(--text-tertiary)">${m}</p></div>`).join('');
+      /* ---------- áudio base ---------- */
+      let actx = null;
+      function ctx() {
+        if (!actx)
+          actx = new (window.AudioContext || window.webkitAudioContext)();
+        if (actx.state === "suspended") actx.resume();
+        return actx;
+      }
+      const NOTAS = [
+        "Dó",
+        "Dó#",
+        "Ré",
+        "Ré#",
+        "Mi",
+        "Fá",
+        "Fá#",
+        "Sol",
+        "Sol#",
+        "Lá",
+        "Lá#",
+        "Si",
+      ];
+      const midiToFreq = (m) => 440 * Math.pow(2, (m - 69) / 12);
+      const nomeMidi = (m) => NOTAS[m % 12] + (Math.floor(m / 12) - 1);
 
-/* ---------- navegação ---------- */
-function go(page,anchor){
-  if(tOn) stopTuner();
-  if(tocando) stopChord();
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));
-  document.getElementById('p-'+page).classList.add('on');
-  if(anchor){ setTimeout(()=>{ const el=document.getElementById(anchor);
-    if(el) el.scrollIntoView({behavior:'smooth',block:'start'}); },60); }
-  else window.scrollTo({top:0,behavior:'smooth'});
-}
-function toggleTheme(){
-  const c=document.documentElement.getAttribute('data-theme');
-  document.documentElement.setAttribute('data-theme', c==='dark'?'light':'dark');
-}
-function alertaCheckout(){ alert('Protótipo: este botão levaria para o checkout da Hotmart.'); }
-function alertaAluno(){ alert('Protótipo: este link leva para a área de aluno da plataforma (Hotmart), fora do site.'); }
-function alertaLead(){ alert('Protótipo: os dados seriam enviados para a ferramenta de e-mail marketing.'); }
+      /* ---------- afinador ---------- */
+      let tStream = null,
+        tAnalyser = null,
+        tBuf = null,
+        tTimer = null,
+        tOn = false;
+      async function toggleTuner() {
+        if (tOn) return stopTuner();
+        const btn = document.getElementById("tBtn"),
+          err = document.getElementById("tErr");
+        err.classList.remove("on");
+        if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+          err.textContent =
+            "Este navegador não permite acesso ao microfone aqui. Tente pelo Chrome ou Safari, numa página com HTTPS.";
+          err.classList.add("on");
+          return;
+        }
+        btn.textContent = "Conectando…";
+        try {
+          tStream = await navigator.mediaDevices.getUserMedia({
+            audio: {
+              echoCancellation: false,
+              noiseSuppression: false,
+              autoGainControl: false,
+            },
+          });
+        } catch (e) {
+          btn.textContent = "Ligar microfone";
+          err.innerHTML =
+            "<b>Microfone indisponível neste contexto.</b> A permissão foi negada ou bloqueada. No site publicado em domínio próprio com HTTPS o navegador pede autorização normalmente — vale testar aí. Verifique também as permissões do navegador.";
+          err.classList.add("on");
+          return;
+        }
+        const ac = ctx();
+        const src = ac.createMediaStreamSource(tStream);
+        tAnalyser = ac.createAnalyser();
+        tAnalyser.fftSize = 2048;
+        tBuf = new Float32Array(tAnalyser.fftSize);
+        src.connect(tAnalyser);
+        tOn = true;
+        btn.textContent = "Desligar microfone";
+        btn.classList.remove("btn-primary");
+        btn.classList.add("btn-ghost");
+        document.getElementById("tHint").textContent =
+          "Cante uma nota sustentada.";
+        tTimer = setInterval(readPitch, 90);
+      }
+      function stopTuner() {
+        tOn = false;
+        clearInterval(tTimer);
+        if (tStream) tStream.getTracks().forEach((t) => t.stop());
+        const btn = document.getElementById("tBtn");
+        if (btn) {
+          btn.textContent = "Ligar microfone";
+          btn.classList.add("btn-primary");
+          btn.classList.remove("btn-ghost");
+        }
+        const n = document.getElementById("tNote");
+        n.textContent = "—";
+        n.className = "tuner-note";
+        document.getElementById("tFreq").textContent = "microfone desligado";
+        document.getElementById("tCents").innerHTML = "&nbsp;";
+        document.getElementById("tNeedle").style.left = "50%";
+        document.getElementById("tNeedle").className = "needle";
+        document.getElementById("tHint").textContent =
+          "O navegador vai pedir permissão de acesso ao microfone.";
+      }
+      function readPitch() {
+        tAnalyser.getFloatTimeDomainData(tBuf);
+        const f = autoCorrelate(tBuf, ctx().sampleRate);
+        const nEl = document.getElementById("tNote"),
+          fEl = document.getElementById("tFreq"),
+          cEl = document.getElementById("tCents"),
+          nd = document.getElementById("tNeedle");
+        if (f < 0 || f < 60 || f > 1300) {
+          fEl.textContent = "ouvindo… cante mais forte";
+          return;
+        }
+        const midi = Math.round(12 * Math.log2(f / 440) + 69);
+        const cents = Math.round(1200 * Math.log2(f / midiToFreq(midi)));
+        const ok = Math.abs(cents) <= 8;
+        nEl.textContent = nomeMidi(midi);
+        nEl.className = "tuner-note" + (ok ? " ok" : "");
+        fEl.textContent = f.toFixed(1) + " Hz";
+        nd.className = "needle" + (ok ? " ok" : "");
+        nd.style.left = Math.max(2, Math.min(98, 50 + cents)) + "%";
+        cEl.textContent =
+          (cents > 0 ? "+" : "") +
+          cents +
+          " cents " +
+          (ok
+            ? "· afinado ✓"
+            : cents < 0
+              ? "· um pouco grave"
+              : "· um pouco agudo");
+      }
+      function autoCorrelate(buf, sr) {
+        let SIZE = buf.length,
+          rms = 0;
+        for (let i = 0; i < SIZE; i++) rms += buf[i] * buf[i];
+        rms = Math.sqrt(rms / SIZE);
+        if (rms < 0.012) return -1;
+        let r1 = 0,
+          r2 = SIZE - 1;
+        const thres = 0.2;
+        for (let i = 0; i < SIZE / 2; i++) {
+          if (Math.abs(buf[i]) < thres) {
+            r1 = i;
+            break;
+          }
+        }
+        for (let i = 1; i < SIZE / 2; i++) {
+          if (Math.abs(buf[SIZE - i]) < thres) {
+            r2 = SIZE - i;
+            break;
+          }
+        }
+        const b = buf.slice(r1, r2);
+        SIZE = b.length;
+        if (SIZE < 256) return -1;
+        const c = new Float32Array(SIZE);
+        for (let i = 0; i < SIZE; i++) {
+          let s = 0;
+          for (let j = 0; j < SIZE - i; j++) s += b[j] * b[j + i];
+          c[i] = s;
+        }
+        let d = 0;
+        while (d < SIZE - 1 && c[d] > c[d + 1]) d++;
+        let max = -1,
+          pos = -1;
+        for (let i = d; i < SIZE; i++) {
+          if (c[i] > max) {
+            max = c[i];
+            pos = i;
+          }
+        }
+        if (pos <= 0 || pos >= SIZE - 1) return -1;
+        let T0 = pos;
+        const x1 = c[T0 - 1],
+          x2 = c[T0],
+          x3 = c[T0 + 1];
+        const a = (x1 + x3 - 2 * x2) / 2,
+          bb = (x3 - x1) / 2;
+        if (a) T0 = T0 - bb / (2 * a);
+        return sr / T0;
+      }
 
-/* ---------- áudio base ---------- */
-let actx=null;
-function ctx(){
-  if(!actx) actx=new (window.AudioContext||window.webkitAudioContext)();
-  if(actx.state==='suspended') actx.resume();
-  return actx;
-}
-const NOTAS=['Dó','Dó#','Ré','Ré#','Mi','Fá','Fá#','Sol','Sol#','Lá','Lá#','Si'];
-const midiToFreq=m=>440*Math.pow(2,(m-69)/12);
-const nomeMidi=m=>NOTAS[m%12]+(Math.floor(m/12)-1);
+      /* ---------- tocador de naipes ---------- */
+      const ACORDES = [
+        { nome: "Dó maior", raiz: 48 },
+        { nome: "Ré menor", raiz: 50 },
+        { nome: "Fá maior", raiz: 53 },
+        { nome: "Sol maior", raiz: 55 },
+        { nome: "Lá menor", raiz: 57 },
+        { nome: "Sib maior", raiz: 46 },
+      ];
+      const VOZES = [
+        {
+          id: "soprano",
+          nome: "Soprano",
+          desc: "voz mais aguda · por cima do acorde",
+          off: 16,
+        },
+        {
+          id: "contralto",
+          nome: "Contralto",
+          desc: "voz do meio · a que mais escorrega",
+          off: 7,
+        },
+        {
+          id: "tenor",
+          nome: "Tenor",
+          desc: "voz mais grave · a base do acorde",
+          off: 0,
+        },
+      ];
+      let acordeAtual = 0,
+        ativos = { soprano: true, contralto: true, tenor: true },
+        tocando = false,
+        oscs = [],
+        masterGain = null,
+        vol = 0.55;
 
-/* ---------- afinador ---------- */
-let tStream=null,tAnalyser=null,tBuf=null,tTimer=null,tOn=false;
-async function toggleTuner(){
-  if(tOn) return stopTuner();
-  const btn=document.getElementById('tBtn'),err=document.getElementById('tErr');
-  err.classList.remove('on');
-  if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){
-    err.textContent='Este navegador não permite acesso ao microfone aqui. Tente pelo Chrome ou Safari, numa página com HTTPS.';
-    err.classList.add('on'); return;
-  }
-  btn.textContent='Conectando…';
-  try{
-    tStream=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:false,noiseSuppression:false,autoGainControl:false}});
-  }catch(e){
-    btn.textContent='Ligar microfone';
-    err.innerHTML='<b>Microfone indisponível neste contexto.</b> A permissão foi negada ou bloqueada. No site publicado em domínio próprio com HTTPS o navegador pede autorização normalmente — vale testar aí. Verifique também as permissões do navegador.';
-    err.classList.add('on'); return;
-  }
-  const ac=ctx();
-  const src=ac.createMediaStreamSource(tStream);
-  tAnalyser=ac.createAnalyser(); tAnalyser.fftSize=2048;
-  tBuf=new Float32Array(tAnalyser.fftSize);
-  src.connect(tAnalyser);
-  tOn=true;
-  btn.textContent='Desligar microfone'; btn.classList.remove('btn-primary'); btn.classList.add('btn-ghost');
-  document.getElementById('tHint').textContent='Cante uma nota sustentada.';
-  tTimer=setInterval(readPitch,90);
-}
-function stopTuner(){
-  tOn=false; clearInterval(tTimer);
-  if(tStream) tStream.getTracks().forEach(t=>t.stop());
-  const btn=document.getElementById('tBtn');
-  if(btn){ btn.textContent='Ligar microfone'; btn.classList.add('btn-primary'); btn.classList.remove('btn-ghost'); }
-  const n=document.getElementById('tNote');
-  n.textContent='—'; n.className='tuner-note';
-  document.getElementById('tFreq').textContent='microfone desligado';
-  document.getElementById('tCents').innerHTML='&nbsp;';
-  document.getElementById('tNeedle').style.left='50%';
-  document.getElementById('tNeedle').className='needle';
-  document.getElementById('tHint').textContent='O navegador vai pedir permissão de acesso ao microfone.';
-}
-function readPitch(){
-  tAnalyser.getFloatTimeDomainData(tBuf);
-  const f=autoCorrelate(tBuf,ctx().sampleRate);
-  const nEl=document.getElementById('tNote'),fEl=document.getElementById('tFreq'),
-        cEl=document.getElementById('tCents'),nd=document.getElementById('tNeedle');
-  if(f<0||f<60||f>1300){ fEl.textContent='ouvindo… cante mais forte'; return; }
-  const midi=Math.round(12*Math.log2(f/440)+69);
-  const cents=Math.round(1200*Math.log2(f/midiToFreq(midi)));
-  const ok=Math.abs(cents)<=8;
-  nEl.textContent=nomeMidi(midi);
-  nEl.className='tuner-note'+(ok?' ok':'');
-  fEl.textContent=f.toFixed(1)+' Hz';
-  nd.className='needle'+(ok?' ok':'');
-  nd.style.left=Math.max(2,Math.min(98,50+cents))+'%';
-  cEl.textContent=(cents>0?'+':'')+cents+' cents '+(ok?'· afinado ✓':(cents<0?'· um pouco grave':'· um pouco agudo'));
-}
-function autoCorrelate(buf,sr){
-  let SIZE=buf.length,rms=0;
-  for(let i=0;i<SIZE;i++) rms+=buf[i]*buf[i];
-  rms=Math.sqrt(rms/SIZE);
-  if(rms<0.012) return -1;
-  let r1=0,r2=SIZE-1;const thres=0.2;
-  for(let i=0;i<SIZE/2;i++){ if(Math.abs(buf[i])<thres){ r1=i; break; } }
-  for(let i=1;i<SIZE/2;i++){ if(Math.abs(buf[SIZE-i])<thres){ r2=SIZE-i; break; } }
-  const b=buf.slice(r1,r2); SIZE=b.length;
-  if(SIZE<256) return -1;
-  const c=new Float32Array(SIZE);
-  for(let i=0;i<SIZE;i++){ let s=0; for(let j=0;j<SIZE-i;j++) s+=b[j]*b[j+i]; c[i]=s; }
-  let d=0; while(d<SIZE-1&&c[d]>c[d+1]) d++;
-  let max=-1,pos=-1;
-  for(let i=d;i<SIZE;i++){ if(c[i]>max){ max=c[i]; pos=i; } }
-  if(pos<=0||pos>=SIZE-1) return -1;
-  let T0=pos;
-  const x1=c[T0-1],x2=c[T0],x3=c[T0+1];
-  const a=(x1+x3-2*x2)/2,bb=(x3-x1)/2;
-  if(a) T0=T0-bb/(2*a);
-  return sr/T0;
-}
-
-/* ---------- tocador de naipes ---------- */
-const ACORDES=[
-  {nome:'Dó maior',raiz:48},{nome:'Ré menor',raiz:50},{nome:'Fá maior',raiz:53},
-  {nome:'Sol maior',raiz:55},{nome:'Lá menor',raiz:57},{nome:'Sib maior',raiz:46}
-];
-const VOZES=[
-  {id:'soprano',nome:'Soprano',desc:'voz mais aguda · por cima do acorde',off:16},
-  {id:'contralto',nome:'Contralto',desc:'voz do meio · a que mais escorrega',off:7},
-  {id:'tenor',nome:'Tenor',desc:'voz mais grave · a base do acorde',off:0}
-];
-let acordeAtual=0,ativos={soprano:true,contralto:true,tenor:true},tocando=false,
-    oscs=[],masterGain=null,vol=.55;
-
-document.getElementById('chordPick').innerHTML=ACORDES.map((a,i)=>
-  `<button class="chip ${i===0?'on':''}" onclick="pickChord(${i})">${a.nome}</button>`).join('');
-function renderVoices(){
-  const raiz=ACORDES[acordeAtual].raiz;
-  document.getElementById('voiceList').innerHTML=VOZES.map(v=>{
-    const on=ativos[v.id];
-    return `<div class="voice ${on?'active':'muted'} ${on&&tocando?'playing':''}" onclick="toggleVoice('${v.id}')">
+      document.getElementById("chordPick").innerHTML = ACORDES.map(
+        (a, i) =>
+          `<button class="chip ${i === 0 ? "on" : ""}" onclick="pickChord(${i})">${a.nome}</button>`,
+      ).join("");
+      function renderVoices() {
+        const raiz = ACORDES[acordeAtual].raiz;
+        document.getElementById("voiceList").innerHTML = VOZES.map((v) => {
+          const on = ativos[v.id];
+          return `<div class="voice ${on ? "active" : "muted"} ${on && tocando ? "playing" : ""}" onclick="toggleVoice('${v.id}')">
       <div class="bars"><i></i><i></i><i></i></div>
       <div class="vname"><b>${v.nome}</b><span>${v.desc}</span></div>
-      <div class="vnote">${nomeMidi(raiz+v.off)}</div></div>`;}).join('');
-}
-renderVoices();
-function pickChord(i){
-  acordeAtual=i;
-  document.querySelectorAll('#chordPick .chip').forEach((c,k)=>c.classList.toggle('on',k===i));
-  const estava=tocando;
-  if(tocando) stopChord(true);
-  renderVoices();
-  if(estava) playChord();
-}
-function toggleVoice(id){
-  ativos[id]=!ativos[id];
-  if(!ativos.soprano&&!ativos.contralto&&!ativos.tenor) ativos[id]=true;
-  const estava=tocando;
-  if(tocando) stopChord(true);
-  renderVoices();
-  if(estava) playChord();
-}
-function soloAll(){
-  ativos={soprano:true,contralto:true,tenor:true};
-  const estava=tocando;
-  if(tocando) stopChord(true);
-  renderVoices();
-  estava ? playChord() : toggleChord();
-}
-function setVol(v){ vol=v/100; if(masterGain) masterGain.gain.setTargetAtTime(vol,ctx().currentTime,.05); }
-function toggleChord(){ tocando ? stopChord() : playChord(); }
-function playChord(){
-  const ac=ctx(),t=ac.currentTime,raiz=ACORDES[acordeAtual].raiz;
-  masterGain=ac.createGain(); masterGain.gain.value=0;
-  const filt=ac.createBiquadFilter(); filt.type='lowpass'; filt.frequency.value=2400; filt.Q.value=.6;
-  masterGain.connect(filt); filt.connect(ac.destination);
-  masterGain.gain.linearRampToValueAtTime(vol,t+.12);
-  oscs=[];
-  VOZES.forEach((v,idx)=>{
-    if(!ativos[v.id]) return;
-    const f=midiToFreq(raiz+v.off);
-    const g=ac.createGain(); g.gain.value=[.30,.26,.30][idx]; g.connect(masterGain);
-    [[0,'sawtooth',.45],[-5,'triangle',.28],[5,'triangle',.28]].forEach(([cents,tipo,amp])=>{
-      const o=ac.createOscillator(); o.type=tipo;
-      o.frequency.value=f*Math.pow(2,cents/1200);
-      const og=ac.createGain(); og.gain.value=amp;
-      o.connect(og); og.connect(g); o.start(t); oscs.push(o);
-    });
-    const lfo=ac.createOscillator(),lg=ac.createGain();
-    lfo.frequency.value=4.6+idx*.5; lg.gain.value=.035;
-    lfo.connect(lg); lg.connect(g.gain); lfo.start(t); oscs.push(lfo);
-  });
-  tocando=true;
-  document.getElementById('nPlay').textContent='■ Parar';
-  renderVoices();
-}
-function stopChord(silencioso){
-  if(!tocando) return;
-  const ac=ctx(),t=ac.currentTime;
-  if(masterGain){
-    masterGain.gain.cancelScheduledValues(t);
-    masterGain.gain.setValueAtTime(masterGain.gain.value,t);
-    masterGain.gain.linearRampToValueAtTime(0,t+.15);
-  }
-  const lista=oscs.slice();
-  setTimeout(()=>lista.forEach(o=>{try{o.stop()}catch(e){}}),220);
-  oscs=[]; tocando=false;
-  const b=document.getElementById('nPlay'); if(b) b.textContent='▶ Tocar acorde';
-  if(!silencioso) renderVoices();
-}
-</script>
-</body>
+      <div class="vnote">${nomeMidi(raiz + v.off)}</div></div>`;
+        }).join("");
+      }
+      renderVoices();
+      function pickChord(i) {
+        acordeAtual = i;
+        document
+          .querySelectorAll("#chordPick .chip")
+          .forEach((c, k) => c.classList.toggle("on", k === i));
+        const estava = tocando;
+        if (tocando) stopChord(true);
+        renderVoices();
+        if (estava) playChord();
+      }
+      function toggleVoice(id) {
+        ativos[id] = !ativos[id];
+        if (!ativos.soprano && !ativos.contralto && !ativos.tenor)
+          ativos[id] = true;
+        const estava = tocando;
+        if (tocando) stopChord(true);
+        renderVoices();
+        if (estava) playChord();
+      }
+      function soloAll() {
+        ativos = { soprano: true, contralto: true, tenor: true };
+        const estava = tocando;
+        if (tocando) stopChord(true);
+        renderVoices();
+        estava ? playChord() : toggleChord();
+      }
+      function setVol(v) {
+        vol = v / 100;
+        if (masterGain)
+          masterGain.gain.setTargetAtTime(vol, ctx().currentTime, 0.05);
+      }
+      function toggleChord() {
+        tocando ? stopChord() : playChord();
+      }
+      function playChord() {
+        const ac = ctx(),
+          t = ac.currentTime,
+          raiz = ACORDES[acordeAtual].raiz;
+        masterGain = ac.createGain();
+        masterGain.gain.value = 0;
+        const filt = ac.createBiquadFilter();
+        filt.type = "lowpass";
+        filt.frequency.value = 2400;
+        filt.Q.value = 0.6;
+        masterGain.connect(filt);
+        filt.connect(ac.destination);
+        masterGain.gain.linearRampToValueAtTime(vol, t + 0.12);
+        oscs = [];
+        VOZES.forEach((v, idx) => {
+          if (!ativos[v.id]) return;
+          const f = midiToFreq(raiz + v.off);
+          const g = ac.createGain();
+          g.gain.value = [0.3, 0.26, 0.3][idx];
+          g.connect(masterGain);
+          [
+            [0, "sawtooth", 0.45],
+            [-5, "triangle", 0.28],
+            [5, "triangle", 0.28],
+          ].forEach(([cents, tipo, amp]) => {
+            const o = ac.createOscillator();
+            o.type = tipo;
+            o.frequency.value = f * Math.pow(2, cents / 1200);
+            const og = ac.createGain();
+            og.gain.value = amp;
+            o.connect(og);
+            og.connect(g);
+            o.start(t);
+            oscs.push(o);
+          });
+          const lfo = ac.createOscillator(),
+            lg = ac.createGain();
+          lfo.frequency.value = 4.6 + idx * 0.5;
+          lg.gain.value = 0.035;
+          lfo.connect(lg);
+          lg.connect(g.gain);
+          lfo.start(t);
+          oscs.push(lfo);
+        });
+        tocando = true;
+        document.getElementById("nPlay").textContent = "■ Parar";
+        renderVoices();
+      }
+      function stopChord(silencioso) {
+        if (!tocando) return;
+        const ac = ctx(),
+          t = ac.currentTime;
+        if (masterGain) {
+          masterGain.gain.cancelScheduledValues(t);
+          masterGain.gain.setValueAtTime(masterGain.gain.value, t);
+          masterGain.gain.linearRampToValueAtTime(0, t + 0.15);
+        }
+        const lista = oscs.slice();
+        setTimeout(
+          () =>
+            lista.forEach((o) => {
+              try {
+                o.stop();
+              } catch (e) {}
+            }),
+          220,
+        );
+        oscs = [];
+        tocando = false;
+        const b = document.getElementById("nPlay");
+        if (b) b.textContent = "▶ Tocar acorde";
+        if (!silencioso) renderVoices();
+      }
+    </script>
+  </body>
 </html>

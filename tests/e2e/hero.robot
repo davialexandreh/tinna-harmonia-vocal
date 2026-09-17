@@ -18,10 +18,18 @@ Vídeo De Fundo Não Atrapalha Quem Está Lendo
     Should Contain    ${video}    "naLinha":true
     Should Contain    ${video}    "temPoster":true
 
-Retrato Da Tinna Carrega Com Texto Alternativo
+Retrato Da Tinna Fica No Bloco De Quem Ensina, Não No Hero
+    [Documentation]    A foto é da seção "quem ensina" e carrega em lazy: no
+    ...    hero ela competiria com o vídeo e com o LCP.
     Abrir Site No Celular
+    ${onde} =    Evaluate JavaScript    ${None}
+    ...    () => { const i = document.querySelector('img[alt*="Tinna"]'); const hero = document.querySelector('main section'); return JSON.stringify({ noHero: !!hero.querySelector('img[alt*="Tinna"]'), lazy: i.loading, secao: i.closest('section')?.querySelector('h2')?.textContent ?? '' }); }
+    Should Contain    ${onde}    "noHero":false
+    Should Contain    ${onde}    "lazy":"lazy"
+    Should Contain    ${onde}    Tinna Silva
+
     ${img} =    Evaluate JavaScript    ${None}
-    ...    () => { const i = document.querySelector('img[alt*="Tinna"]'); return JSON.stringify({ carregou: i.complete && i.naturalWidth > 0, alt: i.alt, arquivo: i.currentSrc.split('/').pop(), temDimensoes: !!(i.getAttribute('width') && i.getAttribute('height')) }); }
+    ...    () => { const i = document.querySelector('img[alt*="Tinna"]'); i.scrollIntoView({ block: 'center', behavior: 'instant' }); return new Promise(ok => { const pronto = () => ok(JSON.stringify({ carregou: i.complete && i.naturalWidth > 0, alt: i.alt, arquivo: i.currentSrc.split('/').pop(), temDimensoes: !!(i.getAttribute('width') && i.getAttribute('height')) })); i.complete ? pronto() : i.addEventListener('load', pronto, { once: true }); }); }
     Should Contain    ${img}    "carregou":true
     Should Contain    ${img}    "temDimensoes":true
     Should Contain    ${img}    tinna-480.webp
