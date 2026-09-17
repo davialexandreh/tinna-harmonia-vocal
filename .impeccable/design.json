@@ -232,12 +232,42 @@
       {
         "name": "ease-out",
         "value": "cubic-bezier(0.16, 1, 0.3, 1)",
-        "purpose": "Easing único do sistema, em transições de 0,2s."
+        "purpose": "Easing único do sistema, em toda transição e entrada."
       },
       {
-        "name": "duracao-estado",
+        "name": "toque",
+        "value": "0.1s",
+        "purpose": "Resposta ao pressionar: escala 0,985."
+      },
+      {
+        "name": "estado",
         "value": "0.2s",
         "purpose": "Troca de estado em botão, chip e link."
+      },
+      {
+        "name": "painel-entra",
+        "value": "0.22s",
+        "purpose": "Entrada do menu mobile."
+      },
+      {
+        "name": "painel-sai",
+        "value": "0.14s",
+        "purpose": "Saída do menu mobile: desfazer é mais rápido do que fazer."
+      },
+      {
+        "name": "voz-entra",
+        "value": "620ms",
+        "purpose": "Cada parte do título do hero, escalonada em 170ms."
+      },
+      {
+        "name": "luz-sobe",
+        "value": "1400ms",
+        "purpose": "Brilho do vídeo do hero subindo até o valor final, uma vez."
+      },
+      {
+        "name": "sustenta",
+        "value": "1900ms",
+        "purpose": "Respiração das barras de voz soando, alternada e infinita enquanto toca."
       }
     ],
     "breakpoints": [
@@ -362,6 +392,11 @@
         "name": "A Regra dos Oito Degraus",
         "body": "Nenhum tamanho de fonte fora da escala de 11, 13, 15, 17, 19, 20, 24 e 32px, mais as três fluidas de título.",
         "section": "typography"
+      },
+      {
+        "name": "A Regra do Momento Único",
+        "body": "Existe uma coreografia no site: a entrada do título do hero. Todo o resto do movimento é resposta a uma ação ou explicação de estado.",
+        "section": "elevation"
       }
     ],
     "dos": [
@@ -380,7 +415,8 @@
       "Don't usar recurso de urgência de infoproduto: contador regressivo, preço riscado, selo de garantia.",
       "Don't introduzir um segundo acento cromático.",
       "Don't usar fundo claro em nenhum estado, incluindo seleção e destaque.",
-      "Don't aninhar cartão dentro de cartão para criar profundidade extra."
+      "Don't aninhar cartão dentro de cartão para criar profundidade extra.",
+      "Don't deixar animação em laço rodando quando o que ela representa parou."
     ]
   }
 }

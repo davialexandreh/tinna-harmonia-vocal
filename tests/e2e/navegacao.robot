@@ -23,7 +23,11 @@ Menu Mobile Fecha Com Esc
     Click    [aria-label="Abrir menu"]
     Get Element States    css=#menu-mobile    contains    visible
     Keyboard Key    press    Escape
-    Get Element Count    css=#menu-mobile    ==    0
+    # O painel continua no DOM para poder animar a saída; fechado, fica
+    # invisível e inerte.
+    Get Element States    css=#menu-mobile    contains    hidden
+    ${inerte} =    Get Attribute    css=#menu-mobile    inert
+    Should Not Be Equal    ${inerte}    ${None}
 
 Navegação Do Desktop Alcança Todas As Páginas
     Abrir Site No Desktop

@@ -20,6 +20,28 @@
 }
 
 /*
+ * A luz sobe sobre o palco enquanto as vozes entram. Uma vez, no carregamento.
+ * É uma camada de opacidade, e não um filtro no vídeo: filtro obriga o
+ * compositor a refazer cada quadro e custa tempo de thread principal.
+ */
+.fundo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--ink);
+  animation: luzSobe 1400ms var(--ease-out) both;
+}
+
+@keyframes luzSobe {
+  from {
+    opacity: 0.72;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/*
  * Véu sobre o vídeo. Mesmo que passe um quadro totalmente branco, o texto
  * branco mantém 13,5:1 no lado esquerdo, bem acima do AA.
  */
@@ -75,6 +97,37 @@
   font-style: normal;
   /* Ênfase por peso: o magenta é reservado para o que se pode tocar. */
   font-weight: 300;
+}
+
+/*
+ * Momento focal do site: as três partes do título entram uma depois da outra,
+ * saindo do desfoque para o foco, como vozes entrando num acorde.
+ *
+ * Só opacidade e desfoque, nada de deslocamento: as partes são inline e
+ * precisam continuar quebrando linha normalmente. Se a animação não rodar, o
+ * texto já está visível.
+ */
+.titulo > * {
+  animation: vozEntra 620ms var(--ease-out) both;
+}
+
+.titulo > *:nth-child(2) {
+  animation-delay: 170ms;
+}
+
+.titulo > *:nth-child(3) {
+  animation-delay: 340ms;
+}
+
+@keyframes vozEntra {
+  from {
+    opacity: 0;
+    filter: blur(9px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
 }
 
 .lead {
@@ -371,15 +424,25 @@
   display: none;
 }
 
+/* Cruz desenhada em CSS: a barra vertical some enquanto o marcador gira,
+   então o sinal vira um traço sem trocar de caractere. */
 .faq summary::after {
-  content: '+';
-  color: var(--brand-texto);
-  font-size: 24px;
-  line-height: 1;
+  content: '';
+  flex: none;
+  width: 15px;
+  height: 15px;
+  margin-top: 5px;
+  background:
+    linear-gradient(var(--brand-texto), var(--brand-texto)) center / 15px 1.5px no-repeat,
+    linear-gradient(var(--brand-texto), var(--brand-texto)) center / 1.5px 15px no-repeat;
+  transition:
+    transform 0.28s var(--ease-out),
+    background-size 0.28s var(--ease-out);
 }
 
 .faq details[open] summary::after {
-  content: '−';
+  transform: rotate(180deg);
+  background-size: 15px 1.5px, 1.5px 0;
 }
 
 .faq p {

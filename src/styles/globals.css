@@ -59,16 +59,24 @@ select {
   border-radius: var(--radius-sm);
 }
 
+/*
+ * Movimento reduzido não é ausência de movimento: o que confirma uma ação
+ * continua acontecendo, só mais curto. O que some é a coreografia (entrada do
+ * título, luz subindo no vídeo, barras respirando), porque nenhuma delas
+ * carrega informação que o resto da página já não diga.
+ */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
+
   *,
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.12s !important;
   }
 }
 

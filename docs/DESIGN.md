@@ -168,6 +168,12 @@ palco gospel (dourado, brilho, luz volumétrica, sombra em letra) e nada de
 urgência de infoproduto (contador, preço riscado, selo de garantia). A promessa é
 de serviço, não de espetáculo.
 
+O movimento tem um só momento autoral: as três partes do título do hero entram
+em sequência, saindo do desfoque para o foco, enquanto a luz sobe sobre o vídeo.
+São as vozes entrando num acorde, e é a única coreografia do site. Todo o resto
+do movimento é resposta: confirma um toque, explica um estado, acompanha uma
+troca de tela.
+
 **Key Characteristics:**
 - Fundo escuro único, sem alternância de tema
 - Magenta reservado à ação, nunca à decoração
@@ -325,6 +331,8 @@ A imagem segue a mesma língua: retrato em 3/4 com raio de 32px e a mesma borda 
 
 O comportamento é **refinado e contido**: transição curta (0,2s) com
 `cubic-bezier(0.16, 1, 0.3, 1)`, deslocamento de 1px no hover, nada que salte.
+Ao toque, 100ms e uma redução de 1,5% de escala: o retorno chega antes do
+resultado.
 
 ### Buttons
 - **Shape:** pílula completa (`999px`), altura confortável para dedo (padrão 14px
@@ -367,6 +375,13 @@ O comportamento é **refinado e contido**: transição curta (0,2s) com
   tela cheia, com links em Inter Tight 24px, fechamento por Esc e rolagem do fundo
   travada.
 
+### Indicador de voz soando
+
+Três barras finas em magenta que respiram em 1,9s, uma defasada da outra, ao
+lado da nota. Aparece só enquanto o áudio toca e some quando ele para, então
+nada fica em laço no silêncio. É o único lugar do site onde a tela mostra que há
+som, e por isso conta como estado, não como enfeite.
+
 ### Painel de ferramenta (componente de assinatura)
 
 O bloco que abriga as ferramentas de áudio é o que este site tem de próprio:
@@ -405,3 +420,6 @@ usa o display em 20px para se destacar da descrição.
 - **Don't** usar fundo claro em nenhum estado, incluindo seleção e destaque. O
   site tem um tema só.
 - **Don't** aninhar cartão dentro de cartão para criar profundidade extra.
+- **Don't** repetir a entrada do hero como revelação de seção ao rolar. A
+  coreografia é uma só, e é no primeiro quadro.
+- **Don't** deixar animação em laço rodando quando o que ela representa parou.

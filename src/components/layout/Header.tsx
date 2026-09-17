@@ -73,27 +73,30 @@ export function Header() {
         </div>
       </Container>
 
-      {aberto && (
-        <div className={styles.painel} id="menu-mobile">
-          <nav aria-label="Navegação principal (mobile)">
-            {navegacao.map((item) => (
-              // Fecha o painel ao navegar.
-              <Link key={item.href} href={item.href} onClick={() => setAberto(false)}>
-                {item.rotulo}
-              </Link>
-            ))}
-          </nav>
-          <div className={styles.painelCta}>
-            <WhatsAppCTA
-              mensagem={site.whatsapp.mensagens.workshop}
-              bloco
-              origem="menu-mobile"
-            >
-              Levar à minha igreja
-            </WhatsAppCTA>
-          </div>
+      <div
+        className={[styles.painel, aberto && styles.painelAberto].filter(Boolean).join(' ')}
+        id="menu-mobile"
+        inert={!aberto}
+      >
+        <nav aria-label="Navegação principal (mobile)">
+          {navegacao.map((item) => (
+            // Fecha o painel ao navegar.
+            <Link key={item.href} href={item.href} onClick={() => setAberto(false)}>
+              {item.rotulo}
+            </Link>
+          ))}
+        </nav>
+        <div className={styles.painelCta}>
+          <WhatsAppCTA
+            mensagem={site.whatsapp.mensagens.workshop}
+            bloco
+            origem="menu-mobile"
+          >
+            Levar à minha igreja
+          </WhatsAppCTA>
         </div>
-      )}
+      </div>
+
     </header>
   );
 }

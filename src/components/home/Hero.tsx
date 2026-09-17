@@ -12,9 +12,10 @@ export function Hero() {
 
       <Container className={styles.heroInterno}>
         <div className={styles.heroTexto}>
+          {/* Três partes, três vozes: a ordem de entrada é a sequência do método. */}
           <h1 className={styles.titulo}>
-            Cantar em harmonia <em>não é dom.</em> É método e o seu grupo pode
-            aprender.
+            <span>Cantar em harmonia</span> <em>não é dom.</em>{' '}
+            <span>É método e o seu grupo pode aprender.</span>
           </h1>
           <p className={styles.lead}>
             Se o seu ministério canta junto mas a segunda voz sempre escorrega

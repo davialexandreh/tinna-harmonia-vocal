@@ -6,6 +6,7 @@ import { Icone } from '@/components/ui/Icone';
 import { midiParaFrequencia, nomeDaNota } from '@/lib/audio/notas';
 import { tocarVoz, type VozTocando } from '@/lib/audio/vozes';
 import { AvisoSemAudio } from './AvisoSemAudio';
+import { Soando } from './Soando';
 import styles from './ferramentas.module.css';
 
 /** Uma oitava a partir do Dó3, região confortável para a maioria das vozes. */
@@ -70,6 +71,7 @@ export function NotaGuia() {
         {nomeDaNota(midi)}
       </p>
       <p className={styles.mostradorLegenda}>
+        {tocando && <Soando />}
         {midiParaFrequencia(midi).toFixed(1)} Hz
       </p>
 

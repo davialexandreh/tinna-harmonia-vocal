@@ -7,6 +7,7 @@ import { acordes, naipes, type NaipeId } from '@/content/acordes';
 import { midiParaFrequencia, nomeDaNota, vozesDoAcorde } from '@/lib/audio/notas';
 import { tocarVoz, type VozTocando } from '@/lib/audio/vozes';
 import { AvisoSemAudio } from './AvisoSemAudio';
+import { Soando } from './Soando';
 import styles from './ferramentas.module.css';
 
 const VOLUME_POR_NAIPE: Record<NaipeId, number> = {
@@ -114,7 +115,10 @@ export function TocadorDeNaipes() {
               <b>{naipe.nome}</b>
               <span>{naipe.descricao}</span>
             </span>
-            <span className={styles.vozNota}>{nomeDaNota(notas[naipe.id])}</span>
+            <span className={styles.vozLado}>
+              {tocando && ativos[naipe.id] && <Soando />}
+              <span className={styles.vozNota}>{nomeDaNota(notas[naipe.id])}</span>
+            </span>
           </button>
         ))}
       </div>
