@@ -16,6 +16,20 @@ npm run build   # gera out/
 npm run preview # serve out/ em http://localhost:3000
 ```
 
+## Mídia
+
+As fotos e vídeos originais ficam em `assets/`. O build é estático, então nada
+é otimizado em tempo de execução — o que está em `public/midia/` é exatamente o
+que o visitante baixa.
+
+```bash
+npm run midia   # gera public/midia/ a partir de assets/
+```
+
+Imagens saem pelo sharp (webp em três larguras + jpeg de segurança). O vídeo
+precisa do ffmpeg (`brew install ffmpeg`): vira 720p sem áudio, com pôster.
+Rode sempre que a Tinna mandar material novo.
+
 ## Testes
 
 ```bash

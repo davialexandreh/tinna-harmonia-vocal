@@ -2,6 +2,9 @@
   background: var(--ink);
   color: #fff;
   padding: var(--space-20) 0;
+
+  /* Bloco sempre escuro: usa o rosa claro para o texto passar no AA. */
+  --brand-texto: var(--brand-claro);
 }
 
 .capa h1 {

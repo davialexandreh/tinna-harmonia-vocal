@@ -4,15 +4,49 @@
   position: relative;
   overflow: hidden;
   padding: var(--space-20) 0;
+
+  /* Bloco sempre escuro, nos dois temas: o rosa de texto precisa ser o claro.
+     O rosa da marca sobre esse fundo dá 3,78:1 e reprova no AA. */
+  --brand-texto: var(--brand-claro);
 }
 
-.wavefield {
+/* fundo de vídeo */
+.fundo {
   position: absolute;
   inset: 0;
-  opacity: 0.3;
   pointer-events: none;
+}
+
+.midiaDeFundo {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+/*
+ * Véu sobre o vídeo. Mesmo que passe um quadro totalmente branco, o texto
+ * branco mantém 13,5:1 no lado esquerdo — bem acima do AA.
+ */
+.veu {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 10, 16, 0.9) 0%,
+    rgba(20, 10, 16, 0.86) 55%,
+    rgba(20, 10, 16, 0.94) 100%
+  );
+}
+
+@media (min-width: 901px) {
+  .veu {
+    background: linear-gradient(
+      90deg,
+      rgba(20, 10, 16, 0.95) 0%,
+      rgba(20, 10, 16, 0.86) 45%,
+      rgba(20, 10, 16, 0.55) 100%
+    );
+  }
 }
 
 .heroGrid {
@@ -57,6 +91,17 @@
 }
 
 .retrato {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: var(--radius-2xl);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(160deg, #3a1a27, #140a10);
+}
+
+/* placeholder ainda usado no bloco "quem ensina" da Home */
+.retratoPlaceholder {
   aspect-ratio: 4 / 5;
   border-radius: var(--radius-2xl);
   background:
@@ -67,16 +112,17 @@
   place-items: center;
   text-align: center;
   padding: var(--space-8);
+  color: #fff;
 }
 
-.retrato span {
+.retratoPlaceholder span {
   font-size: 12px;
   color: #b9a9af;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
-.retrato strong {
+.retratoPlaceholder strong {
   display: block;
   font-size: 58px;
   margin-bottom: var(--space-4);

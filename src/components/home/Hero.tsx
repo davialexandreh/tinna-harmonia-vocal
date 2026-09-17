@@ -1,3 +1,4 @@
+import { FundoDoHero } from '@/components/home/FundoDoHero';
 import { WhatsAppCTA } from '@/components/cta/WhatsAppCTA';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
@@ -7,28 +8,7 @@ import styles from './home.module.css';
 export function Hero() {
   return (
     <section className={styles.hero}>
-      <svg
-        className={styles.wavefield}
-        viewBox="0 0 1200 600"
-        preserveAspectRatio="none"
-        aria-hidden="true"
-      >
-        <g fill="none" stroke="#E11D62" strokeWidth="1.2">
-          <path d="M0 460 Q 100 380 200 460 T 400 460 T 600 460 T 800 460 T 1000 460 T 1200 460" />
-          <path
-            d="M0 500 Q 100 420 200 500 T 400 500 T 600 500 T 800 500 T 1000 500 T 1200 500"
-            opacity=".7"
-          />
-          <path
-            d="M0 540 Q 100 460 200 540 T 400 540 T 600 540 T 800 540 T 1000 540 T 1200 540"
-            opacity=".45"
-          />
-          <path
-            d="M0 420 Q 100 340 200 420 T 400 420 T 600 420 T 800 420 T 1000 420 T 1200 420"
-            opacity=".3"
-          />
-        </g>
-      </svg>
+      <FundoDoHero />
 
       <Container className={styles.heroGrid}>
         <div>
@@ -54,16 +34,18 @@ export function Hero() {
           </div>
         </div>
 
-        <div className={styles.retrato}>
-          <div>
-            <strong aria-hidden="true">🎤</strong>
-            <span>
-              Placeholder
-              <br />
-              foto da Tinna
-            </span>
-          </div>
-        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element -- export estático: sem otimizador, o srcset é montado à mão */}
+        <img
+          className={styles.retrato}
+          src="/midia/tinna-800.jpg"
+          srcSet="/midia/tinna-480.webp 480w, /midia/tinna-800.webp 800w, /midia/tinna-1200.webp 1200w"
+          sizes="(max-width: 900px) 70vw, 380px"
+          width={800}
+          height={1067}
+          alt="Tinna Silva sorrindo, segurando um microfone"
+          fetchPriority="high"
+          decoding="async"
+        />
       </Container>
     </section>
   );

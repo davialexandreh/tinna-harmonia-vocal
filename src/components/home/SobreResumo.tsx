@@ -9,7 +9,7 @@ export function SobreResumo() {
   return (
     <Secao>
       <Container className={styles.heroGrid}>
-        <div className={styles.retrato}>
+        <div className={styles.retratoPlaceholder}>
           <div>
             <strong aria-hidden="true">📖</strong>
             <span>

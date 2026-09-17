@@ -51,6 +51,11 @@ npm run test:e2e   # Robot Framework (precisa do site servido em :4321)
 | Formatos e passos do workshop | `src/content/workshops.ts` |
 | Cores, espaçamento, tipografia | `src/styles/tokens.css` |
 | Acordes das ferramentas | `src/content/acordes.ts` |
+| Foto e vídeo | troque em `assets/` e rode `npm run midia` |
+
+O vídeo do hero não carrega quando a pessoa pediu menos movimento no sistema,
+está em economia de dados ou tem conexão lenta — nesses casos fica o pôster.
+A regra está em `src/components/home/FundoDoHero.tsx`.
 
 <!-- BEGIN:nextjs-agent-rules -->
 

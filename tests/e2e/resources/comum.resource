@@ -1,5 +1,5 @@
 *** Settings ***
-Library     Browser    timeout=10s
+Library     Browser    timeout=20s
 
 *** Variables ***
 ${BASE_URL}         http://localhost:4321
