@@ -23,18 +23,17 @@ export default function Ferramentas() {
         <Container>
           <SecHead
             nivel="h1"
-            eyebrow="Grátis · sem cadastro"
             titulo={
               <>
                 Ferramentas para <em>treinar hoje</em>
               </>
             }
-            descricao="Funcionam direto no navegador do celular. Nada para instalar, nada para pagar, nenhum dado seu sai do aparelho."
+            descricao="Grátis e sem cadastro, direto no navegador do celular. Nada para instalar, nada para pagar, e nenhum dado seu sai do aparelho."
           />
           <Grid colunas={2}>
             {ferramentas.map((ferramenta) => (
               <Card key={ferramenta.slug}>
-                <CardIcone>{ferramenta.icone}</CardIcone>
+                <CardIcone nome={ferramenta.icone} />
                 <h2>
                   <Link href={`/ferramentas/${ferramenta.slug}/`}>{ferramenta.titulo}</Link>
                 </h2>

@@ -23,7 +23,6 @@ export default function Contato() {
         <SecHead
           nivel="h1"
           centro
-          eyebrow="Contato"
           titulo={
             <>
               Fale comigo <em>direto no WhatsApp</em>
@@ -33,8 +32,8 @@ export default function Contato() {
         />
         <Grid colunas={2}>
           <Card>
-            <CardIcone>💬</CardIcone>
-            <h3>Workshop para o ministério</h3>
+            <CardIcone nome="conversa" />
+            <h2>Workshop para o ministério</h2>
             <p>
               Me diga o nome da igreja, quantas pessoas cantam e o período que vocês
               preferem. Eu respondo com formato e valor.
@@ -49,8 +48,8 @@ export default function Contato() {
             </p>
           </Card>
           <Card>
-            <CardIcone>🎧</CardIcone>
-            <h3>Outras dúvidas</h3>
+            <CardIcone nome="fone" />
+            <h2>Outras dúvidas</h2>
             <p>
               Dúvida sobre voz, ensaio, as ferramentas do site ou o curso online que está
               em preparo.

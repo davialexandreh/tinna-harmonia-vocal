@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { WhatsAppCTA } from '@/components/cta/WhatsAppCTA';
 import { Container } from '@/components/ui/Container';
+import { MarcaNota } from '@/components/ui/Icone';
 import { navegacao, site } from '@/content/site';
 import styles from './Header.module.css';
 
@@ -32,8 +33,8 @@ export function Header() {
     <header className={styles.header}>
       <Container className={styles.inner} as="div">
         <Link href="/" className={styles.logo}>
-          <span className={styles.mark} aria-hidden="true">
-            ♪
+          <span className={styles.mark}>
+            <MarcaNota />
           </span>
           {site.nome}
         </Link>

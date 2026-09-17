@@ -8,12 +8,12 @@
   text-align: center;
 }
 
-.eyebrow {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-caps);
-  font-weight: 700;
-  color: var(--brand-texto);
+
+/* O h1 de uma página interna precisa ficar acima da abertura de seção,
+   senão os dois níveis empatam. */
+.head h1 {
+  font-size: clamp(33px, 4.8vw, 54px);
+  margin: var(--space-3) 0;
 }
 
 .head h2 {
@@ -21,12 +21,14 @@
   margin: var(--space-3) 0;
 }
 
+.head h1 em,
 .head h2 em {
   font-style: normal;
-  color: var(--brand-texto);
+  /* Ênfase por peso: magenta é ação. */
+  font-weight: 300;
 }
 
 .head p {
   color: var(--text-secondary);
-  font-size: 18px;
+  font-size: 19px;
 }

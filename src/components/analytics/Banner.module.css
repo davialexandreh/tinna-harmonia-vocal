@@ -9,12 +9,12 @@
   background: var(--surface-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-xl);
+  box-shadow: var(--shadow-flutuante);
   padding: var(--space-4) var(--space-5);
 }
 
 .texto {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.4;
   color: var(--text-secondary);
   margin-bottom: var(--space-3);

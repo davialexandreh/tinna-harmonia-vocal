@@ -22,9 +22,8 @@ export function PaginaFerramenta({
         <Container narrow>
           <SecHead
             nivel="h1"
-            eyebrow="Ferramenta gratuita"
             titulo={ferramenta.titulo}
-            descricao={ferramenta.descricao}
+            descricao={`Grátis, sem cadastro. ${ferramenta.descricao}`}
           />
           <noscript>
             <p className={styles.aviso}>

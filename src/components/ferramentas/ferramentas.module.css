@@ -3,6 +3,7 @@
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-xl);
   padding: var(--space-8);
+  box-shadow: var(--shadow-ambiente);
 }
 
 @media (max-width: 680px) {
@@ -30,7 +31,7 @@
   border: 1.5px solid transparent;
   border-radius: var(--radius-pill);
   padding: 9px 16px;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
   color: var(--text-secondary);
@@ -59,14 +60,14 @@
   letter-spacing: var(--tracking-tighter);
   line-height: 1;
   text-align: center;
-  color: var(--brand-texto);
+  color: var(--text-primary);
   margin: var(--space-6) 0;
 }
 
 .mostradorLegenda {
   text-align: center;
   color: var(--text-tertiary);
-  font-size: 14px;
+  font-size: 15px;
   margin-top: calc(var(--space-6) * -1);
   margin-bottom: var(--space-6);
 }
@@ -85,12 +86,18 @@
 }
 
 .controle span {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--text-secondary);
   min-width: 68px;
 }
 
 /* lista de vozes do tocador de naipes */
+.instrucao {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  margin: calc(var(--space-3) * -1) 0 var(--space-4);
+}
+
 .vozes {
   display: flex;
   flex-direction: column;
@@ -139,7 +146,7 @@
   font-family: var(--font-display);
   font-size: 20px;
   font-weight: 600;
-  color: var(--brand-texto);
+  color: var(--text-primary);
 }
 
 /* indicador de batida do metrônomo */
@@ -188,7 +195,7 @@
 .placar {
   text-align: center;
   color: var(--text-tertiary);
-  font-size: 14px;
+  font-size: 15px;
   margin-top: var(--space-3);
 }
 
@@ -196,13 +203,13 @@
   background: var(--surface-sunken);
   border-radius: var(--radius-md);
   padding: var(--space-4) var(--space-5);
-  font-size: 14.5px;
+  font-size: 15px;
   color: var(--text-secondary);
   margin-top: var(--space-6);
 }
 
 .dica {
-  font-size: 13.5px;
+  font-size: 13px;
   color: var(--text-secondary);
   margin-top: var(--space-6);
   border-top: 1px solid var(--border-subtle);
@@ -227,7 +234,7 @@
   counter-increment: passo;
   display: flex;
   gap: var(--space-4);
-  font-size: 16px;
+  font-size: 17px;
   color: var(--text-secondary);
 }
 
@@ -236,7 +243,7 @@
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 13px;
-  color: var(--brand-texto);
+  color: var(--text-tertiary);
   flex: none;
   padding-top: 3px;
 }
@@ -272,8 +279,11 @@
 }
 
 .marcaResposta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-family: var(--font-display);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--brand-texto);
   white-space: nowrap;

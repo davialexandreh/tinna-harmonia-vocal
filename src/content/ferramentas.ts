@@ -1,8 +1,10 @@
 /** Índice das ferramentas. Cada uma é uma porta de entrada de busca orgânica. */
+import type { NomeDeIcone } from '@/components/ui/Icone';
+
 export const ferramentas = [
   {
     slug: 'tocador-de-naipes',
-    icone: '🎼',
+    icone: 'naipes',
     titulo: 'Tocador de naipes',
     chamada: 'Ouça soprano, contralto e tenor separados ou juntos.',
     descricao:
@@ -15,7 +17,7 @@ export const ferramentas = [
   },
   {
     slug: 'nota-guia',
-    icone: '🎹',
+    icone: 'diapasao',
     titulo: 'Nota-guia',
     chamada: 'Uma nota sustentada para apoiar o seu estudo.',
     descricao:
@@ -28,7 +30,7 @@ export const ferramentas = [
   },
   {
     slug: 'metronomo',
-    icone: '🥁',
+    icone: 'metronomo',
     titulo: 'Metrônomo',
     chamada: 'Andamento estável para o ensaio não acelerar.',
     descricao:
@@ -41,7 +43,7 @@ export const ferramentas = [
   },
   {
     slug: 'treino-de-ouvido',
-    icone: '👂',
+    icone: 'ouvido',
     titulo: 'Ache a voz',
     chamada: 'Toca um acorde de três vozes e você identifica o naipe.',
     descricao:
@@ -52,7 +54,7 @@ export const ferramentas = [
       'Errar faz parte: repita o mesmo acorde até reconhecer sem pensar.',
     ],
   },
-] as const;
+] as const satisfies readonly { icone: NomeDeIcone; [chave: string]: unknown }[];
 
 export type Ferramenta = (typeof ferramentas)[number];
 

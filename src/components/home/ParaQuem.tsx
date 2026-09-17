@@ -11,7 +11,6 @@ export function ParaQuem() {
       <Container>
         <SecHead
           centro
-          eyebrow="Honestidade"
           titulo={
             <>
               Isso é pra vocês? <em>Nem sempre.</em>

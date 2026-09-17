@@ -23,7 +23,6 @@ export default function Sobre() {
         <Container narrow>
           <SecHead
             nivel="h1"
-            eyebrow="Quem ensina"
             titulo={
               <>
                 Harmonia vocal <em>é o meu trabalho há mais de dez anos</em>
@@ -40,7 +39,7 @@ export default function Sobre() {
 
       <Secao alt>
         <Container>
-          <SecHead centro eyebrow="Como eu ensino" titulo="Quatro princípios" />
+          <SecHead centro titulo="Quatro princípios" />
           <Grid colunas={4}>
             {principios.map((p) => (
               <Card key={p.titulo}>

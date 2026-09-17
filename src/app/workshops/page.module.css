@@ -5,7 +5,7 @@
 }
 
 .capa h1 {
-  font-size: clamp(34px, 5vw, 56px);
+  font-size: clamp(33px, 4.8vw, 54px);
   margin: var(--space-4) 0;
 }
 
@@ -21,13 +21,6 @@
   margin-bottom: var(--space-8);
 }
 
-.eyebrow {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-caps);
-  font-weight: 700;
-  color: var(--brand-texto);
-}
 
 .passos {
   list-style: none;
@@ -42,7 +35,7 @@
   counter-increment: passo;
   display: flex;
   gap: var(--space-5);
-  font-size: 16.5px;
+  font-size: 17px;
   color: var(--text-secondary);
 }
 
@@ -50,8 +43,8 @@
   content: counter(passo, decimal-leading-zero);
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 14px;
-  color: var(--brand-texto);
+  font-size: 15px;
+  color: var(--text-tertiary);
   flex: none;
   padding-top: 3px;
 }

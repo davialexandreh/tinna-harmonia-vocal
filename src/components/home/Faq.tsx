@@ -11,7 +11,6 @@ export function Faq() {
       <Container narrow>
         <SecHead
           centro
-          eyebrow="Dúvidas"
           titulo={
             <>
               Perguntas <em>frequentes</em>

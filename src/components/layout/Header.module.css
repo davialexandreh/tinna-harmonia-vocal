@@ -34,7 +34,7 @@
   display: grid;
   place-items: center;
   color: #fff;
-  font-size: 14px;
+  font-size: 15px;
   flex: none;
 }
 
@@ -79,7 +79,7 @@
   width: 18px;
   height: 2px;
   background: var(--text-primary);
-  border-radius: 2px;
+  border-radius: var(--radius-pill);
 }
 
 /* painel mobile */

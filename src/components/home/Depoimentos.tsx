@@ -1,4 +1,5 @@
 import { Container } from '@/components/ui/Container';
+import { Icone } from '@/components/ui/Icone';
 import { Grid } from '@/components/ui/Grid';
 import { SecHead } from '@/components/ui/SecHead';
 import { Secao } from '@/components/ui/Secao';
@@ -18,7 +19,6 @@ export function Depoimentos() {
       <Container>
         <SecHead
           centro
-          eyebrow="Quem já passou por isso"
           titulo={
             <>
               O que muda <em>no ensaio de segunda</em>
@@ -28,8 +28,8 @@ export function Depoimentos() {
         <Grid colunas={4}>
           {depoimentos.map((d) => (
             <figure key={d.nome} className={styles.depoimento}>
-              <div className={styles.videoPlaceholder} aria-hidden="true">
-                ▶
+              <div className={styles.videoPlaceholder}>
+                <Icone nome="tocar" tamanho={28} />
               </div>
               <figcaption className={styles.depoimentoCorpo}>
                 <p>{d.texto}</p>

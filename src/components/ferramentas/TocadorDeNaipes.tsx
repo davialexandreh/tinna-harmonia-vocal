@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/Button';
+import { Icone } from '@/components/ui/Icone';
 import { acordes, naipes, type NaipeId } from '@/content/acordes';
 import { midiParaFrequencia, nomeDaNota, vozesDoAcorde } from '@/lib/audio/notas';
 import { tocarVoz, type VozTocando } from '@/lib/audio/vozes';
@@ -98,7 +99,8 @@ export function TocadorDeNaipes() {
         ))}
       </div>
 
-      <span className={styles.rotulo}>Vozes: toque para ligar ou desligar</span>
+      <span className={styles.rotulo}>Vozes</span>
+      <p className={styles.instrucao}>Toque em uma voz para ligar ou desligar.</p>
       <div className={styles.vozes}>
         {naipes.map((naipe) => (
           <button
@@ -118,7 +120,8 @@ export function TocadorDeNaipes() {
       </div>
 
       <Button onClick={alternarReproducao} bloco>
-        {tocando ? '■ Parar' : '▶ Tocar acorde'}
+        <Icone nome={tocando ? 'parar' : 'tocar'} tamanho={18} />
+        {tocando ? 'Parar' : 'Tocar acorde'}
       </Button>
 
       <p className={styles.dica}>

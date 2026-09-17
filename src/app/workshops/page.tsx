@@ -21,7 +21,6 @@ export default function Workshops() {
     <>
       <section className={styles.capa}>
         <Container>
-          <span className={styles.eyebrow}>Workshops e imersões</span>
           <h1>
             O encontro acontece <em>na sua igreja</em>, com o ministério inteiro
           </h1>
@@ -42,7 +41,6 @@ export default function Workshops() {
       <Secao>
         <Container>
           <SecHead
-            eyebrow="Formatos"
             titulo={
               <>
                 Três maneiras de <em>trabalhar com o grupo</em>
@@ -53,7 +51,7 @@ export default function Workshops() {
           <Grid>
             {formatos.map((formato) => (
               <Card key={formato.titulo}>
-                <CardIcone>{formato.icone}</CardIcone>
+                <CardIcone nome={formato.icone} />
                 <h3>{formato.titulo}</h3>
                 <p>{formato.descricao}</p>
               </Card>
@@ -65,7 +63,6 @@ export default function Workshops() {
       <Secao alt>
         <Container>
           <SecHead
-            eyebrow="O que o ministério recebe"
             titulo={
               <>
                 Vocês não saem com teoria. <em>Saem com repertório.</em>
@@ -86,7 +83,6 @@ export default function Workshops() {
       <Secao id="orcamento">
         <Container>
           <SecHead
-            eyebrow="Como agendar"
             titulo="Do primeiro contato até o encontro"
             descricao="Sem formulário e sem espera: a conversa começa e termina no WhatsApp."
           />

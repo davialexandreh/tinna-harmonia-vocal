@@ -2,7 +2,6 @@ import type { ReactNode } from 'react';
 import styles from './SecHead.module.css';
 
 type SecHeadProps = {
-  eyebrow?: string;
   titulo: ReactNode;
   descricao?: ReactNode;
   centro?: boolean;
@@ -11,7 +10,6 @@ type SecHeadProps = {
 };
 
 export function SecHead({
-  eyebrow,
   titulo,
   descricao,
   centro = false,
@@ -21,7 +19,6 @@ export function SecHead({
 
   return (
     <div className={[styles.head, centro && styles.centro].filter(Boolean).join(' ')}>
-      {eyebrow && <span className={styles.eyebrow}>{eyebrow}</span>}
       <Titulo>{titulo}</Titulo>
       {descricao && <p>{descricao}</p>}
     </div>

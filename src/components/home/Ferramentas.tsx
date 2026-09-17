@@ -12,17 +12,16 @@ export function Ferramentas() {
       <Container>
         <SecHead
           centro
-          eyebrow="Grátis · sem cadastro"
           titulo={
             <>
               Ferramentas para <em>treinar hoje</em>
             </>
           }
-          descricao="Funcionam direto no navegador, no celular, sem instalar nada."
+          descricao="Grátis e sem cadastro. Funcionam direto no navegador do celular, sem instalar nada."
         />
         <Grid colunas={2}>
           <Card>
-            <CardIcone>🎼</CardIcone>
+            <CardIcone nome="naipes" />
             <h3>Tocador de naipes</h3>
             <p>
               Ouça soprano, contralto e tenor separados ou juntos. Isole a sua voz e treine
@@ -30,7 +29,7 @@ export function Ferramentas() {
             </p>
           </Card>
           <Card>
-            <CardIcone>🎹</CardIcone>
+            <CardIcone nome="diapasao" />
             <h3>Nota-guia e metrônomo</h3>
             <p>
               Uma nota sustentada para apoiar o estudo e um metrônomo estável para o ensaio

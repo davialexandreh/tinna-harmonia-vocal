@@ -8,7 +8,6 @@ export function ProblemaSolucao() {
       <Container>
         <div className={styles.duasColunas}>
           <div>
-            <span className={styles.eyebrow}>O problema</span>
             <h2>Vocês ensaiam há anos e a segunda voz ainda não para em pé</h2>
             <p>
               Todo mundo começa certo. No meio da música o naipe inteiro escorrega de volta
@@ -21,7 +20,6 @@ export function ProblemaSolucao() {
             </p>
           </div>
           <div>
-            <span className={styles.eyebrow}>A solução</span>
             <h2>Um caminho na ordem certa, aplicado ao ensaio real</h2>
             <p>
               O grupo aprende a encontrar cada voz dentro do arranjo, sustentá-la com os

@@ -16,7 +16,6 @@ export function Metodo() {
       <Container>
         <SecHead
           centro
-          eyebrow="A metodologia"
           titulo={
             <>
               O caminho, <em>na ordem exata</em>

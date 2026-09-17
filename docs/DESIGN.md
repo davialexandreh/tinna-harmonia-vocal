@@ -13,12 +13,25 @@ colors:
   texto-secundario: "#c8bec2"
   texto-terciario: "#a79e9a"
   borda-sutil: "rgba(255, 255, 255, 0.14)"
+  preto-sombra: "#000000"
 typography:
   display:
     fontFamily: "Inter Tight, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
     fontSize: "clamp(36px, 5.4vw, 66px)"
     fontWeight: 600
     lineHeight: 1.05
+    letterSpacing: "-0.03em"
+  page-title:
+    fontFamily: "Inter Tight, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+    fontSize: "clamp(33px, 4.8vw, 54px)"
+    fontWeight: 600
+    lineHeight: 1.05
+    letterSpacing: "-0.03em"
+  tool-display:
+    fontFamily: "Inter Tight, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+    fontSize: "clamp(56px, 12vw, 88px)"
+    fontWeight: 600
+    lineHeight: 1
     letterSpacing: "-0.03em"
   headline:
     fontFamily: "Inter Tight, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
@@ -44,6 +57,36 @@ typography:
     fontWeight: 600
     lineHeight: 1.2
     letterSpacing: "normal"
+  lead:
+    fontFamily: "Archivo, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+    fontSize: "19px"
+    fontWeight: 400
+    lineHeight: 1.5
+    letterSpacing: "normal"
+  subtitle:
+    fontFamily: "Inter Tight, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+    fontSize: "24px"
+    fontWeight: 600
+    lineHeight: 1.15
+    letterSpacing: "-0.03em"
+  stat:
+    fontFamily: "Inter Tight, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+    fontSize: "32px"
+    fontWeight: 600
+    lineHeight: 1
+    letterSpacing: "-0.03em"
+  caption:
+    fontFamily: "Archivo, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+    fontSize: "13px"
+    fontWeight: 400
+    lineHeight: 1.45
+    letterSpacing: "normal"
+  overline:
+    fontFamily: "Archivo, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+    fontSize: "11px"
+    fontWeight: 700
+    lineHeight: 1.2
+    letterSpacing: "0.12em"
 rounded:
   sm: "8px"
   md: "12px"
@@ -162,6 +205,8 @@ carrega toda a energia do sistema justamente porque não tem concorrente.
 - **Texto terciário** (`#a79e9a`): metadados, legendas e o rodapé legal.
 - **Borda sutil** (`rgba(255, 255, 255, 0.14)`): a linha de 1px que desenha cartão,
   campo e separação de seção.
+- **Preto puro** (`#000000`): só como base de sombra, em `rgba`. Nunca como fundo
+  de superfície e nunca como cor de texto.
 
 ### Named Rules
 
@@ -186,11 +231,26 @@ grotescas: o contraste entre elas é de largura e função, nunca de estilo.
 ### Hierarchy
 - **Display** (600, `clamp(36px, 5.4vw, 66px)`, 1.05, `-0.03em`): a promessa do
   hero. Um por página, sempre.
+- **Page title** (600, `clamp(33px, 4.8vw, 54px)`): o h1 de página interna, um
+  degrau acima da abertura de seção.
+- **Tool display** (600, `clamp(56px, 12vw, 88px)`): o mostrador das ferramentas
+  de áudio. Existe só dentro do painel.
 - **Headline** (600, `clamp(29px, 4vw, 46px)`, 1.05): abertura de seção.
 - **Title** (600, 20px, 1.15): título de cartão e de bloco dentro de seção.
 - **Body** (400, 17px, 1.5): leitura corrida. Medida de 65–75ch; em textos legais
   o limite é 72ch e o container cai para 880px.
-- **Label** (600, 15px): botão e controle. Em botão pequeno, 14px; em grande, 17px.
+- **Label** (600, 15px): botão, controle e link de navegação.
+- **Lead** (400, 19px): parágrafo de abertura e resposta de FAQ.
+- **Subtitle** (600, 24px): título de nível dentro de uma grade.
+- **Stat** (600, 32px): número em destaque.
+- **Caption** (400, 13px): legenda, metadado e nota de rodapé.
+- **Overline** (700, 11px, `0.12em`, caixa alta): rótulo de controle dentro de um
+  painel de ferramenta. Nunca acima de um título.
+
+### Escala
+Oito degraus, e nenhum valor fora deles: 11, 13, 15, 17, 19, 20, 24 e 32px. Acima
+disso só as três fluidas: h1 `clamp(33px, 4.8vw, 54px)`, headline
+`clamp(29px, 4vw, 46px)` e display `clamp(36px, 5.4vw, 66px)`.
 
 ### Named Rules
 
@@ -200,6 +260,9 @@ tipo, incluindo monoespaçada, não existe neste sistema.
 
 **A Regra do Aperto.** Todo título carrega `letter-spacing: -0.03em`. É o que faz
 a Inter Tight parecer desenhada para o site em vez de escolhida numa lista.
+
+**A Regra dos Oito Degraus.** Nenhum tamanho de fonte fora da escala. Se um bloco
+pede 14,5px, o bloco está errado, não a escala.
 
 ## Layout
 
@@ -323,7 +386,9 @@ usa o display em 20px para se destacar da descrição.
   Vivo reprova no AA para corpo pequeno sobre o escuro.
 - **Do** manter a medida de leitura entre 65 e 75ch e trocar o container para
   880px em texto corrido.
-- **Do** desenhar ícone como SVG autoral, em traço e peso consistentes.
+- **Do** desenhar ícone como SVG autoral, em traço de 1,75 na grade de 24, com a
+  cor vindo de `currentColor`.
+- **Do** manter o ícone solto no fluxo, sem moldura arredondada em volta.
 - **Do** tratar 390px como a largura de projeto, não como adaptação.
 
 ### Don't:

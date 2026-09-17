@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/Button';
+import { Icone } from '@/components/ui/Icone';
 import { acordes, naipes, type NaipeId } from '@/content/acordes';
 import { midiParaFrequencia, vozesDoAcorde } from '@/lib/audio/notas';
 import { tocarVoz, type VozTocando } from '@/lib/audio/vozes';
@@ -114,9 +115,19 @@ export function TreinoDeOuvido() {
   return (
     <div className={styles.painel}>
       <p className={styles.mostrador} aria-hidden="true">
-        {resultado === 'certo' && '✓'}
-        {resultado === 'errado' && '✗'}
-        {!resultado && (fase === 'acorde' ? '🎵' : fase === 'voz' ? '👂' : '?')}
+        <Icone
+          nome={
+            resultado === 'certo'
+              ? 'certo'
+              : resultado === 'errado'
+                ? 'errado'
+                : fase === 'voz'
+                  ? 'ouvido'
+                  : 'naipes'
+          }
+          tamanho={72}
+          strokeWidth={1.25}
+        />
       </p>
       <p className={styles.mostradorLegenda} aria-live="polite">
         {fase === 'parado' && 'Toque em começar para ouvir o primeiro acorde'}
@@ -153,7 +164,12 @@ export function TreinoDeOuvido() {
                 <b>{naipe.nome}</b>
                 <span>{naipe.descricao}</span>
               </span>
-              {eraCerta && <span className={styles.marcaResposta}>✓ era esta</span>}
+              {eraCerta && (
+                <span className={styles.marcaResposta}>
+                  <Icone nome="certo" tamanho={15} />
+                  era esta
+                </span>
+              )}
               {foiEscolhido && !eraCerta && (
                 <span className={[styles.marcaResposta, styles.marcaErro].join(' ')}>
                   sua escolha
@@ -166,7 +182,8 @@ export function TreinoDeOuvido() {
 
       <div className={styles.linha}>
         <Button onClick={novaRodada}>
-          {fase === 'parado' ? '▶ Começar' : '↻ Próximo acorde'}
+          <Icone nome={fase === 'parado' ? 'tocar' : 'repetir'} tamanho={18} />
+          {fase === 'parado' ? 'Começar' : 'Próximo acorde'}
         </Button>
         {rodada && (
           <Button variante="ghost" onClick={repetir}>

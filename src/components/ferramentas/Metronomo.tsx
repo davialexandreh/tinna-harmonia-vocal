@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/Button';
+import { Icone } from '@/components/ui/Icone';
 import { obterContexto } from '@/lib/audio/contexto';
 import {
   BPM_MAXIMO,
@@ -124,7 +125,8 @@ export function Metronomo() {
       </div>
 
       <Button onClick={alternar} bloco>
-        {tocando ? '■ Parar' : '▶ Iniciar'}
+        <Icone nome={tocando ? 'parar' : 'tocar'} tamanho={18} />
+        {tocando ? 'Parar' : 'Iniciar'}
       </Button>
 
       <p className={styles.dica}>

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/Button';
+import { Icone } from '@/components/ui/Icone';
 import { midiParaFrequencia, nomeDaNota } from '@/lib/audio/notas';
 import { tocarVoz, type VozTocando } from '@/lib/audio/vozes';
 import { AvisoSemAudio } from './AvisoSemAudio';
@@ -85,7 +86,8 @@ export function NotaGuia() {
       </div>
 
       <Button onClick={alternar} bloco>
-        {tocando ? '■ Parar' : '▶ Tocar nota-guia'}
+        <Icone nome={tocando ? 'parar' : 'tocar'} tamanho={18} />
+        {tocando ? 'Parar' : 'Tocar nota-guia'}
       </Button>
 
       <AvisoSemAudio />

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Container } from '@/components/ui/Container';
+import { MarcaNota } from '@/components/ui/Icone';
 import { site } from '@/content/site';
 import { whatsappUrl } from '@/lib/whatsapp';
 import styles from './Footer.module.css';
@@ -13,8 +14,8 @@ export function Footer() {
         <div className={styles.cols}>
           <div>
             <Link href="/" className={styles.marca}>
-              <span className={styles.mark} aria-hidden="true">
-                ♪
+              <span className={styles.mark}>
+                <MarcaNota />
               </span>
               {site.nome}
             </Link>

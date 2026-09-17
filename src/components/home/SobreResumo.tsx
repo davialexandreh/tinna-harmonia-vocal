@@ -23,7 +23,6 @@ export function SobreResumo() {
         />
         <div>
           <SecHead
-            eyebrow="Quem ensina"
             titulo={
               <>
                 Tinna Silva, <em>harmonia vocal</em>

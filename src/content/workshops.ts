@@ -5,24 +5,25 @@
  * (duração e capacidade) vieram do protótipo e ainda não foram confirmados
  * pela Tinna (pergunta 5).
  */
+import type { NomeDeIcone } from '@/components/ui/Icone';
 
-export const formatos = [
+export const formatos: { icone: NomeDeIcone; titulo: string; descricao: string; detalhe: string }[] = [
   {
-    icone: '🎤',
+    icone: 'microfone',
     titulo: 'Workshop de um dia',
     descricao:
       'Um encontro com o ministério inteiro: diagnóstico de vozes, fundamentos de harmonia e montagem de uma música em três vozes até o fim do dia.',
     detalhe: 'PENDENTE: duração e número de participantes',
   },
   {
-    icone: '🔥',
+    icone: 'calendario',
     titulo: 'Imersão de fim de semana',
     descricao:
       'Mais tempo para aprofundar: arranjo, ensaio separado por naipe e preparação do repertório que vocês vão cantar no culto.',
     detalhe: 'PENDENTE: duração e número de participantes',
   },
   {
-    icone: '🌱',
+    icone: 'ciclo',
     titulo: 'Acompanhamento contínuo',
     descricao:
       'Encontros recorrentes com o mesmo grupo, para consolidar o método, evoluir o repertório e formar quem vai conduzir o ensaio depois.',

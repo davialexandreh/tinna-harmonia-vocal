@@ -12,7 +12,6 @@ export function Hero() {
 
       <Container className={styles.heroInterno}>
         <div className={styles.heroTexto}>
-          <span className={styles.eyebrow}>{site.tagline}</span>
           <h1 className={styles.titulo}>
             Cantar em harmonia <em>não é dom.</em> É método e o seu grupo pode
             aprender.

@@ -12,7 +12,6 @@ export function Niveis() {
       <Container>
         <SecHead
           centro
-          eyebrow="O que o grupo aprende"
           titulo={
             <>
               Do primeiro naipe ao <em>arranjo completo</em>

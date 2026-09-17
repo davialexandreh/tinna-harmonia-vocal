@@ -33,7 +33,7 @@
   display: grid;
   place-items: center;
   color: #fff;
-  font-size: 14px;
+  font-size: 15px;
   flex: none;
 }
 
@@ -45,7 +45,7 @@
 
 .coluna h2 {
   color: #fff;
-  font-size: 12px;
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: var(--space-4);

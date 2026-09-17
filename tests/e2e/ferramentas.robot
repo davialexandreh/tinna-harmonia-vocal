@@ -12,9 +12,9 @@ Test Teardown       Close Browser    ALL
 Metrônomo Inicia E Para
     Abrir Site No Celular    /ferramentas/metronomo/
     Get Text    body    contains    batidas por minuto
-    Click    text=▶ Iniciar
+    Click    button >> text=Iniciar
     Get Text    button:has-text("Parar")    contains    Parar
-    Click    text=■ Parar
+    Click    button >> text=Parar
     Get Text    button:has-text("Iniciar")    contains    Iniciar
 
 Tocador De Naipes Mostra As Três Vozes Com As Notas Certas
@@ -41,7 +41,7 @@ Nota-Guia Troca A Nota Escolhida
 
 Treino De Ouvido Começa Uma Rodada
     Abrir Site No Celular    /ferramentas/treino-de-ouvido/
-    Click    text=▶ Começar
+    Click    button >> text=Começar
     Get Text    body    contains    acorde
 
 Treino De Ouvido Marca A Resposta Escolhida

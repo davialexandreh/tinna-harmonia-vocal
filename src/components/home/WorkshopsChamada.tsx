@@ -19,7 +19,6 @@ export function WorkshopsChamada() {
       <Container>
         <SecHead
           centro
-          eyebrow="Presencial"
           titulo={
             <>
               Levo o trabalho <em>até a sua igreja</em>
@@ -30,7 +29,7 @@ export function WorkshopsChamada() {
         <Grid>
           {formatos.map((formato) => (
             <Card key={formato.titulo}>
-              <CardIcone>{formato.icone}</CardIcone>
+              <CardIcone nome={formato.icone} />
               <h3>{formato.titulo}</h3>
               <p>{formato.descricao}</p>
             </Card>

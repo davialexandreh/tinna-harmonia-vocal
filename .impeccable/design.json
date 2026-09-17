@@ -153,6 +153,12 @@
           "oklch(84% 0.011 45.7)",
           "oklch(95% 0.010 45.7)"
         ]
+      },
+      "preto-sombra": {
+        "role": "neutral",
+        "displayName": "Preto de sombra",
+        "canonical": "oklch(0% 0 0)",
+        "tonalRamp": []
       }
     },
     "typographyMeta": {
@@ -175,6 +181,34 @@
       "label": {
         "displayName": "Label",
         "purpose": "Botão e controle."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Parágrafo de abertura e resposta de FAQ."
+      },
+      "subtitle": {
+        "displayName": "Subtitle",
+        "purpose": "Título de nível dentro de uma grade."
+      },
+      "stat": {
+        "displayName": "Stat",
+        "purpose": "Número em destaque."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Legenda, metadado e nota de rodapé."
+      },
+      "overline": {
+        "displayName": "Overline",
+        "purpose": "Rótulo de controle dentro de painel. Nunca acima de um título."
+      },
+      "page-title": {
+        "displayName": "Page title",
+        "purpose": "h1 de página interna."
+      },
+      "tool-display": {
+        "displayName": "Tool display",
+        "purpose": "Mostrador das ferramentas de áudio."
       }
     },
     "shadows": [
@@ -323,6 +357,11 @@
         "name": "A Regra da Borda Obrigatória",
         "body": "Toda superfície elevada tem borda de 1px. No escuro, sombra sozinha não desenha contorno.",
         "section": "elevation"
+      },
+      {
+        "name": "A Regra dos Oito Degraus",
+        "body": "Nenhum tamanho de fonte fora da escala de 11, 13, 15, 17, 19, 20, 24 e 32px, mais as três fluidas de título.",
+        "section": "typography"
       }
     ],
     "dos": [
@@ -331,7 +370,8 @@
       "Do usar Magenta Claro (#f2568d) quando o acento virar texto.",
       "Do manter a medida de leitura entre 65 e 75ch e trocar o container para 880px em texto corrido.",
       "Do desenhar ícone como SVG autoral, em traço e peso consistentes.",
-      "Do tratar 390px como a largura de projeto, não como adaptação."
+      "Do tratar 390px como a largura de projeto, não como adaptação.",
+      "Do manter o ícone solto no fluxo, sem moldura arredondada em volta."
     ],
     "donts": [
       "Don't usar emoji como ícone.",

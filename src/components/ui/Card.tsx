@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { Icone, type NomeDeIcone } from './Icone';
 import styles from './Card.module.css';
 
 export function Card({
@@ -11,11 +12,11 @@ export function Card({
   return <div className={[styles.card, className].filter(Boolean).join(' ')}>{children}</div>;
 }
 
-/** Ícone em emoji no topo do card. Decorativo. */
-export function CardIcone({ children }: { children: ReactNode }) {
+/** Ícone desenhado no topo do cartão. Decorativo: o título carrega o sentido. */
+export function CardIcone({ nome }: { nome: NomeDeIcone }) {
   return (
-    <div className={styles.ico} aria-hidden="true">
-      {children}
+    <div className={styles.ico}>
+      <Icone nome={nome} tamanho={22} />
     </div>
   );
 }
