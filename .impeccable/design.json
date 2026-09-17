@@ -1,0 +1,346 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-17T15:55:40.495704Z",
+  "title": "Design System: Tinna Silva · Harmonia Vocal",
+  "extensions": {
+    "colorMeta": {
+      "magenta-vivo": {
+        "role": "primary",
+        "displayName": "Magenta Vivo",
+        "canonical": "oklch(59.1% 0.224 8.7)",
+        "tonalRamp": [
+          "oklch(15% 0.165 8.7)",
+          "oklch(26% 0.180 8.7)",
+          "oklch(38% 0.195 8.7)",
+          "oklch(49% 0.211 8.7)",
+          "oklch(61% 0.222 8.7)",
+          "oklch(72% 0.206 8.7)",
+          "oklch(84% 0.191 8.7)",
+          "oklch(95% 0.176 8.7)"
+        ]
+      },
+      "magenta-profundo": {
+        "role": "primary",
+        "displayName": "Magenta Profundo",
+        "canonical": "oklch(42.1% 0.159 8.3)",
+        "tonalRamp": [
+          "oklch(15% 0.133 8.3)",
+          "oklch(26% 0.144 8.3)",
+          "oklch(38% 0.155 8.3)",
+          "oklch(49% 0.152 8.3)",
+          "oklch(61% 0.141 8.3)",
+          "oklch(72% 0.130 8.3)",
+          "oklch(84% 0.119 8.3)",
+          "oklch(95% 0.108 8.3)"
+        ]
+      },
+      "magenta-claro": {
+        "role": "primary",
+        "displayName": "Magenta Claro",
+        "canonical": "oklch(67.5% 0.196 2.2)",
+        "tonalRamp": [
+          "oklch(15% 0.134 2.2)",
+          "oklch(26% 0.147 2.2)",
+          "oklch(38% 0.161 2.2)",
+          "oklch(49% 0.174 2.2)",
+          "oklch(61% 0.188 2.2)",
+          "oklch(72% 0.190 2.2)",
+          "oklch(84% 0.177 2.2)",
+          "oklch(95% 0.164 2.2)"
+        ]
+      },
+      "quase-preto": {
+        "role": "neutral",
+        "displayName": "Quase Preto",
+        "canonical": "oklch(16.2% 0.021 343.0)",
+        "tonalRamp": [
+          "oklch(15% 0.021 343.0)",
+          "oklch(26% 0.020 343.0)",
+          "oklch(38% 0.018 343.0)",
+          "oklch(49% 0.017 343.0)",
+          "oklch(61% 0.015 343.0)",
+          "oklch(72% 0.014 343.0)",
+          "oklch(84% 0.012 343.0)",
+          "oklch(95% 0.011 343.0)"
+        ]
+      },
+      "superficie-faixa": {
+        "role": "neutral",
+        "displayName": "Faixa",
+        "canonical": "oklch(18.6% 0.021 350.4)",
+        "tonalRamp": [
+          "oklch(15% 0.020 350.4)",
+          "oklch(26% 0.020 350.4)",
+          "oklch(38% 0.018 350.4)",
+          "oklch(49% 0.017 350.4)",
+          "oklch(61% 0.015 350.4)",
+          "oklch(72% 0.014 350.4)",
+          "oklch(84% 0.013 350.4)",
+          "oklch(95% 0.011 350.4)"
+        ]
+      },
+      "superficie-cartao": {
+        "role": "neutral",
+        "displayName": "Cartão",
+        "canonical": "oklch(21.2% 0.025 356.3)",
+        "tonalRamp": [
+          "oklch(15% 0.024 356.3)",
+          "oklch(26% 0.024 356.3)",
+          "oklch(38% 0.022 356.3)",
+          "oklch(49% 0.020 356.3)",
+          "oklch(61% 0.019 356.3)",
+          "oklch(72% 0.017 356.3)",
+          "oklch(84% 0.015 356.3)",
+          "oklch(95% 0.014 356.3)"
+        ]
+      },
+      "superficie-afundada": {
+        "role": "neutral",
+        "displayName": "Afundada",
+        "canonical": "oklch(13.7% 0.017 353.1)",
+        "tonalRamp": [
+          "oklch(15% 0.017 353.1)",
+          "oklch(26% 0.016 353.1)",
+          "oklch(38% 0.015 353.1)",
+          "oklch(49% 0.014 353.1)",
+          "oklch(61% 0.012 353.1)",
+          "oklch(72% 0.011 353.1)",
+          "oklch(84% 0.010 353.1)",
+          "oklch(95% 0.009 353.1)"
+        ]
+      },
+      "texto-primario": {
+        "role": "neutral",
+        "displayName": "Texto primário",
+        "canonical": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "oklch(15% 0.000 89.9)",
+          "oklch(26% 0.000 89.9)",
+          "oklch(38% 0.000 89.9)",
+          "oklch(49% 0.000 89.9)",
+          "oklch(61% 0.000 89.9)",
+          "oklch(72% 0.000 89.9)",
+          "oklch(84% 0.000 89.9)",
+          "oklch(95% 0.000 89.9)"
+        ]
+      },
+      "texto-secundario": {
+        "role": "neutral",
+        "displayName": "Texto secundário",
+        "canonical": "oklch(81.1% 0.012 351.1)",
+        "tonalRamp": [
+          "oklch(15% 0.008 351.1)",
+          "oklch(26% 0.008 351.1)",
+          "oklch(38% 0.009 351.1)",
+          "oklch(49% 0.010 351.1)",
+          "oklch(61% 0.011 351.1)",
+          "oklch(72% 0.012 351.1)",
+          "oklch(84% 0.012 351.1)",
+          "oklch(95% 0.011 351.1)"
+        ]
+      },
+      "texto-terciario": {
+        "role": "neutral",
+        "displayName": "Texto terciário",
+        "canonical": "oklch(70.6% 0.012 45.7)",
+        "tonalRamp": [
+          "oklch(15% 0.008 45.7)",
+          "oklch(26% 0.009 45.7)",
+          "oklch(38% 0.010 45.7)",
+          "oklch(49% 0.011 45.7)",
+          "oklch(61% 0.011 45.7)",
+          "oklch(72% 0.012 45.7)",
+          "oklch(84% 0.011 45.7)",
+          "oklch(95% 0.010 45.7)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "A promessa do hero. Um por página."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Abertura de seção."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Título de cartão e de bloco."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Leitura corrida, medida de 65 a 75ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Botão e controle."
+      }
+    },
+    "shadows": [
+      {
+        "name": "ambiente",
+        "value": "0 2px 10px rgba(0, 0, 0, 0.35)",
+        "purpose": "Repouso de cartão, painel de ferramenta e bloco elevado."
+      },
+      {
+        "name": "resposta",
+        "value": "0 6px 20px rgba(0, 0, 0, 0.45)",
+        "purpose": "Hover de botão e de elemento que reage ao toque."
+      },
+      {
+        "name": "flutuante",
+        "value": "0 24px 60px rgba(0, 0, 0, 0.6)",
+        "purpose": "O que sai do plano da página, como o aviso de cookies."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Easing único do sistema, em transições de 0,2s."
+      },
+      {
+        "name": "duracao-estado",
+        "value": "0.2s",
+        "purpose": "Troca de estado em botão, chip e link."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "cartao-unico",
+        "value": "680px"
+      },
+      {
+        "name": "secao-compacta",
+        "value": "760px"
+      },
+      {
+        "name": "empilha-midia",
+        "value": "900px"
+      },
+      {
+        "name": "grade-dupla",
+        "value": "1000px"
+      },
+      {
+        "name": "container",
+        "value": "1120px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botão primário",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "A única ação de conversão do site: sempre leva para o WhatsApp.",
+      "html": "<button class=\"ds-btn-primary\">Levar à minha igreja</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--brand, #e11d62); color: #fff; font-family: Archivo, sans-serif; font-size: 15px; font-weight: 600; padding: 14px 26px; border: 1.5px solid transparent; border-radius: 999px; cursor: pointer; transition: all .2s cubic-bezier(.16,1,.3,1); } .ds-btn-primary:hover { background: var(--brand-deep, #8e0f3c); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,0,0,.45); } .ds-btn-primary:focus-visible { outline: 3px solid var(--brand-claro, #f2568d); outline-offset: 2px; }"
+    },
+    {
+      "name": "Botão fantasma",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Ação secundária dentro do mesmo bloco, sem competir com a primária.",
+      "html": "<button class=\"ds-btn-ghost\">Ver como funciona</button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--text-primary, #fff); font-family: Archivo, sans-serif; font-size: 15px; font-weight: 600; padding: 14px 26px; border: 1.5px solid var(--border-subtle, rgba(255,255,255,.14)); border-radius: 999px; cursor: pointer; transition: all .2s cubic-bezier(.16,1,.3,1); } .ds-btn-ghost:hover { border-color: var(--text-primary, #fff); } .ds-btn-ghost:focus-visible { outline: 3px solid var(--brand-claro, #f2568d); outline-offset: 2px; }"
+    },
+    {
+      "name": "Botão inverso",
+      "kind": "button",
+      "refersTo": "button-inverse",
+      "description": "Existe só sobre imagem ou vídeo, onde o fantasma perderia legibilidade.",
+      "html": "<button class=\"ds-btn-inverse\">Ferramentas grátis</button>",
+      "css": ".ds-btn-inverse { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: var(--ink, #140a10); font-family: Archivo, sans-serif; font-size: 15px; font-weight: 600; padding: 14px 26px; border: 1.5px solid transparent; border-radius: 999px; cursor: pointer; transition: all .2s cubic-bezier(.16,1,.3,1); } .ds-btn-inverse:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,0,0,.45); }"
+    },
+    {
+      "name": "Cartão",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Superfície elevada um degrau acima do fundo, com borda obrigatória.",
+      "html": "<div class=\"ds-card\"><h3>Workshop de um dia</h3><p>Um encontro com o ministério inteiro: diagnóstico de vozes, fundamentos e uma música montada em três vozes.</p></div>",
+      "css": ".ds-card { background: var(--surface-card, #221419); border: 1px solid var(--border-subtle, rgba(255,255,255,.14)); border-radius: 16px; padding: 24px; box-shadow: 0 2px 10px rgba(0,0,0,.35); } .ds-card h3 { font-family: 'Inter Tight', sans-serif; font-size: 20px; font-weight: 600; letter-spacing: -.03em; color: var(--text-primary, #fff); margin: 0 0 8px; } .ds-card p { font-family: Archivo, sans-serif; font-size: 15px; line-height: 1.5; color: var(--text-secondary, #c8bec2); margin: 0; }"
+    },
+    {
+      "name": "Chip de seleção",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Escolha entre opções curtas nas ferramentas de áudio. Selecionado nunca usa fundo claro.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip\" aria-pressed=\"true\">Dó maior</button><button class=\"ds-chip\" aria-pressed=\"false\">Ré menor</button></div>",
+      "css": ".ds-chips { display: flex; gap: 8px; } .ds-chip { background: var(--surface-sunken, #0e0609); border: 1.5px solid transparent; border-radius: 999px; padding: 9px 16px; font-family: Archivo, sans-serif; font-size: 14px; font-weight: 600; color: var(--text-secondary, #c8bec2); cursor: pointer; transition: all .2s cubic-bezier(.16,1,.3,1); } .ds-chip[aria-pressed=\"true\"] { background: color-mix(in srgb, var(--brand, #e11d62) 16%, transparent); border-color: var(--brand, #e11d62); color: var(--brand-claro, #f2568d); } .ds-chip:focus-visible { outline: 3px solid var(--brand-claro, #f2568d); outline-offset: 2px; }"
+    },
+    {
+      "name": "Cabeçalho",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Fixo, translúcido e com desfoque. Abaixo de 900px os links viram painel de tela cheia.",
+      "html": "<header class=\"ds-nav\"><a class=\"ds-nav-marca\" href=\"#\"><span class=\"ds-nav-mark\">♪</span>Tinna Silva</a><nav class=\"ds-nav-links\"><a href=\"#\">Workshops</a><a href=\"#\">Ferramentas</a><a href=\"#\">Sobre</a></nav></header>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 72px; padding: 0 24px; background: color-mix(in srgb, var(--surface-page, #140a10) 88%, transparent); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border-subtle, rgba(255,255,255,.14)); } .ds-nav-marca { display: flex; align-items: center; gap: 10px; font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: -.02em; color: var(--text-primary, #fff); text-decoration: none; } .ds-nav-mark { width: 30px; height: 30px; border-radius: 50%; background: linear-gradient(135deg, #e11d62, #8e0f3c); display: grid; place-items: center; color: #fff; font-size: 14px; } .ds-nav-links { display: flex; gap: 24px; } .ds-nav-links a { font-family: Archivo, sans-serif; font-size: 15px; font-weight: 500; color: var(--text-secondary, #c8bec2); text-decoration: none; transition: color .2s cubic-bezier(.16,1,.3,1); } .ds-nav-links a:hover { color: var(--brand-claro, #f2568d); }"
+    },
+    {
+      "name": "Painel de ferramenta",
+      "kind": "custom",
+      "refersTo": "card",
+      "description": "Componente de assinatura: abriga as ferramentas de áudio, com rótulo em caixa alta e mostrador em display.",
+      "html": "<div class=\"ds-tool\"><span class=\"ds-tool-rotulo\">Escolha a nota</span><p class=\"ds-tool-mostrador\">Fá3</p><p class=\"ds-tool-legenda\">174,6 Hz</p></div>",
+      "css": ".ds-tool { background: var(--surface-card, #221419); border: 1px solid var(--border-subtle, rgba(255,255,255,.14)); border-radius: 24px; padding: 32px; box-shadow: 0 2px 10px rgba(0,0,0,.35); } .ds-tool-rotulo { display: block; font-family: Archivo, sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--text-tertiary, #a79e9a); margin-bottom: 12px; } .ds-tool-mostrador { font-family: 'Inter Tight', sans-serif; font-size: clamp(56px, 12vw, 88px); font-weight: 600; letter-spacing: -.03em; line-height: 1; text-align: center; color: var(--brand-claro, #f2568d); margin: 0; } .ds-tool-legenda { text-align: center; font-family: Archivo, sans-serif; font-size: 14px; color: var(--text-tertiary, #a79e9a); margin: 8px 0 0; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "O palco visto do naipe",
+    "overview": "Quem canta a segunda voz não vê o palco de frente: vê de dentro, meio no escuro, com a luz batendo em quem está à frente. O sistema inteiro parte desse ponto de vista. O fundo é escuro porque é assim que se enxerga o culto de dentro do grupo, não porque tema escuro esteja na moda.\n\nA personalidade é refinada e contida. Nada aqui grita: o magenta é raro, o movimento é curto, as bordas são finas e o espaçamento é largo o suficiente para o olho descansar entre blocos. O site fala com um líder de louvor cansado, no celular, entre o trabalho e o ensaio de terça.\n\nO que o sistema recusa é tão definidor quanto o que ele usa: nada de estética de palco gospel e nada de urgência de infoproduto. A promessa é de serviço, não de espetáculo.",
+    "keyCharacteristics": [
+      "Fundo escuro único, sem alternância de tema",
+      "Magenta reservado à ação, nunca à decoração",
+      "Duas famílias tipográficas com papéis rígidos: Inter Tight titula, Archivo lê",
+      "Três níveis de superfície quase pretos, separados por tom, borda fina e sombra ambiente",
+      "Cantos generosos (16 a 32px) e botões em pílula",
+      "Mobile-first de verdade: o layout nasce em 390px"
+    ],
+    "rules": [
+      {
+        "name": "A Regra da Ação Única",
+        "body": "O magenta só aparece onde se pode tocar: botão, estado ativo, faixa de chamada. Ênfase em título é peso e tamanho, nunca cor.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra do Degrau",
+        "body": "Superfícies só sobem de nível: página, faixa, cartão. Nunca se aninha cartão dentro de cartão para criar um quarto nível.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra das Duas Vozes",
+        "body": "Inter Tight só titula, Archivo só lê. Um terceiro tipo, incluindo monoespaçada, não existe neste sistema.",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra do Aperto",
+        "body": "Todo título carrega letter-spacing de -0.03em.",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra da Borda Obrigatória",
+        "body": "Toda superfície elevada tem borda de 1px. No escuro, sombra sozinha não desenha contorno.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do reservar o magenta para o que se pode tocar: botão, estado ativo, faixa de chamada.",
+      "Do apoiar todo cartão um degrau de superfície acima do fundo em que ele está, sempre com borda de 1px e sombra ambiente.",
+      "Do usar Magenta Claro (#f2568d) quando o acento virar texto.",
+      "Do manter a medida de leitura entre 65 e 75ch e trocar o container para 880px em texto corrido.",
+      "Do desenhar ícone como SVG autoral, em traço e peso consistentes.",
+      "Do tratar 390px como a largura de projeto, não como adaptação."
+    ],
+    "donts": [
+      "Don't usar emoji como ícone.",
+      "Don't abrir seção com rótulo minúsculo em caixa alta acima do título.",
+      "Don't trazer estética de palco gospel: degradê dourado, brilho, luz volumétrica ou sombra em letra.",
+      "Don't usar recurso de urgência de infoproduto: contador regressivo, preço riscado, selo de garantia.",
+      "Don't introduzir um segundo acento cromático.",
+      "Don't usar fundo claro em nenhum estado, incluindo seleção e destaque.",
+      "Don't aninhar cartão dentro de cartão para criar profundidade extra."
+    ]
+  }
+}
