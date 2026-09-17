@@ -1,0 +1,247 @@
+.painel {
+  background: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+}
+
+@media (max-width: 680px) {
+  .painel {
+    padding: var(--space-5);
+  }
+}
+
+.linha {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+}
+
+.chip {
+  background: var(--surface-sunken);
+  border: 1.5px solid transparent;
+  border-radius: var(--radius-pill);
+  padding: 9px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+
+.chip[aria-pressed='true'] {
+  background: var(--brand-soft);
+  border-color: var(--brand);
+  color: var(--brand-deep);
+}
+
+.rotulo {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+  font-weight: 700;
+  color: var(--text-tertiary);
+  display: block;
+  margin-bottom: var(--space-3);
+}
+
+.mostrador {
+  font-family: var(--font-display);
+  font-size: clamp(56px, 12vw, 88px);
+  font-weight: 600;
+  letter-spacing: var(--tracking-tighter);
+  line-height: 1;
+  text-align: center;
+  color: var(--brand);
+  margin: var(--space-6) 0;
+}
+
+.mostradorLegenda {
+  text-align: center;
+  color: var(--text-tertiary);
+  font-size: 14px;
+  margin-top: calc(var(--space-6) * -1);
+  margin-bottom: var(--space-6);
+}
+
+.controle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.controle input[type='range'] {
+  flex: 1;
+  accent-color: var(--brand);
+  min-width: 140px;
+}
+
+.controle span {
+  font-size: 14px;
+  color: var(--text-secondary);
+  min-width: 68px;
+}
+
+/* lista de vozes do tocador de naipes */
+.vozes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.voz {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  width: 100%;
+  text-align: left;
+  background: var(--surface-sunken);
+  border: 1.5px solid transparent;
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  cursor: pointer;
+}
+
+.voz[aria-pressed='true'] {
+  border-color: var(--brand);
+  background: var(--surface-card);
+}
+
+.voz[aria-pressed='false'] {
+  opacity: 0.55;
+}
+
+.vozNome {
+  flex: 1;
+}
+
+.vozNome b {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 17px;
+}
+
+.vozNome span {
+  font-size: 13px;
+  color: var(--text-tertiary);
+}
+
+.vozNota {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--brand);
+}
+
+/* indicador de batida do metrônomo */
+.batidas {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.batida {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--border-subtle);
+  transition: transform 0.1s var(--ease-out), background 0.1s var(--ease-out);
+}
+
+.batidaAtiva {
+  background: var(--brand);
+  border-color: var(--brand);
+  transform: scale(1.35);
+}
+
+.batidaAcentuada {
+  border-color: var(--brand);
+}
+
+/* treino de ouvido */
+.resposta {
+  font-size: 17px;
+  text-align: center;
+  margin-top: var(--space-5);
+  min-height: 26px;
+}
+
+.certo {
+  color: var(--brand-deep);
+  font-weight: 600;
+}
+
+.errado {
+  color: var(--text-secondary);
+}
+
+.placar {
+  text-align: center;
+  color: var(--text-tertiary);
+  font-size: 14px;
+  margin-top: var(--space-3);
+}
+
+.aviso {
+  background: var(--surface-sunken);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  font-size: 14.5px;
+  color: var(--text-secondary);
+  margin-top: var(--space-6);
+}
+
+.dica {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  margin-top: var(--space-6);
+  border-top: 1px solid var(--border-subtle);
+  padding-top: var(--space-5);
+}
+
+.rotuloEspacado {
+  margin-top: var(--space-6);
+}
+
+.comoUsar {
+  list-style: none;
+  counter-reset: passo;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 68ch;
+  margin-inline: auto;
+}
+
+.comoUsar li {
+  counter-increment: passo;
+  display: flex;
+  gap: var(--space-4);
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+.comoUsar li::before {
+  content: counter(passo, decimal-leading-zero);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--brand);
+  flex: none;
+  padding-top: 3px;
+}
+
+.acaoFerramenta {
+  text-align: center;
+  margin-top: var(--space-10);
+}
