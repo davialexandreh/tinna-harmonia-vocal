@@ -37,4 +37,17 @@ npm run build      # build estático em out/
 npm run preview    # serve out/ localmente
 npm run lint
 npm run typecheck
+npm test           # Vitest (lógica pura)
+npm run test:e2e   # Robot Framework (precisa do site servido em :4321)
 ```
+
+## Onde mexer
+
+| Quero mudar | Arquivo |
+| --- | --- |
+| Número de WhatsApp, domínio, redes | `src/content/site.ts` |
+| Textos da Home | `src/content/home.ts` |
+| FAQ | `src/content/faq.ts` |
+| Formatos e passos do workshop | `src/content/workshops.ts` |
+| Cores, espaçamento, tipografia | `src/styles/tokens.css` |
+| Acordes das ferramentas | `src/content/acordes.ts` |

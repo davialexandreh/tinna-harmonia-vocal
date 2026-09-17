@@ -382,7 +382,7 @@
 }
 
 .ctaBand p {
-  opacity: 0.92;
+  /* Sem opacidade: branco a 92% sobre o rosa dá 4,07:1 e reprova no AA. */
   max-width: 52ch;
   margin: 0 auto var(--space-8);
 }

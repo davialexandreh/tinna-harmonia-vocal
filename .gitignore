@@ -5,3 +5,6 @@ out/
 *.tsbuildinfo
 next-env.d.ts
 .DS_Store
+.venv-e2e/
+tests/e2e/relatorios/
+.lighthouseci/
