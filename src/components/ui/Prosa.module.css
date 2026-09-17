@@ -1,0 +1,39 @@
+/* Bloco de texto corrido: páginas legais e biografia. */
+.prosa {
+  color: var(--text-secondary);
+  font-size: 17px;
+}
+
+.prosa h2 {
+  font-size: 26px;
+  margin: var(--space-10) 0 var(--space-4);
+  color: var(--text-primary);
+}
+
+.prosa h2:first-child {
+  margin-top: 0;
+}
+
+.prosa p,
+.prosa ul {
+  margin-bottom: var(--space-4);
+  max-width: 72ch;
+}
+
+.prosa ul {
+  padding-left: var(--space-6);
+}
+
+.prosa li {
+  margin-bottom: var(--space-2);
+}
+
+.prosa a {
+  color: var(--brand);
+}
+
+.atualizado {
+  font-size: 14px;
+  color: var(--text-tertiary);
+  margin-bottom: var(--space-8);
+}

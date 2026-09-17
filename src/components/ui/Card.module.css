@@ -1,0 +1,38 @@
+.card {
+  background: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: var(--space-2);
+}
+
+.card p {
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+.ico {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+  background: var(--brand-soft);
+  color: var(--brand-deep);
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  margin-bottom: var(--space-4);
+}
+
+.num {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--brand);
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: var(--space-3);
+}

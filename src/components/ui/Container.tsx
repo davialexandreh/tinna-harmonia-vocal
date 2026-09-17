@@ -5,6 +5,8 @@ type ContainerProps = {
   children: ReactNode;
   /** Largura reduzida, para blocos de leitura (FAQ, textos legais). */
   narrow?: boolean;
+  /** Centraliza o texto do bloco. */
+  centralizado?: boolean;
   as?: ElementType;
   className?: string;
 };
@@ -12,10 +14,16 @@ type ContainerProps = {
 export function Container({
   children,
   narrow = false,
+  centralizado = false,
   as: Tag = 'div',
   className,
 }: ContainerProps) {
-  const classes = [styles.container, narrow && styles.narrow, className]
+  const classes = [
+    styles.container,
+    narrow && styles.narrow,
+    centralizado && styles.centralizado,
+    className,
+  ]
     .filter(Boolean)
     .join(' ');
 

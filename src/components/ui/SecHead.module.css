@@ -1,0 +1,32 @@
+.head {
+  max-width: 720px;
+  margin-bottom: var(--space-12);
+}
+
+.centro {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+  font-weight: 700;
+  color: var(--brand);
+}
+
+.head h2 {
+  font-size: clamp(29px, 4vw, 46px);
+  margin: var(--space-3) 0;
+}
+
+.head h2 em {
+  font-style: normal;
+  color: var(--brand);
+}
+
+.head p {
+  color: var(--text-secondary);
+  font-size: 18px;
+}

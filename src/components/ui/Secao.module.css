@@ -1,0 +1,18 @@
+.secao {
+  padding: var(--space-24) 0;
+}
+
+.alt {
+  background: var(--surface-paper);
+}
+
+.escura {
+  background: var(--ink);
+  color: #fff;
+}
+
+@media (max-width: 760px) {
+  .secao {
+    padding: var(--space-16) 0;
+  }
+}
