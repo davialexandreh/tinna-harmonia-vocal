@@ -3,7 +3,17 @@ import coreWebVitals from 'eslint-config-next/core-web-vitals';
 import typescript from 'eslint-config-next/typescript';
 
 const config = [
-  { ignores: ['.next/**', 'out/**', 'node_modules/**'] },
+  {
+    ignores: [
+      '.next/**',
+      'out/**',
+      'node_modules/**',
+      // artefatos gerados: relatórios do Robot Framework e do Lighthouse
+      'tests/e2e/relatorios/**',
+      '.lighthouseci/**',
+      '.venv-e2e/**',
+    ],
+  },
   ...coreWebVitals,
   ...typescript,
 ];
