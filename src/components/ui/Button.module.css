@@ -12,7 +12,15 @@
   cursor: pointer;
   text-decoration: none;
   transition: all 0.2s var(--ease-out);
-  white-space: nowrap;
+  /*
+   * Sem nowrap: o botão dimensiona pelo conteúdo e só quebra quando o espaço
+   * é menor que o rótulo, que é justamente o caso do zoom de 200% no celular.
+   * Com nowrap, ali aparecia rolagem lateral.
+   */
+  text-wrap: balance;
+  /* Nunca mais largo que o espaço que tem: com zoom alto, o rótulo quebra
+     dentro do botão em vez de empurrar a página para o lado. */
+  max-width: 100%;
 }
 
 /* O toque precisa de resposta antes do resultado: 100ms, sem deslocamento. */

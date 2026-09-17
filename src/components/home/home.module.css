@@ -268,7 +268,9 @@
 }
 
 .pilar h3 {
-  font-size: 19px;
+  /* Mesmo papel do título de cartão: 20px, não 19. A diferença era invisível
+     e só servia para desalinhar a escala. */
+  font-size: 20px;
   margin: var(--space-3) 0 var(--space-2);
 }
 
@@ -288,6 +290,7 @@
 
 /* ---------- níveis ---------- */
 .nivel {
+  min-width: 0;
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
@@ -326,6 +329,7 @@
 
 /* ---------- é / não é pra você ---------- */
 .fitbox {
+  min-width: 0;
   border-radius: var(--radius-lg);
   padding: var(--space-8);
   border: 1px solid var(--border-subtle);

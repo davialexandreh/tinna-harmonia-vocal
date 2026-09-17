@@ -17,7 +17,9 @@ html {
 body {
   font-family: var(--font-sans);
   font-size: 17px;
-  line-height: 1.5;
+  /* 1,55 e não 1,5: no escuro a linha precisa de mais respiro para não colar. */
+  line-height: 1.55;
+  letter-spacing: var(--tracking-corpo);
   color: var(--text-primary);
   background: var(--surface-page);
   -webkit-font-smoothing: antialiased;
@@ -29,8 +31,33 @@ h3,
 h4 {
   font-family: var(--font-display);
   letter-spacing: var(--tracking-tighter);
-  line-height: 1.05;
   font-weight: 600;
+}
+
+/*
+ * Português tem palavra comprida, e título não quebra palavra por padrão:
+ * "Acompanhamento" sozinho passava de 150px e empurrava a página inteira para
+ * o lado num cartão estreito. Só quebra quando não cabe de outro jeito.
+ */
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+figcaption {
+  overflow-wrap: break-word;
+}
+
+/* Título grande fecha a linha; título pequeno, que quebra em duas, precisa de ar. */
+h1,
+h2 {
+  line-height: 1.05;
+}
+
+h3,
+h4 {
+  line-height: 1.18;
 }
 
 a {

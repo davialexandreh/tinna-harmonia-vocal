@@ -13,6 +13,11 @@
   gap: var(--space-10);
 }
 
+/* Item de grade não encolhe abaixo do conteúdo sem isto. */
+.cols > * {
+  min-width: 0;
+}
+
 .marca {
   display: flex;
   align-items: center;
@@ -57,6 +62,9 @@
   display: block;
   color: var(--text-secondary);
   text-decoration: none;
+  /* O @ do Instagram tem 24 caracteres sem espaço: sem isto, ele empurra a
+     coluna inteira para fora da tela em telas estreitas ou com zoom. */
+  overflow-wrap: anywhere;
   font-size: 15px;
   margin-bottom: 10px;
 }
@@ -84,6 +92,14 @@
 @media (max-width: 800px) {
   .cols {
     grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+  }
+}
+
+/* Abaixo disso duas colunas não cabem: equivale a 200% de zoom no celular. */
+@media (max-width: 420px) {
+  .cols {
+    grid-template-columns: 1fr;
     gap: var(--space-8);
   }
 }

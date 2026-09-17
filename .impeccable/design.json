@@ -410,6 +410,21 @@
         "name": "A Regra do Desenho Honesto",
         "body": "A onda desenhada vem do áudio que está tocando, nunca de uma animação que imita som. Se não há som, não há desenho.",
         "section": "elevation"
+      },
+      {
+        "name": "A Regra do Claro Sobre Escuro",
+        "body": "O corpo compensa o claro sobre escuro nos três eixos: entrelinha 1,55, +0,005em de entreletra e nunca abaixo do peso 400.",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra da Entrelinha Proporcional",
+        "body": "Título grande usa 1,05; título pequeno, que quebra em duas linhas, usa 1,18.",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra do Refluxo",
+        "body": "Nenhuma página rola para o lado a 195px, o equivalente a 390px com zoom de 200%.",
+        "section": "typography"
       }
     ],
     "dos": [
@@ -419,7 +434,9 @@
       "Do manter a medida de leitura entre 65 e 75ch e trocar o container para 880px em texto corrido.",
       "Do desenhar ícone como SVG autoral, em traço e peso consistentes.",
       "Do tratar 390px como a largura de projeto, não como adaptação.",
-      "Do manter o ícone solto no fluxo, sem moldura arredondada em volta."
+      "Do manter o ícone solto no fluxo, sem moldura arredondada em volta.",
+      "Do compensar o claro sobre escuro com 1,55 de entrelinha e +0,005em de entreletra no corpo.",
+      "Do verificar o refluxo a 195px antes de dar um bloco por pronto."
     ],
     "donts": [
       "Don't usar emoji como ícone.",

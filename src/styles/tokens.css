@@ -70,6 +70,12 @@
   --brand-texto: var(--brand-claro);
   --tracking-tighter: -0.03em;
   --tracking-caps: 0.12em;
+  /*
+   * Texto claro sobre fundo escuro parece mais apertado do que é: o branco
+   * espalha sobre o preto e fecha o espaço entre as letras. Um toque de
+   * entreletra devolve o ar, sem virar texto espaçado.
+   */
+  --tracking-corpo: 0.005em;
 
   /* z-index */
   --z-header: 100;

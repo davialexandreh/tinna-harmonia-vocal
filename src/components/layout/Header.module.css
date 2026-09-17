@@ -117,6 +117,8 @@
 }
 
 .painel a {
+  /* Sem display block, o <a> flui inline e os itens saem em uma linha só. */
+  display: block;
   text-decoration: none;
   font-family: var(--font-display);
   font-size: 24px;

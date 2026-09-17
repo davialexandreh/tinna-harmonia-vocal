@@ -3,6 +3,14 @@
   gap: var(--space-6);
 }
 
+/*
+ * Item de grade tem min-width auto por padrão, então uma palavra longa faz a
+ * coluna crescer além do container. Aparece como rolagem lateral no zoom.
+ */
+.grid > * {
+  min-width: 0;
+}
+
 .c2 {
   grid-template-columns: repeat(2, 1fr);
 }

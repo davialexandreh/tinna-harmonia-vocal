@@ -243,8 +243,8 @@ grotescas: o contraste entre elas é de largura e função, nunca de estilo.
   de áudio. Existe só dentro do painel.
 - **Headline** (600, `clamp(29px, 4vw, 46px)`, 1.05): abertura de seção.
 - **Title** (600, 20px, 1.15): título de cartão e de bloco dentro de seção.
-- **Body** (400, 17px, 1.5): leitura corrida. Medida de 65–75ch; em textos legais
-  o limite é 72ch e o container cai para 880px.
+- **Body** (400, 17px, 1.55, `+0.005em`): leitura corrida. Medida de 65–75ch; em
+  textos legais o limite é 72ch e o container cai para 880px.
 - **Label** (600, 15px): botão, controle e link de navegação.
 - **Lead** (400, 19px): parágrafo de abertura e resposta de FAQ.
 - **Subtitle** (600, 24px): título de nível dentro de uma grade.
@@ -270,6 +270,14 @@ a Inter Tight parecer desenhada para o site em vez de escolhida numa lista.
 **A Regra dos Oito Degraus.** Nenhum tamanho de fonte fora da escala. Se um bloco
 pede 14,5px, o bloco está errado, não a escala.
 
+**A Regra do Claro Sobre Escuro.** Texto branco sobre fundo quase preto parece
+mais apertado do que é. O corpo compensa nos três eixos: entrelinha de 1,55 em
+vez de 1,5, `+0,005em` de entreletra, e nunca abaixo do peso 400.
+
+**A Regra da Entrelinha Proporcional.** Título grande fecha a linha (1,05);
+título pequeno, que quebra em duas, precisa de ar (1,18). Uma entrelinha única
+para todos os níveis deixa o título de cartão espremido.
+
 ## Layout
 
 Coluna única centrada, com dois containers: **1120px** para grade de conteúdo e
@@ -289,6 +297,12 @@ painel de tela cheia.
 O espaçamento segue uma escala de múltiplos de 4px (4 a 96). Dentro de um grupo,
 8 a 16px; entre grupos, 24 a 48px; entre seções, 64 a 96px. Acima de um título
 sempre cabe mais espaço do que abaixo dele.
+
+**A Regra do Refluxo.** Nenhuma página rola para o lado a 195px de largura, que
+é o que sobra de um celular de 390px com zoom de 200%. Isso exige três coisas
+que se esquecem sozinhas: item de grade com `min-width: 0`, botão com
+`max-width: 100%` em vez de `white-space: nowrap`, e `overflow-wrap: break-word`
+no texto, porque palavra longa em português estoura cartão estreito.
 
 ## Elevation & Depth
 

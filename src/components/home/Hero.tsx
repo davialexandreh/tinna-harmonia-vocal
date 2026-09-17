@@ -14,7 +14,7 @@ export function Hero() {
         <div className={styles.heroTexto}>
           {/* Três partes, três vozes: a ordem de entrada é a sequência do método. */}
           <h1 className={styles.titulo}>
-            <span>Cantar em harmonia</span> <em>não é dom.</em>{' '}
+            <span>Cantar em harmonia</span> <em>não é dom.</em>{" "}
             <span>É método e o seu grupo pode aprender.</span>
           </h1>
           <p className={styles.lead}>
@@ -34,9 +34,6 @@ export function Hero() {
               Ferramentas grátis
             </Button>
           </div>
-          <p className={styles.destino}>
-            “Levar à minha igreja” abre uma conversa no WhatsApp com a Tinna.
-          </p>
         </div>
       </Container>
     </section>
