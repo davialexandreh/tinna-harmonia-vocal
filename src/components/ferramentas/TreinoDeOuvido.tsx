@@ -30,6 +30,7 @@ export function TreinoDeOuvido() {
   const [rodada, setRodada] = useState<Rodada | null>(null);
   const [fase, setFase] = useState<Fase>('parado');
   const [resultado, setResultado] = useState<'certo' | 'errado' | null>(null);
+  const [escolha, setEscolha] = useState<NaipeId | null>(null);
   const [placar, setPlacar] = useState({ acertos: 0, total: 0 });
 
   const vozesRef = useRef<VozTocando[]>([]);
@@ -47,6 +48,7 @@ export function TreinoDeOuvido() {
   function tocarRodada(nova: Rodada) {
     limpar();
     setResultado(null);
+    setEscolha(null);
     setFase('acorde');
 
     const acorde = acordes[nova.indiceAcorde];
@@ -92,11 +94,12 @@ export function TreinoDeOuvido() {
     tocarRodada(nova);
   }
 
-  function responder(escolha: NaipeId) {
+  function responder(escolhido: NaipeId) {
     if (!rodada || fase === 'parado') return;
 
     limpar();
-    const acertou = escolha === rodada.naipe;
+    const acertou = escolhido === rodada.naipe;
+    setEscolha(escolhido);
     setResultado(acertou ? 'certo' : 'errado');
     setPlacar((p) => ({ acertos: p.acertos + (acertou ? 1 : 0), total: p.total + 1 }));
     setFase('respondendo');
@@ -111,7 +114,9 @@ export function TreinoDeOuvido() {
   return (
     <div className={styles.painel}>
       <p className={styles.mostrador} aria-hidden="true">
-        {fase === 'acorde' ? '🎵' : fase === 'voz' ? '👂' : '?'}
+        {resultado === 'certo' && '✓'}
+        {resultado === 'errado' && '✗'}
+        {!resultado && (fase === 'acorde' ? '🎵' : fase === 'voz' ? '👂' : '?')}
       </p>
       <p className={styles.mostradorLegenda} aria-live="polite">
         {fase === 'parado' && 'Toque em começar para ouvir o primeiro acorde'}
@@ -123,21 +128,40 @@ export function TreinoDeOuvido() {
       </p>
 
       <div className={styles.vozes}>
-        {naipes.map((naipe) => (
-          <button
-            key={naipe.id}
-            type="button"
-            className={styles.voz}
-            aria-pressed={false}
-            disabled={fase === 'parado' || resultado !== null}
-            onClick={() => responder(naipe.id)}
-          >
-            <span className={styles.vozNome}>
-              <b>{naipe.nome}</b>
-              <span>{naipe.descricao}</span>
-            </span>
-          </button>
-        ))}
+        {naipes.map((naipe) => {
+          const foiEscolhido = escolha === naipe.id;
+          const eraCerta = resultado !== null && rodada?.naipe === naipe.id;
+
+          return (
+            <button
+              key={naipe.id}
+              type="button"
+              className={[
+                styles.voz,
+                styles.vozEscolhida,
+                eraCerta && styles.vozCerta,
+                foiEscolhido && !eraCerta && styles.vozEscolhidaErrada,
+                resultado !== null && !eraCerta && !foiEscolhido && styles.vozErrada,
+              ]
+                .filter(Boolean)
+                .join(' ')}
+              aria-pressed={foiEscolhido}
+              disabled={fase === 'parado' || resultado !== null}
+              onClick={() => responder(naipe.id)}
+            >
+              <span className={styles.vozNome}>
+                <b>{naipe.nome}</b>
+                <span>{naipe.descricao}</span>
+              </span>
+              {eraCerta && <span className={styles.marcaResposta}>✓ era esta</span>}
+              {foiEscolhido && !eraCerta && (
+                <span className={[styles.marcaResposta, styles.marcaErro].join(' ')}>
+                  sua escolha
+                </span>
+              )}
+            </button>
+          );
+        })}
       </div>
 
       <div className={styles.linha}>

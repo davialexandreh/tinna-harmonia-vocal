@@ -37,4 +37,4 @@ Nenhum Número De Telefone Placeholder Vai Ao Ar
     [Tags]    pendente-cliente
     Abrir Site No Celular
     ${href} =    Get Attribute    (//*[@data-evento="whatsapp"])[1]    href
-    Should Not Contain    ${href}    5511999999999
+    Should Not Contain    ${href}    5511947308383

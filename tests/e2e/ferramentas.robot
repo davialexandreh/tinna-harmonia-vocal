@@ -43,3 +43,15 @@ Treino De Ouvido Começa Uma Rodada
     Abrir Site No Celular    /ferramentas/treino-de-ouvido/
     Click    text=▶ Começar
     Get Text    body    contains    acorde
+
+Treino De Ouvido Marca A Resposta Escolhida
+    [Documentation]    Sem marcar a escolha, a pessoa não sabe no que clicou
+    ...    nem qual naipe era o certo.
+    Abrir Site No Celular    /ferramentas/treino-de-ouvido/
+    Click    button >> text=Começar
+    Sleep    6.5s
+    Click    button >> text=Contralto
+    # A rodada é sorteada: ora a escolha é a certa, ora não. O que precisa
+    # valer sempre é que o clique fica marcado e que o naipe correto aparece.
+    Get Attribute    button:has-text("Contralto")    aria-pressed    ==    true
+    Get Text    body    contains    era esta
