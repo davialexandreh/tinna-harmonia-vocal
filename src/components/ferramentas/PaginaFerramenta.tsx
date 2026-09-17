@@ -26,6 +26,13 @@ export function PaginaFerramenta({
             titulo={ferramenta.titulo}
             descricao={ferramenta.descricao}
           />
+          <noscript>
+            <p className={styles.aviso}>
+              As ferramentas funcionam com JavaScript, e ele está desativado ou bloqueado
+              neste navegador. Libere o script desta página, ou abra em outro navegador,
+              para usar o áudio.
+            </p>
+          </noscript>
           {children}
         </Container>
       </Secao>
