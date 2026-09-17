@@ -41,7 +41,7 @@ export function WorkshopsChamada() {
             tamanho="lg"
             origem="home-workshops"
           >
-            Pedir um orçamento
+            Pedir orçamento
           </WhatsAppCTA>{' '}
           <Button href="/workshops/" variante="ghost" tamanho="lg">
             Ver como funciona

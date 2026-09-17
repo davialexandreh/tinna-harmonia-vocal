@@ -34,6 +34,9 @@ export function Hero() {
               Ferramentas grátis
             </Button>
           </div>
+          <p className={styles.destino}>
+            “Levar à minha igreja” abre uma conversa no WhatsApp com a Tinna.
+          </p>
         </div>
       </Container>
     </section>

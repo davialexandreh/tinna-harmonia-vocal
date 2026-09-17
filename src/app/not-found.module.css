@@ -1,0 +1,40 @@
+.saidas {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.saidas a {
+  display: block;
+  padding: var(--space-5);
+  background: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-ambiente);
+  text-decoration: none;
+  transition: border-color 0.2s var(--ease-out);
+}
+
+.saidas a:hover {
+  border-color: var(--text-tertiary);
+}
+
+.saidas b {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: var(--tracking-tighter);
+  color: var(--text-primary);
+}
+
+.saidas span {
+  display: block;
+  margin-top: var(--space-1);
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+.acao {
+  margin-top: var(--space-10);
+}

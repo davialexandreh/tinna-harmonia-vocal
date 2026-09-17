@@ -33,7 +33,7 @@ export default function Workshops() {
             tamanho="lg"
             origem="workshops-capa"
           >
-            Pedir um orçamento
+            Pedir orçamento
           </WhatsAppCTA>
         </Container>
       </section>
@@ -97,7 +97,7 @@ export default function Workshops() {
               tamanho="lg"
               origem="workshops-orcamento"
             >
-              Pedir um orçamento
+              Pedir orçamento
             </WhatsAppCTA>
           </div>
         </Container>

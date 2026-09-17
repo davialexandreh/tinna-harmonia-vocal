@@ -50,7 +50,7 @@ export function PaginaFerramenta({
               tamanho="lg"
               origem={`ferramenta-${ferramenta.slug}`}
             >
-              Quero o plano de estudo
+              Pedir o plano no WhatsApp
             </WhatsAppCTA>
             <p className={styles.dica}>
               Prefere treinar com o grupo inteiro?{' '}

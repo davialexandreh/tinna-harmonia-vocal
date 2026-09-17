@@ -60,7 +60,7 @@ export default function Contato() {
                 variante="ghost"
                 origem="contato-geral"
               >
-                Mandar mensagem
+                Tirar uma dúvida
               </WhatsAppCTA>
             </p>
           </Card>

@@ -116,7 +116,7 @@ export function TocadorDeNaipes() {
       </div>
 
       <span className={styles.rotulo}>Vozes</span>
-      <p className={styles.instrucao}>Toque em uma voz para ligar ou desligar.</p>
+      <p className={styles.instrucao}>Ligue e desligue cada voz para ouvir separado.</p>
       <div className={styles.vozes}>
         {naipes.map((naipe) => (
           <button

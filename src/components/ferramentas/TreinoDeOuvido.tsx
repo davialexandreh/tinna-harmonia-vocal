@@ -130,12 +130,15 @@ export function TreinoDeOuvido() {
         />
       </p>
       <p className={styles.mostradorLegenda} aria-live="polite">
-        {fase === 'parado' && 'Toque em começar para ouvir o primeiro acorde'}
-        {fase === 'acorde' && 'Ouvindo o acorde completo…'}
-        {fase === 'voz' && 'Agora só uma voz. Qual naipe é?'}
-        {fase === 'respondendo' && !resultado && 'Responda: qual naipe estava soando?'}
-        {resultado === 'certo' && 'Acertou!'}
-        {resultado === 'errado' && rodada && `Era ${nomeDoNaipe(rodada.naipe)}.`}
+        {fase === 'parado' &&
+          'Comece: o acorde soa inteiro e, logo depois, uma das vozes aparece sozinha.'}
+        {fase === 'acorde' && 'Acorde completo: as três vozes juntas.'}
+        {fase === 'voz' && 'Agora só uma voz. Preste atenção na altura dela.'}
+        {fase === 'respondendo' && !resultado && 'Qual naipe estava soando sozinho?'}
+        {resultado === 'certo' && rodada && `Acertou: era ${nomeDoNaipe(rodada.naipe)}.`}
+        {resultado === 'errado' &&
+          rodada &&
+          `Era ${nomeDoNaipe(rodada.naipe)}. Ouça de novo antes de seguir.`}
       </p>
 
       <div className={styles.vozes}>

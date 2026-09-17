@@ -22,9 +22,9 @@ export function AvisoSemAudio() {
 
   return (
     <p className={styles.aviso} role="alert">
-      Este navegador não suporta os recursos de áudio usados aqui. Abra a página no
-      Chrome, no Safari ou no Firefox atualizados. E, se você entrou por um link do
-      Instagram, toque nos três pontos e escolha “Abrir no navegador”.
+      Este navegador não reproduz o áudio desta ferramenta. Se você chegou por um link
+      do Instagram, toque nos três pontos e escolha “Abrir no navegador”. Fora dele,
+      use Chrome, Safari ou Firefox atualizados.
     </p>
   );
 }

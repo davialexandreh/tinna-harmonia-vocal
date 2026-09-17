@@ -21,7 +21,7 @@ CTA Carrega A Mensagem Já Escrita
 Página De Workshops Pede Orçamento
     Abrir Site No Celular    /workshops/
     Todo CTA De WhatsApp Deve Apontar Para wa.me
-    Get Text    body    contains    Pedir um orçamento
+    Get Text    body    contains    Pedir orçamento
 
 Cada Ferramenta Termina Em Um CTA
     FOR    ${slug}    IN

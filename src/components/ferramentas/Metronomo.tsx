@@ -101,10 +101,20 @@ export function Metronomo() {
       </div>
 
       <div className={styles.linha}>
-        <Button variante="ghost" tamanho="sm" onClick={() => setBpm(limitarBpm(bpm - 5))}>
+        <Button
+          variante="ghost"
+          tamanho="sm"
+          onClick={() => setBpm(limitarBpm(bpm - 5))}
+          aria-label="Diminuir cinco batidas por minuto"
+        >
           −5
         </Button>
-        <Button variante="ghost" tamanho="sm" onClick={() => setBpm(limitarBpm(bpm + 5))}>
+        <Button
+          variante="ghost"
+          tamanho="sm"
+          onClick={() => setBpm(limitarBpm(bpm + 5))}
+          aria-label="Aumentar cinco batidas por minuto"
+        >
           +5
         </Button>
       </div>
