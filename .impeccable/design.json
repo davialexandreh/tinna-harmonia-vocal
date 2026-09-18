@@ -472,7 +472,7 @@
       "Don't usar fundo claro em nenhum estado, incluindo seleção e destaque.",
       "Don't aninhar cartão dentro de cartão para criar profundidade extra.",
       "Don't deixar animação em laço rodando quando o que ela representa parou.",
-      "Don't esconder conteúdo por CSS estático: quem esconde para revelar é script."
+      "Don't esconder conteúdo por CSS estático, e não esconder o que já está na tela: a revelação marca só as seções que estavam fora da dobra quando a página montou."
     ]
   }
 }

@@ -145,49 +145,50 @@ main {
 /*
  * Revelação das seções da Home.
  *
- * Só esconde quando a classe está no <html>, e a classe só entra por script.
- * Sem JavaScript, ou com movimento reduzido, a página aparece inteira.
+ * Só esconde o que tem o atributo, e quem põe o atributo é o componente, nas
+ * seções que ainda estavam fora da tela. Sem JavaScript, ou com movimento
+ * reduzido, ninguém recebe atributo e a página aparece inteira.
  *
  * O gesto é curto e igual para todas as seções de propósito: quem carrega a
  * identidade é a entrada do hero, que sai do desfoque. Se a seção repetisse
  * aquele gesto, o hero deixaria de ser um momento.
  */
-.revelacao-ativa [data-revelar='espera'] {
+[data-revelar='espera'] {
   opacity: 0;
   transform: translateY(14px);
 }
 
-.revelacao-ativa [data-revelar] {
+[data-revelar] {
   transition:
     opacity 0.52s var(--ease-out),
     transform 0.52s var(--ease-out);
 }
 
-.revelacao-ativa [data-revelar='pronto'] {
+[data-revelar='pronto'] {
   opacity: 1;
   transform: none;
 }
 
 /* Grade de cartões entra como lista: um depois do outro, com teto de atraso. */
-.revelacao-ativa [data-revelar='espera'] [data-grade] > * {
+[data-revelar='espera'] [data-grade] > * {
   opacity: 0;
   transform: translateY(10px);
 }
 
-.revelacao-ativa [data-grade] > * {
+[data-grade] > * {
   transition:
     opacity 0.52s var(--ease-out) var(--atraso-revelacao, 0ms),
     transform 0.52s var(--ease-out) var(--atraso-revelacao, 0ms);
 }
 
-.revelacao-ativa [data-revelar='pronto'] [data-grade] > * {
+[data-revelar='pronto'] [data-grade] > * {
   opacity: 1;
   transform: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .revelacao-ativa [data-revelar],
-  .revelacao-ativa [data-grade] > * {
+  [data-revelar],
+  [data-grade] > * {
     opacity: 1 !important;
     transform: none !important;
   }

@@ -477,6 +477,8 @@ usa o display em 20px para se destacar da descrição.
 - **Don't** usar o gesto do hero (desfoque que vira foco) em qualquer outro
   lugar. A revelação de seção existe, mas é outro gesto, mais curto e mais
   pobre, e é só na Home.
-- **Don't** esconder conteúdo por CSS estático. Quem esconde para revelar é
-  script: sem JavaScript, ou com movimento reduzido, a página inteira aparece.
+- **Don't** esconder conteúdo por CSS estático, e não esconder o que já está
+  na tela. A revelação marca apenas as seções que ainda estavam fora da dobra
+  quando a página montou; sem JavaScript, ou com movimento reduzido, a página
+  inteira aparece.
 - **Don't** deixar animação em laço rodando quando o que ela representa parou.

@@ -13,9 +13,12 @@ import { useEffect } from 'react';
  * as duas coisas fossem iguais, a entrada do título deixaria de ser um momento
  * e viraria o padrão da página.
  *
- * Sem JavaScript nada fica escondido: quem esconde é a classe que este arquivo
- * e o script do layout colocam no <html>. Se o script não rodar, o site aparece
- * inteiro, como sempre apareceu.
+ * Esconde apenas o que está abaixo da dobra no momento em que monta. Seção já
+ * visível nunca é escondida, então não existe o piscar de aparecer e sumir, e
+ * não é preciso script inline marcando o documento antes da pintura.
+ *
+ * Sem JavaScript nada fica escondido: quem põe o atributo é este componente.
+ * Se ele não rodar, o site aparece inteiro, como sempre apareceu.
  */
 
 /** Atraso entre irmãos de uma mesma grade, em ms. */
@@ -25,7 +28,6 @@ const ATRASO_MAXIMO = 280;
 
 export function RevelaSecoes() {
   useEffect(() => {
-    const raiz = document.documentElement;
     const movimentoReduzido = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     const conteudo = document.querySelector('main');
@@ -35,12 +37,15 @@ export function RevelaSecoes() {
     // primeira dobra, então nunca entra na revelação.
     const secoes = [...conteudo.querySelectorAll<HTMLElement>(':scope > section')].slice(1);
 
-    if (movimentoReduzido || secoes.length === 0) {
-      raiz.classList.remove('revelacao-ativa');
-      return;
-    }
+    if (movimentoReduzido || secoes.length === 0) return;
 
-    for (const secao of secoes) {
+    // Só entra na revelação o que ainda não apareceu para ninguém. Esconder o
+    // que já está pintado seria trocar uma animação por um susto.
+    const escondidas = secoes.filter(
+      (secao) => secao.getBoundingClientRect().top > window.innerHeight * 0.9,
+    );
+
+    for (const secao of escondidas) {
       secao.dataset.revelar = 'espera';
 
       // Grade de cartões entra como lista: um depois do outro, com teto.
@@ -78,15 +83,15 @@ export function RevelaSecoes() {
       );
     } catch {
       // Navegador sem IntersectionObserver: mostra tudo e sai de cena.
-      for (const secao of secoes) revelar(secao);
+      for (const secao of escondidas) revelar(secao);
       return;
     }
 
-    for (const secao of secoes) observador.observe(secao);
+    for (const secao of escondidas) observador.observe(secao);
 
     return () => {
       observador.disconnect();
-      for (const secao of secoes) revelar(secao);
+      for (const secao of escondidas) revelar(secao);
     };
   }, []);
 

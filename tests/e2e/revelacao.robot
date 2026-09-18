@@ -10,9 +10,10 @@ Test Teardown       Close Browser    ALL
 Secoes Abaixo Da Dobra Comecam Escondidas E Aparecem Ao Rolar
     Abrir Site No Celular
     Sleep    0.5s
-    ${inicio} =    Evaluate JavaScript    ${None}    () => { const s = [...document.querySelectorAll('main > section')]; return JSON.stringify({ classe: document.documentElement.classList.contains('revelacao-ativa'), escondidas: s.filter((x) => parseFloat(getComputedStyle(x).opacity) < 0.5).length, total: s.length }); }
-    Should Contain    ${inicio}    "classe":true
+    ${inicio} =    Evaluate JavaScript    ${None}    () => { const s = [...document.querySelectorAll('main > section')]; return JSON.stringify({ escondidas: s.filter((x) => parseFloat(getComputedStyle(x).opacity) < 0.5).length, visiveisNoTopo: s.filter((x) => x.getBoundingClientRect().top < window.innerHeight && parseFloat(getComputedStyle(x).opacity) > 0.9).length }); }
     Should Not Contain    ${inicio}    "escondidas":0
+    # Seção que já estava na tela nunca é escondida: nada pisca.
+    Should Not Contain    ${inicio}    "visiveisNoTopo":0
 
     Evaluate JavaScript    ${None}    () => window.scrollTo({ top: 1500, behavior: 'instant' })
     Sleep    1s
@@ -35,7 +36,7 @@ Movimento Reduzido Nao Esconde Nada
     New Context    viewport={'width': 390, 'height': 844}    reducedMotion=reduce
     New Page    ${BASE_URL}
     Sleep    0.8s
-    ${r} =    Evaluate JavaScript    ${None}    () => { const s = [...document.querySelectorAll('main > section')]; return JSON.stringify({ classe: document.documentElement.classList.contains('revelacao-ativa'), escondidas: s.filter((x) => parseFloat(getComputedStyle(x).opacity) < 0.5).length, total: s.length }); }
+    ${r} =    Evaluate JavaScript    ${None}    () => { const s = [...document.querySelectorAll('main > section')]; return JSON.stringify({ escondidas: s.filter((x) => parseFloat(getComputedStyle(x).opacity) < 0.5).length }); }
     Should Contain    ${r}    "escondidas":0
 
 Resposta Do FAQ Abre Animando E Fecha Mais Rapido
@@ -78,3 +79,15 @@ Movimento Reduzido Abre A Resposta Na Hora
     ${imediato} =    Evaluate JavaScript    ${None}
     ...    () => Math.round(document.querySelector('#faq details:nth-of-type(2)').getBoundingClientRect().height)
     Should Be True    ${imediato} > ${fechado} + 20
+
+Revelacao Funciona Tambem Ao Chegar Por Navegacao Interna
+    [Documentation]    O script inline só rodava na carga do documento: quem
+    ...    chegasse à Home por link interno não via revelação nenhuma. Agora
+    ...    quem esconde é o componente, que monta nos dois caminhos.
+    Abrir Site No Celular    /workshops/
+    Click    css=header >> text=Tinna Silva
+    Get Url    ==    ${BASE_URL}/
+    Sleep    0.6s
+    ${estado} =    Evaluate JavaScript    ${None}
+    ...    () => JSON.stringify({ escondidas: [...document.querySelectorAll('main > section')].filter((x) => parseFloat(getComputedStyle(x).opacity) < 0.5).length })
+    Should Not Contain    ${estado}    "escondidas":0
