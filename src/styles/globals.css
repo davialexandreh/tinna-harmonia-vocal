@@ -146,7 +146,7 @@ main {
   font-size: 15px;
   font-weight: 600;
   text-decoration: none;
-  transition: top 0.2s var(--ease-out);
+  transition: top 0.26s var(--ease-out);
 }
 
 .skip-link:focus {
@@ -170,8 +170,8 @@ main {
 
 .revelacao-ativa [data-revelar] {
   transition:
-    opacity 0.42s var(--ease-out),
-    transform 0.42s var(--ease-out);
+    opacity 0.52s var(--ease-out),
+    transform 0.52s var(--ease-out);
 }
 
 .revelacao-ativa [data-revelar='pronto'] {
@@ -187,8 +187,8 @@ main {
 
 .revelacao-ativa [data-grade] > * {
   transition:
-    opacity 0.42s var(--ease-out) var(--atraso-revelacao, 0ms),
-    transform 0.42s var(--ease-out) var(--atraso-revelacao, 0ms);
+    opacity 0.52s var(--ease-out) var(--atraso-revelacao, 0ms),
+    transform 0.52s var(--ease-out) var(--atraso-revelacao, 0ms);
 }
 
 .revelacao-ativa [data-revelar='pronto'] [data-grade] > * {

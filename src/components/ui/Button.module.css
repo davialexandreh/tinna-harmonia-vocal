@@ -11,7 +11,7 @@
   border: 1.5px solid transparent;
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.2s var(--ease-out);
+  transition: all 0.26s var(--ease-out);
   /*
    * Sem nowrap: o botão dimensiona pelo conteúdo e só quebra quando o espaço
    * é menor que o rótulo, que é justamente o caso do zoom de 200% no celular.
@@ -26,7 +26,8 @@
 /* O toque precisa de resposta antes do resultado: 100ms, sem deslocamento. */
 .btn:active {
   transform: scale(0.985);
-  transition-duration: 0.1s;
+  /* O aperto continua curto: retorno ao toque não se contempla. */
+  transition-duration: 0.12s;
 }
 
 .primary {

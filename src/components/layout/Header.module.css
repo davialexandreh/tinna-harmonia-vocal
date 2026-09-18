@@ -101,9 +101,9 @@
   visibility: hidden;
   transform: translateY(-10px);
   transition:
-    opacity 0.14s var(--ease-out),
-    transform 0.14s var(--ease-out),
-    visibility 0.14s;
+    opacity 0.2s var(--ease-out),
+    transform 0.2s var(--ease-out),
+    visibility 0.2s;
 }
 
 .painelAberto {
@@ -111,9 +111,9 @@
   visibility: visible;
   transform: none;
   transition:
-    opacity 0.22s var(--ease-out),
-    transform 0.22s var(--ease-out),
-    visibility 0.22s;
+    opacity 0.3s var(--ease-out),
+    transform 0.3s var(--ease-out),
+    visibility 0.3s;
 }
 
 .painel a {
@@ -151,19 +151,19 @@
 
 /* Os itens do painel chegam em sequência curta, no mesmo sentido do gesto. */
 .painelAberto nav a {
-  animation: itemDoMenu 260ms var(--ease-out) both;
+  animation: itemDoMenu 320ms var(--ease-out) both;
 }
 
 .painelAberto nav a:nth-child(2) {
-  animation-delay: 40ms;
+  animation-delay: 55ms;
 }
 
 .painelAberto nav a:nth-child(3) {
-  animation-delay: 80ms;
+  animation-delay: 110ms;
 }
 
 .painelAberto nav a:nth-child(4) {
-  animation-delay: 120ms;
+  animation-delay: 165ms;
 }
 
 @keyframes itemDoMenu {

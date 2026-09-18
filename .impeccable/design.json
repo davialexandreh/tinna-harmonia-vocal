@@ -231,48 +231,48 @@
     "motion": [
       {
         "name": "ease-out",
-        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
-        "purpose": "Easing único do sistema, em toda transição e entrada."
+        "value": "cubic-bezier(0.33, 0.7, 0.3, 1)",
+        "purpose": "Curva de estado: parte com firmeza e chega desacelerando."
       },
       {
         "name": "toque",
-        "value": "0.1s",
-        "purpose": "Resposta ao pressionar: escala 0,985."
+        "value": "0.12s",
+        "purpose": "Aperto do botão: o retorno ao gesto não desacelera."
       },
       {
         "name": "estado",
-        "value": "0.2s",
-        "purpose": "Troca de estado em botão, chip e link."
+        "value": "0.26s",
+        "purpose": "Troca de estado em botão, chip, linha de voz e link."
       },
       {
         "name": "painel-entra",
-        "value": "0.22s",
+        "value": "0.3s",
         "purpose": "Entrada do menu mobile."
       },
       {
         "name": "painel-sai",
-        "value": "0.14s",
-        "purpose": "Saída do menu mobile: desfazer é mais rápido do que fazer."
+        "value": "0.2s",
+        "purpose": "Saída do menu mobile."
       },
       {
         "name": "voz-entra",
-        "value": "620ms",
-        "purpose": "Cada parte do título do hero, escalonada em 170ms."
+        "value": "720ms",
+        "purpose": "Cada parte do título do hero, escalonada em 190ms."
       },
       {
         "name": "luz-sobe",
-        "value": "1400ms",
-        "purpose": "Brilho do vídeo do hero subindo até o valor final, uma vez."
+        "value": "1700ms",
+        "purpose": "Brilho do hero subindo até o valor final, uma vez."
       },
       {
         "name": "sustenta",
-        "value": "1900ms",
-        "purpose": "Respiração das barras de voz soando, alternada e infinita enquanto toca."
+        "value": "2200ms",
+        "purpose": "Respiração das barras de voz soando."
       },
       {
         "name": "revela-secao",
-        "value": "420ms",
-        "purpose": "Entrada das seções da Home ao rolar: 14px, sem desfoque, com escalonamento de 70ms entre cartões e teto de 280ms."
+        "value": "520ms",
+        "purpose": "Entrada das seções da Home ao rolar: 14px, sem desfoque, escalonamento de 70ms entre cartões."
       },
       {
         "name": "ease-abertura",
@@ -448,7 +448,7 @@
       },
       {
         "name": "A Regra das Duas Curvas",
-        "body": "Estado usa a curva exponencial e chega rápido; tamanho usa a curva suave nas duas pontas.",
+        "body": "Estado usa cubic-bezier(0.33, 0.7, 0.3, 1), que parte com firmeza e chega desacelerando; tamanho usa cubic-bezier(0.4, 0, 0.2, 1), suave nas duas pontas.",
         "section": "elevation"
       }
     ],

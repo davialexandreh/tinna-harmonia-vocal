@@ -58,7 +58,13 @@
   --shadow-ambiente: 0 2px 10px rgba(0, 0, 0, 0.35);
   --shadow-resposta: 0 6px 20px rgba(0, 0, 0, 0.45);
   --shadow-flutuante: 0 24px 60px rgba(0, 0, 0, 0.6);
-  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  /*
+   * Curva de estado. Foi exponencial (0.16, 1, 0.3, 1) e entregava 65% do
+   * percurso em 15% do tempo: tudo chegava de supetão. Esta cumpre 34% no
+   * mesmo ponto e continua desacelerando na chegada, que é o que faz a
+   * transição parecer conduzida em vez de cortada.
+   */
+  --ease-out: cubic-bezier(0.33, 0.7, 0.3, 1);
   /*
    * Curva para mudança de tamanho. A --ease-out é exponencial e entrega quase
    * toda a distância no primeiro terço do tempo: em botão isso é resposta

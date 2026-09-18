@@ -27,6 +27,11 @@
 }
 
 .chip {
+  /* Trocava de estado sem transição: o chip acendia de um quadro para o outro. */
+  transition:
+    background 0.26s var(--ease-out),
+    border-color 0.26s var(--ease-out),
+    color 0.26s var(--ease-out);
   background: var(--surface-sunken);
   border: 1.5px solid transparent;
   border-radius: var(--radius-pill);
@@ -115,7 +120,7 @@
   border-radius: var(--radius-pill);
   background: var(--brand);
   transform-origin: bottom;
-  animation: sustenta 1900ms var(--ease-out) infinite alternate;
+  animation: sustenta 2200ms var(--ease-out) infinite alternate;
 }
 
 .soando i:nth-child(1) {
@@ -155,6 +160,10 @@
 }
 
 .voz {
+  transition:
+    background 0.26s var(--ease-out),
+    border-color 0.26s var(--ease-out),
+    opacity 0.26s var(--ease-out);
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -218,7 +227,7 @@
   height: 18px;
   border-radius: 50%;
   border: 2px solid var(--border-subtle);
-  transition: transform 0.1s var(--ease-out), background 0.1s var(--ease-out);
+  transition: transform 0.14s var(--ease-out), background 0.14s var(--ease-out);
 }
 
 .batidaAtiva {

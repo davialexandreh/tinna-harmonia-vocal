@@ -29,7 +29,7 @@
   position: absolute;
   inset: 0;
   background: var(--ink);
-  animation: luzSobe 1400ms var(--ease-out) both;
+  animation: luzSobe 1700ms var(--ease-out) both;
 }
 
 @keyframes luzSobe {
@@ -108,15 +108,15 @@
  * texto já está visível.
  */
 .titulo > * {
-  animation: vozEntra 620ms var(--ease-out) both;
+  animation: vozEntra 720ms var(--ease-out) both;
 }
 
 .titulo > *:nth-child(2) {
-  animation-delay: 170ms;
+  animation-delay: 190ms;
 }
 
 .titulo > *:nth-child(3) {
-  animation-delay: 340ms;
+  animation-delay: 380ms;
 }
 
 @keyframes vozEntra {
@@ -447,8 +447,8 @@
     linear-gradient(var(--brand-texto), var(--brand-texto)) center / 15px 1.5px no-repeat,
     linear-gradient(var(--brand-texto), var(--brand-texto)) center / 1.5px 15px no-repeat;
   transition:
-    transform 0.28s var(--ease-out),
-    background-size 0.28s var(--ease-out);
+    transform 0.34s var(--ease-out),
+    background-size 0.34s var(--ease-out);
 }
 
 .faq details[open] summary::after {

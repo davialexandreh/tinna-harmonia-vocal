@@ -173,7 +173,7 @@ em sequência, saindo do desfoque para o foco, enquanto a luz sobe sobre o víde
 São as vozes entrando num acorde, e esse gesto não se repete em lugar nenhum.
 
 Na Home, as seções abaixo da primeira dobra entram ao rolar, com um gesto
-deliberadamente mais pobre: 14px de deslocamento em 420ms, igual para todas,
+deliberadamente mais pobre: 14px de deslocamento em 520ms, igual para todas,
 sem desfoque. A diferença é o ponto. Se a seção repetisse a entrada do hero, o
 hero deixaria de ser um momento e viraria o padrão da página. Fora da Home não
 há revelação por rolagem.
@@ -281,9 +281,14 @@ pede 14,5px, o bloco está errado, não a escala.
 mais apertado do que é. O corpo compensa nos três eixos: entrelinha de 1,55 em
 vez de 1,5, `+0,005em` de entreletra, e nunca abaixo do peso 400.
 
-**A Regra das Duas Curvas.** Estado usa a curva exponencial e chega rápido.
-Tamanho usa a curva suave nas duas pontas. Nunca o contrário: altura com curva
-de estado parece corte, e estado com curva de tamanho parece lentidão.
+**A Regra das Duas Curvas.** Estado usa `cubic-bezier(0.33, 0.7, 0.3, 1)`, que
+parte com firmeza e chega desacelerando. Tamanho usa `cubic-bezier(0.4, 0, 0.2, 1)`,
+suave nas duas pontas. Nunca o contrário: altura com curva de estado parece
+corte, e estado com curva de tamanho parece lentidão.
+
+O sistema já teve uma curva exponencial, `cubic-bezier(0.16, 1, 0.3, 1)`, que
+cumpria 65% do percurso em 15% do tempo. Era precisa demais para o tom do site:
+tudo chegava de supetão. A curva atual cumpre 34% no mesmo ponto.
 
 **A Regra da Entrelinha Proporcional.** Título grande fecha a linha (1,05);
 título pequeno, que quebra em duas, precisa de ar (1,18). Uma entrelinha única
@@ -354,11 +359,11 @@ A imagem segue a mesma língua: retrato em 3/4 com raio de 32px e a mesma borda 
 
 ## Components
 
-O comportamento é **refinado e contido**: transição curta (0,2s) com
-`cubic-bezier(0.16, 1, 0.3, 1)`, deslocamento de 1px no hover, nada que salte.
-Mudança de tamanho é a exceção e usa a outra curva,
-`cubic-bezier(0.4, 0, 0.2, 1)`: a exponencial entrega 94% da altura no primeiro
-terço do tempo, o que em botão é resposta e em altura é salto.
+O comportamento é **refinado e contido**: transição de 0,26s com
+`cubic-bezier(0.33, 0.7, 0.3, 1)`, deslocamento de 1px no hover, nada que salte.
+Mudança de tamanho usa a outra curva, `cubic-bezier(0.4, 0, 0.2, 1)`, que sai e
+chega devagar. O aperto do toque é a única coisa que continua curta, em 0,12s:
+retorno a um gesto não se contempla.
 Ao toque, 100ms e uma redução de 1,5% de escala: o retorno chega antes do
 resultado.
 
