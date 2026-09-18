@@ -281,6 +281,10 @@ pede 14,5px, o bloco está errado, não a escala.
 mais apertado do que é. O corpo compensa nos três eixos: entrelinha de 1,55 em
 vez de 1,5, `+0,005em` de entreletra, e nunca abaixo do peso 400.
 
+**A Regra das Duas Curvas.** Estado usa a curva exponencial e chega rápido.
+Tamanho usa a curva suave nas duas pontas. Nunca o contrário: altura com curva
+de estado parece corte, e estado com curva de tamanho parece lentidão.
+
 **A Regra da Entrelinha Proporcional.** Título grande fecha a linha (1,05);
 título pequeno, que quebra em duas, precisa de ar (1,18). Uma entrelinha única
 para todos os níveis deixa o título de cartão espremido.
@@ -352,6 +356,9 @@ A imagem segue a mesma língua: retrato em 3/4 com raio de 32px e a mesma borda 
 
 O comportamento é **refinado e contido**: transição curta (0,2s) com
 `cubic-bezier(0.16, 1, 0.3, 1)`, deslocamento de 1px no hover, nada que salte.
+Mudança de tamanho é a exceção e usa a outra curva,
+`cubic-bezier(0.4, 0, 0.2, 1)`: a exponencial entrega 94% da altura no primeiro
+terço do tempo, o que em botão é resposta e em altura é salto.
 Ao toque, 100ms e uma redução de 1,5% de escala: o retorno chega antes do
 resultado.
 
@@ -400,8 +407,9 @@ resultado.
 
 Lista de perguntas em `<details>` nativo, sem JavaScript. O sinal de mais gira
 180° e perde a barra vertical ao abrir, virando um traço. A resposta entra
-animando a altura por `::details-content` (260ms para abrir, 180ms para fechar),
-e onde o navegador não suporta ela simplesmente aparece, como sempre apareceu.
+animando a altura por `::details-content` (340ms para abrir, 240ms para fechar)
+com a curva de abertura, e onde o navegador não suporta ela simplesmente
+aparece, como sempre apareceu.
 
 ### Indicador de voz soando
 

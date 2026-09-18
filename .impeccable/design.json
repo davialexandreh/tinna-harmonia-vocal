@@ -273,6 +273,21 @@
         "name": "revela-secao",
         "value": "420ms",
         "purpose": "Entrada das seções da Home ao rolar: 14px, sem desfoque, com escalonamento de 70ms entre cartões e teto de 280ms."
+      },
+      {
+        "name": "ease-abertura",
+        "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Curva de mudança de tamanho: suave nas duas pontas."
+      },
+      {
+        "name": "faq-abre",
+        "value": "340ms",
+        "purpose": "Altura da resposta do FAQ ao abrir."
+      },
+      {
+        "name": "faq-fecha",
+        "value": "240ms",
+        "purpose": "Altura da resposta do FAQ ao fechar."
       }
     ],
     "breakpoints": [
@@ -430,6 +445,11 @@
         "name": "A Regra do Refluxo",
         "body": "Nenhuma página rola para o lado a 195px, o equivalente a 390px com zoom de 200%.",
         "section": "typography"
+      },
+      {
+        "name": "A Regra das Duas Curvas",
+        "body": "Estado usa a curva exponencial e chega rápido; tamanho usa a curva suave nas duas pontas.",
+        "section": "elevation"
       }
     ],
     "dos": [
