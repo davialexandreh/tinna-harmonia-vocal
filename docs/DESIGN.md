@@ -170,9 +170,16 @@ de serviço, não de espetáculo.
 
 O movimento tem um só momento autoral: as três partes do título do hero entram
 em sequência, saindo do desfoque para o foco, enquanto a luz sobe sobre o vídeo.
-São as vozes entrando num acorde, e é a única coreografia do site. Todo o resto
-do movimento é resposta: confirma um toque, explica um estado, acompanha uma
-troca de tela.
+São as vozes entrando num acorde, e esse gesto não se repete em lugar nenhum.
+
+Na Home, as seções abaixo da primeira dobra entram ao rolar, com um gesto
+deliberadamente mais pobre: 14px de deslocamento em 420ms, igual para todas,
+sem desfoque. A diferença é o ponto. Se a seção repetisse a entrada do hero, o
+hero deixaria de ser um momento e viraria o padrão da página. Fora da Home não
+há revelação por rolagem.
+
+Todo o resto do movimento é resposta: confirma um toque, explica um estado,
+acompanha uma troca de tela.
 
 **Key Characteristics:**
 - Fundo escuro único, sem alternância de tema
@@ -447,6 +454,9 @@ usa o display em 20px para se destacar da descrição.
 - **Don't** usar fundo claro em nenhum estado, incluindo seleção e destaque. O
   site tem um tema só.
 - **Don't** aninhar cartão dentro de cartão para criar profundidade extra.
-- **Don't** repetir a entrada do hero como revelação de seção ao rolar. A
-  coreografia é uma só, e é no primeiro quadro.
+- **Don't** usar o gesto do hero (desfoque que vira foco) em qualquer outro
+  lugar. A revelação de seção existe, mas é outro gesto, mais curto e mais
+  pobre, e é só na Home.
+- **Don't** esconder conteúdo por CSS estático. Quem esconde para revelar é
+  script: sem JavaScript, ou com movimento reduzido, a página inteira aparece.
 - **Don't** deixar animação em laço rodando quando o que ela representa parou.

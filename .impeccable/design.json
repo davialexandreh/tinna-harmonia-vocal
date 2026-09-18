@@ -268,6 +268,11 @@
         "name": "sustenta",
         "value": "1900ms",
         "purpose": "Respiração das barras de voz soando, alternada e infinita enquanto toca."
+      },
+      {
+        "name": "revela-secao",
+        "value": "420ms",
+        "purpose": "Entrada das seções da Home ao rolar: 14px, sem desfoque, com escalonamento de 70ms entre cartões e teto de 280ms."
       }
     ],
     "breakpoints": [
@@ -403,7 +408,7 @@
       },
       {
         "name": "A Regra do Momento Único",
-        "body": "Existe uma coreografia no site: a entrada do título do hero. Todo o resto do movimento é resposta a uma ação ou explicação de estado.",
+        "body": "O gesto do hero, desfoque que vira foco, é único e não se repete. As seções da Home revelam ao rolar com um gesto mais pobre, de 14px em 420ms. Todo o resto do movimento é resposta a uma ação ou explicação de estado.",
         "section": "elevation"
       },
       {
@@ -446,7 +451,8 @@
       "Don't introduzir um segundo acento cromático.",
       "Don't usar fundo claro em nenhum estado, incluindo seleção e destaque.",
       "Don't aninhar cartão dentro de cartão para criar profundidade extra.",
-      "Don't deixar animação em laço rodando quando o que ela representa parou."
+      "Don't deixar animação em laço rodando quando o que ela representa parou.",
+      "Don't esconder conteúdo por CSS estático: quem esconde para revelar é script."
     ]
   }
 }

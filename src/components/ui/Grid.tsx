@@ -11,7 +11,10 @@ export function Grid({
   className?: string;
 }) {
   return (
-    <div className={[styles.grid, styles[`c${colunas}`], className].filter(Boolean).join(' ')}>
+    <div
+      data-grade=""
+      className={[styles.grid, styles[`c${colunas}`], className].filter(Boolean).join(' ')}
+    >
       {children}
     </div>
   );
