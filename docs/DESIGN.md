@@ -396,6 +396,13 @@ resultado.
   tela cheia, com links em Inter Tight 24px, fechamento por Esc e rolagem do fundo
   travada.
 
+### FAQ
+
+Lista de perguntas em `<details>` nativo, sem JavaScript. O sinal de mais gira
+180° e perde a barra vertical ao abrir, virando um traço. A resposta entra
+animando a altura por `::details-content` (260ms para abrir, 180ms para fechar),
+e onde o navegador não suporta ela simplesmente aparece, como sempre apareceu.
+
 ### Indicador de voz soando
 
 Três barras finas em magenta que respiram em 1,9s, uma defasada da outra, ao

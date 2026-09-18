@@ -1,7 +1,8 @@
 *** Settings ***
-Documentation       Revelação das seções da Home. O risco desta técnica é
-...                 esconder conteúdo de quem não roda o script, então é isso
-...                 que estes testes guardam.
+Documentation       Revelações da Home: as seções ao rolar e a resposta do
+...                 FAQ ao abrir. O risco das duas é esconder conteúdo de quem
+...                 não roda o script ou pediu menos movimento, e é isso que
+...                 estes testes guardam.
 Resource            resources/comum.resource
 Test Teardown       Close Browser    ALL
 
@@ -36,3 +37,44 @@ Movimento Reduzido Nao Esconde Nada
     Sleep    0.8s
     ${r} =    Evaluate JavaScript    ${None}    () => { const s = [...document.querySelectorAll('main > section')]; return JSON.stringify({ classe: document.documentElement.classList.contains('revelacao-ativa'), escondidas: s.filter((x) => parseFloat(getComputedStyle(x).opacity) < 0.5).length, total: s.length }); }
     Should Contain    ${r}    "escondidas":0
+
+Resposta Do FAQ Abre Animando E Fecha Mais Rapido
+    [Documentation]    Sem ::details-content a resposta aparecia de uma vez.
+    ...    Onde o navegador não suporta, continua abrindo na hora, e é por isso
+    ...    que o teste só cobra animação quando há suporte.
+    Abrir Site No Desktop
+    ${suporta} =    Evaluate JavaScript    ${None}
+    ...    () => CSS.supports('selector(::details-content)')
+    Pass Execution If    not ${suporta}    Navegador sem ::details-content: nada a animar.
+
+    Evaluate JavaScript    ${None}
+    ...    () => document.querySelector('#faq').scrollIntoView({ block: 'start', behavior: 'instant' })
+    Sleep    0.4s
+    ${fechado} =    Evaluate JavaScript    ${None}
+    ...    () => Math.round(document.querySelector('#faq details:nth-of-type(2)').getBoundingClientRect().height)
+
+    Click    css=#faq details:nth-of-type(2) summary
+    ${no_clique} =    Evaluate JavaScript    ${None}
+    ...    () => Math.round(document.querySelector('#faq details:nth-of-type(2)').getBoundingClientRect().height)
+    # No instante do clique o details já está aberto, mas a altura ainda é a
+    # de antes: é isso que prova que existe transição em vez de salto.
+    Should Be Equal As Integers    ${no_clique}    ${fechado}
+
+    Sleep    0.6s
+    ${aberto} =    Evaluate JavaScript    ${None}
+    ...    () => Math.round(document.querySelector('#faq details:nth-of-type(2)').getBoundingClientRect().height)
+    Should Be True    ${aberto} > ${fechado} + 20
+
+Movimento Reduzido Abre A Resposta Na Hora
+    New Browser    chromium    headless=${True}
+    New Context    viewport={'width': 900, 'height': 900}    reducedMotion=reduce
+    New Page    ${BASE_URL}
+    Evaluate JavaScript    ${None}
+    ...    () => document.querySelector('#faq').scrollIntoView({ block: 'start', behavior: 'instant' })
+    Sleep    0.4s
+    ${fechado} =    Evaluate JavaScript    ${None}
+    ...    () => Math.round(document.querySelector('#faq details:nth-of-type(2)').getBoundingClientRect().height)
+    Click    css=#faq details:nth-of-type(2) summary
+    ${imediato} =    Evaluate JavaScript    ${None}
+    ...    () => Math.round(document.querySelector('#faq details:nth-of-type(2)').getBoundingClientRect().height)
+    Should Be True    ${imediato} > ${fechado} + 20
