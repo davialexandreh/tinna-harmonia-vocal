@@ -44,8 +44,28 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR" className={`${interTight.variable} ${archivo.variable}`}>
-      <body>
+    /*
+     * suppressHydrationWarning nos dois, por motivos diferentes e ambos
+     * legítimos:
+     *
+     * <html>: o script da Home marca a classe da revelação antes da
+     * hidratação, de propósito, para a seção não piscar. O servidor não pode
+     * escrever essa classe, senão quem não roda script ficaria com o conteúdo
+     * escondido para sempre.
+     *
+     * <body>: extensões de navegador escrevem atributos aqui antes do React
+     * carregar (cz-shortcut-listen do ColorZilla, entre outras). Não é algo
+     * que o site controle.
+     *
+     * A supressão vale só para o atributo deste elemento, não para a árvore
+     * abaixo: um erro de verdade dentro da página continua aparecendo.
+     */
+    <html
+      lang="pt-BR"
+      className={`${interTight.variable} ${archivo.variable}`}
+      suppressHydrationWarning
+    >
+      <body suppressHydrationWarning>
         <a className="skip-link" href="#conteudo">
           Pular para o conteúdo
         </a>
