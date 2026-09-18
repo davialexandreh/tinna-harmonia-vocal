@@ -5,9 +5,9 @@
  * do próprio navegador: não sai do aparelho e não vai para servidor nenhum.
  */
 
-export const CHAVE_CONSENTIMENTO = 'tinna:consentimento:v1';
+const CHAVE_CONSENTIMENTO = 'tinna:consentimento:v1';
 
-export type Consentimento = 'aceito' | 'recusado' | 'pendente' | 'indefinido';
+type Consentimento = 'aceito' | 'recusado' | 'pendente' | 'indefinido';
 
 const ouvintes = new Set<() => void>();
 

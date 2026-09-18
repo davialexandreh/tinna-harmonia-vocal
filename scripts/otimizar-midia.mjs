@@ -103,15 +103,14 @@ async function gerarVideo() {
   const quadro = join(saida, 'hero-quadro.png');
   await executar('ffmpeg', ['-y', '-ss', '1.5', '-i', origem, '-frames:v', '1', quadro]);
 
-  for (const [nome, opcoes] of [
-    ['hero-poster.webp', { webp: { quality: 72 } }],
-    ['hero-poster.jpg', { jpeg: { quality: 70, progressive: true, mozjpeg: true } }],
-  ]) {
-    const destino = join(saida, nome);
-    const imagem = sharp(quadro).resize({ width: 1280 });
-    await (opcoes.webp ? imagem.webp(opcoes.webp) : imagem.jpeg(opcoes.jpeg)).toFile(destino);
-    console.log(`· poster ${nome}: ${kb(await tamanho(destino))}`);
-  }
+  // Só jpeg: o pôster entra no atributo poster do <video> e no <img> de
+  // reserva, e os dois pedem um formato só. Um webp a mais era peso parado.
+  const poster = join(saida, 'hero-poster.jpg');
+  await sharp(quadro)
+    .resize({ width: 1280 })
+    .jpeg({ quality: 70, progressive: true, mozjpeg: true })
+    .toFile(poster);
+  console.log(`· poster: ${kb(await tamanho(poster))}`);
 
   await executar('rm', ['-f', quadro]);
 }

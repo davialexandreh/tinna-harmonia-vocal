@@ -3,7 +3,7 @@
  * Tudo aqui é função pura: é o que os testes da Fase 4 cobrem.
  */
 
-export const NOTAS_PT = [
+const NOTAS_PT = [
   'Dó',
   'Dó#',
   'Ré',
@@ -19,8 +19,8 @@ export const NOTAS_PT = [
 ] as const;
 
 /** Lá 4 = MIDI 69 = 440 Hz. */
-export const LA4_MIDI = 69;
-export const AFINACAO_PADRAO = 440;
+const LA4_MIDI = 69;
+const AFINACAO_PADRAO = 440;
 
 export function midiParaFrequencia(midi: number, afinacao = AFINACAO_PADRAO): number {
   return afinacao * Math.pow(2, (midi - LA4_MIDI) / 12);

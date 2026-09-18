@@ -143,13 +143,6 @@
   flex-wrap: wrap;
 }
 
-/* Diz para onde o botão leva: quem toca sai do site e cai no WhatsApp. */
-.destino {
-  margin-top: var(--space-4);
-  font-size: 13px;
-  color: var(--text-secondary);
-}
-
 .retrato {
   width: 100%;
   height: auto;
@@ -158,20 +151,6 @@
   border-radius: var(--radius-2xl);
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: linear-gradient(160deg, var(--surface-card), var(--surface-page));
-}
-
-.proximo {
-  padding: var(--space-16) 0;
-}
-
-.proximo h2 {
-  font-size: clamp(29px, 4vw, 46px);
-  margin-bottom: var(--space-4);
-}
-
-.proximo p {
-  color: var(--text-secondary);
-  max-width: 60ch;
 }
 
 @media (max-width: 900px) {

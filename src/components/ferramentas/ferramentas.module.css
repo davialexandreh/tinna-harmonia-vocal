@@ -240,23 +240,6 @@
   border-color: var(--brand);
 }
 
-/* treino de ouvido */
-.resposta {
-  font-size: 17px;
-  text-align: center;
-  margin-top: var(--space-5);
-  min-height: 26px;
-}
-
-.certo {
-  color: var(--brand-texto);
-  font-weight: 600;
-}
-
-.errado {
-  color: var(--text-secondary);
-}
-
 .placar {
   text-align: center;
   color: var(--text-tertiary);

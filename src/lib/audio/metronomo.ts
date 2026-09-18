@@ -8,14 +8,14 @@
  */
 
 /** Intervalo do timer grosseiro, em ms. */
-export const INTERVALO_TIMER_MS = 25;
+const INTERVALO_TIMER_MS = 25;
 /** Janela de agendamento antecipado, em segundos. */
-export const JANELA_LOOKAHEAD_S = 0.1;
+const JANELA_LOOKAHEAD_S = 0.1;
 
 export const BPM_MINIMO = 40;
 export const BPM_MAXIMO = 240;
 
-export type Batida = {
+type Batida = {
   /** Instante no relógio do AudioContext, em segundos. */
   tempo: number;
   /** Posição dentro do compasso, começando em 0. */
@@ -64,7 +64,7 @@ type ContextoMinimo = Pick<
   'currentTime' | 'createOscillator' | 'createGain' | 'destination'
 >;
 
-export type OpcoesMetronomo = {
+type OpcoesMetronomo = {
   bpm?: number;
   compasso?: number;
   /** Chamado a cada batida agendada, para acender o indicador visual. */
