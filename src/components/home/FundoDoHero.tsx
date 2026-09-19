@@ -64,7 +64,12 @@ export function FundoDoHero() {
           alt=""
           width={1280}
           height={720}
-          fetchPriority="low"
+          /*
+           * Prioridade alta: esta imagem preenche a primeira tela e é ela que
+           * o navegador mede como maior elemento. Marcada como baixa, o LCP
+           * no celular ficava no limite dos 2,5s esperando a vez dela.
+           */
+          fetchPriority="high"
           decoding="async"
         />
       )}

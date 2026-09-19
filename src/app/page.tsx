@@ -21,6 +21,12 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+      {/*
+        O pôster do hero é o maior elemento da primeira tela em qualquer
+        caminho: ele é o fundo quando não há vídeo e é o quadro inicial quando
+        há. Pré-carregar tira a espera da fila de descoberta.
+      */}
+      <link rel="preload" as="image" href="/midia/hero-poster.jpg" fetchPriority="high" />
       <RevelaSecoes />
       <PessoaESericoLd />
       <FaqLd />
