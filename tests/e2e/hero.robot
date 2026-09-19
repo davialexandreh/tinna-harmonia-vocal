@@ -34,10 +34,29 @@ Retrato Da Tinna Fica No Bloco De Quem Ensina, Não No Hero
     Should Contain    ${img}    "temDimensoes":true
     Should Contain    ${img}    tinna-480.webp
 
-Com Movimento Reduzido O Vídeo Não Carrega
+Com Movimento Reduzido O Vídeo Não Toca
+    [Documentation]    O elemento existe sempre, para o pôster aparecer no
+    ...    primeiro quadro. O que movimento reduzido garante é que ele fique
+    ...    parado, mostrando o pôster.
     New Browser    chromium    headless=${True}
     New Context    viewport={'width': 1280, 'height': 800}    reducedMotion=reduce
     New Page    ${BASE_URL}
-    Sleep    1s
-    Get Element Count    video    ==    0
-    Get Element Count    img[src*="hero-poster"]    ==    1
+    Sleep    1.5s
+    ${estado} =    Evaluate JavaScript    ${None}
+    ...    () => { const v = document.querySelector('video'); return JSON.stringify({ existe: !!v, parado: v.paused, semAutoplay: !v.hasAttribute('autoplay'), poster: v.poster.split('/').pop() }); }
+    Should Contain    ${estado}    "existe":true
+    Should Contain    ${estado}    "parado":true
+    Should Contain    ${estado}    "semAutoplay":true
+    Should Contain    ${estado}    hero-poster.jpg
+
+Sem JavaScript O Pôster Aparece Do Mesmo Jeito
+    [Documentation]    Sem script não há quem mande tocar, e é o pôster que
+    ...    preenche a tela. É por isso que o vídeo não traz autoplay no HTML.
+    New Browser    chromium    headless=${True}
+    New Context    viewport={'width': 1280, 'height': 800}    javaScriptEnabled=${False}
+    New Page    ${BASE_URL}
+    ${poster} =    Get Attribute    video    poster
+    Should Contain    ${poster}    hero-poster.jpg
+    # Sem JavaScript não dá para avaliar script na página: a ausência do
+    # atributo se verifica pelo próprio seletor.
+    Get Element Count    video[autoplay]    ==    0
