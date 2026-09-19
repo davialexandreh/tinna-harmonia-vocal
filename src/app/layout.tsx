@@ -29,6 +29,19 @@ export const metadata: Metadata = {
   },
   description: site.descricao,
   openGraph: {
+    /*
+     * Imagem do preview de link. Provisória: é o quadro do vídeo do hero, que
+     * ao menos dá rosto ao link no WhatsApp, que é por onde o site circula.
+     * Troque por uma peça própria quando houver foto da Tinna para isso.
+     */
+    images: [
+      {
+        url: "/midia/hero-poster.jpg",
+        width: 1280,
+        height: 720,
+        alt: "Tinna Silva, harmonia vocal na prática",
+      },
+    ],
     type: 'website',
     locale: 'pt_BR',
     siteName: site.nome,

@@ -11,8 +11,20 @@ export const site = {
   descricao:
     "Aulas e workshops de harmonia vocal para ministérios de louvor. Método prático para o grupo cantar em três vozes, sem depender de teoria musical.",
 
-  // PENDENTE: domínio ainda não definido/registrado (ver pergunta 8).
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://tinnasilva.com.br",
+  /*
+   * Endereço oficial do site, usado nos metadados, no preview de link e no
+   * sitemap.
+   *
+   * Sem domínio próprio ainda, quem responde é a variável URL que o Netlify
+   * injeta na hora de construir: ela já vale o endereço do site e passa a
+   * valer o domínio definitivo sozinha, no dia em que um for conectado por lá.
+   * Fixar um domínio que ainda não existe seria declarar como oficial um
+   * endereço que não responde.
+   */
+  url:
+    process.env.NEXT_PUBLIC_SITE_URL ??
+    process.env.URL ??
+    "http://localhost:3000",
 
   instagram: {
     usuario: "@tinnasilvaharmoniavocal",
