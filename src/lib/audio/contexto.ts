@@ -5,7 +5,19 @@
  * - iOS e Chrome só saem de `suspended` dentro de um gesto do usuário, então
  *   `obterContexto` precisa ser chamado a partir de um clique.
  * - Ao voltar do background, o contexto pode ficar suspenso de novo.
+ * - No iOS (Safari e Chrome, ambos WebKit), Web Audio fica mudo com a chave de
+ *   silêncio ligada, a menos que a sessão de áudio seja declarada `playback`.
+ *   Também existe o estado `interrupted` (ligação, Siri), que pede `resume`.
  */
+
+type NavegadorComSessao = Navigator & { audioSession?: { type: string } };
+
+function declararSessaoDeReproducao(): void {
+  const sessao = (navigator as NavegadorComSessao).audioSession;
+  if (sessao && sessao.type !== 'playback') {
+    sessao.type = 'playback';
+  }
+}
 
 let contexto: AudioContext | null = null;
 let barramento: GainNode | null = null;
@@ -13,6 +25,7 @@ let analisadorMestre: AnalyserNode | null = null;
 
 export function obterContexto(): AudioContext {
   if (!contexto) {
+    declararSessaoDeReproducao();
     const Construtor =
       window.AudioContext ??
       (window as unknown as { webkitAudioContext: typeof AudioContext })
@@ -20,7 +33,7 @@ export function obterContexto(): AudioContext {
     contexto = new Construtor();
   }
 
-  if (contexto.state === 'suspended') {
+  if (contexto.state !== 'running' && contexto.state !== 'closed') {
     void contexto.resume();
   }
 
