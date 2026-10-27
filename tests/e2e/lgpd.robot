@@ -47,6 +47,7 @@ Banner Não Pode Cobrir Os Controles Das Ferramentas
 
 Rodapé Continua Alcançável Com O Banner Aberto
     Abrir Site No Celular
+    Get Element States    [aria-label="Aviso de cookies"]    contains    visible
     ${situacao} =    Evaluate JavaScript    ${None}
     ...    () => { window.scrollTo({ top: document.body.scrollHeight, behavior: 'instant' }); const rodape = document.querySelector('footer').getBoundingClientRect(); const banner = document.querySelector('[aria-label="Aviso de cookies"]').getBoundingClientRect(); return JSON.stringify({ fimVisivel: rodape.bottom <= window.innerHeight + 1, bannerAcimaDoFim: banner.top < rodape.bottom }); }
     Should Contain    ${situacao}    "fimVisivel":true
