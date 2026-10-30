@@ -15,16 +15,10 @@ export const site = {
    * Endereço oficial do site, usado nos metadados, no preview de link e no
    * sitemap.
    *
-   * Sem domínio próprio ainda, quem responde é a variável URL que o Netlify
-   * injeta na hora de construir: ela já vale o endereço do site e passa a
-   * valer o domínio definitivo sozinha, no dia em que um for conectado por lá.
-   * Fixar um domínio que ainda não existe seria declarar como oficial um
-   * endereço que não responde.
+   * Vem de NEXT_PUBLIC_SITE_URL, definida no build de produção em
+   * `.github/workflows/ci.yml`. Sem ela (dev, testes), fica o localhost.
    */
-  url:
-    process.env.NEXT_PUBLIC_SITE_URL ??
-    process.env.URL ??
-    "http://localhost:3000",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
 
   instagram: {
     usuario: "@tinnasilvaharmoniavocal",

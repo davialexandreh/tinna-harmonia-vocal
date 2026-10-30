@@ -12,7 +12,7 @@ código de produção).
 | Framework | Next.js 16 (App Router) com `output: 'export'`, estático puro |
 | Estilo | CSS Modules + tokens em `src/styles/tokens.css` |
 | CMS | Nenhum. Conteúdo em `src/content/`, toda edição passa por deploy |
-| Hospedagem | Netlify, publish `out/` |
+| Hospedagem | GitHub Pages, publicado pelo job `publicar` do CI a cada push na `main` |
 | Captação | Só `wa.me`. Sem formulário, sem e-mail marketing |
 | Áudio | Web Audio API puro, sem Tone.js |
 | Testes | Vitest na lógica de áudio, Robot Framework + Playwright nos fluxos |

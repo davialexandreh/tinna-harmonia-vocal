@@ -1,6 +1,6 @@
 # Site Tinna Silva · Harmonia Vocal
 
-Site estático em Next.js 16 (App Router, `output: 'export'`), publicado no Netlify.
+Site estático em Next.js 16 (App Router, `output: 'export'`), publicado no GitHub Pages.
 
 ## Rodando
 
@@ -56,17 +56,18 @@ Orçamento de performance (Lighthouse CI, exige Chrome):
 npm run build && npx @lhci/cli autorun
 ```
 
-## Deploy (Netlify)
+## Deploy (GitHub Pages)
 
-1. Suba o repositório para o GitHub.
-2. No Netlify: **Add new site → Import an existing project**.
-3. Build command `npm run build`, publish directory `out` já estão em
-   `netlify.toml`, não precisa preencher à mão.
-4. Deploy Previews por branch vêm ligados por padrão.
+Todo push na `main` publica sozinho: o job `publicar` do CI
+(`.github/workflows/ci.yml`) roda depois de lint, tipos, testes, build e
+Robot Framework. Se algum falhar, nada vai ao ar.
 
-Se o Netlify instalar o `@netlify/plugin-nextjs` automaticamente, confira o log:
-com `output: 'export'` ele deve apenas servir os arquivos estáticos. Se tentar
-subir runtime de SSR, remova o plugin nas configurações do site.
+- Domínio: `tinnasilvaharmoniavocal.com.br`, configurado em
+  **Settings → Pages → Custom domain** (não existe arquivo `CNAME` no repo).
+- DNS no Registro.br: quatro registros A na raiz (`185.199.108.153`,
+  `185.199.109.153`, `185.199.110.153`, `185.199.111.153`) e `www` como CNAME
+  para `davialexandreh.github.io`.
+- Não há Deploy Preview por PR: o Pages publica só a `main`.
 
 ## Pendências de conteúdo
 
