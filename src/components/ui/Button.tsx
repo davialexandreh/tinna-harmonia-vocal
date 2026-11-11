@@ -53,6 +53,19 @@ export function Button({
     );
   }
 
+  /*
+   * Âncora da própria página fica fora do Link: o Next pré-carregaria a rota
+   * atual, e aberta como /index.html (Lighthouse, alguns servidores) ela vira
+   * /index.html/__next._tree.txt, um 404 no console.
+   */
+  if (href?.startsWith('#')) {
+    return (
+      <a href={href} className={classes} {...(rest as ComponentPropsWithoutRef<'a'>)}>
+        {children}
+      </a>
+    );
+  }
+
   if (href) {
     return (
       <Link href={href} className={classes} {...(rest as ComponentPropsWithoutRef<'a'>)}>
