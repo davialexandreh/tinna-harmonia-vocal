@@ -14,13 +14,15 @@ export function Hero() {
         <div className={styles.heroTexto}>
           {/* Três partes, três vozes: a ordem de entrada é a sequência do método. */}
           <h1 className={styles.titulo}>
-            <span>Cantar em harmonia</span> <em>não é dom.</em>{" "}
-            <span>É método e o seu grupo pode aprender.</span>
+            <span>Desenvolva o potencial</span> <em>vocal</em>{" "}
+            <span>
+              do seu grupo e construa novas possibilidades em harmonia
+            </span>
           </h1>
           <p className={styles.lead}>
-            Se o seu ministério canta junto mas a segunda voz sempre escorrega
-            de volta para a melodia, o problema nunca foi talento. Foi caminho.
-            E caminho se ensina.
+            Seu grupo canta junto, mas ainda encontra dificuldades para
+            construir e sustentar as harmonias? Com treinamento e orientação, é
+            possível desenvolver vozes mais seguras e harmonias bem construídas.
           </p>
           <div className={styles.acoes}>
             <WhatsAppCTA
@@ -28,10 +30,10 @@ export function Hero() {
               tamanho="lg"
               origem="home-hero"
             >
-              Levar à minha igreja
+              Quero levar esse treinamento para meu grupo
             </WhatsAppCTA>
-            <Button href="/ferramentas/" variante="inverse" tamanho="lg">
-              Ferramentas grátis
+            <Button href="#servicos" variante="inverse" tamanho="lg">
+              Descubra como posso ajudar
             </Button>
           </div>
         </div>

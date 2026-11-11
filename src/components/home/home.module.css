@@ -137,10 +137,16 @@
   margin-bottom: var(--space-8);
 }
 
+/* Coluna única do tamanho do botão mais largo: os dois ficam iguais. */
 .acoes {
-  display: flex;
+  display: grid;
+  width: fit-content;
+  max-width: 100%;
   gap: var(--space-3);
-  flex-wrap: wrap;
+}
+
+.acoes > * {
+  text-align: center;
 }
 
 .retrato {
@@ -524,6 +530,37 @@
 
 .textoSecundario + .textoSecundario {
   margin-top: var(--space-4);
+}
+
+/* Cinco serviços: 3 + 2 com a segunda linha centrada, em vez de um buraco
+   no canto. O seletor duplo vence o .c3 do Grid sem depender da ordem do CSS. */
+@media (min-width: 1001px) {
+  [data-grade].gradeServicos {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  [data-grade].gradeServicos > * {
+    grid-column: span 2;
+  }
+
+  [data-grade].gradeServicos > :nth-child(4) {
+    grid-column: 2 / span 2;
+  }
+}
+
+/* No 2 + 2 + 1 do tablet, o último ocupa a linha toda. */
+@media (min-width: 681px) and (max-width: 1000px) {
+  [data-grade].gradeServicos > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+
+.modalidade {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--brand-texto);
+  margin-bottom: var(--space-3);
 }
 
 .acaoCentral {

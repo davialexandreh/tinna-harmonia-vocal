@@ -48,6 +48,7 @@ npm run test:e2e   # Robot Framework (precisa do site servido em :4321)
 | Número de WhatsApp, domínio, redes | `src/content/site.ts` |
 | Textos da Home | `src/content/home.ts` |
 | FAQ | `src/content/faq.ts` |
+| Serviços da seção da Home | `src/content/servicos.ts` |
 | Formatos e passos do workshop | `src/content/workshops.ts` |
 | Cores, espaçamento, tipografia | `src/styles/tokens.css` |
 | Acordes das ferramentas | `src/content/acordes.ts` |

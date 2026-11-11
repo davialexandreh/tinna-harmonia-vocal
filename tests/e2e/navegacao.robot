@@ -7,7 +7,7 @@ Test Teardown       Close Browser    ALL
 Home Carrega Com A Promessa Principal
     Abrir Site No Celular
     O Título Deve Conter    Tinna Silva
-    Get Text    h1    contains    Cantar em harmonia
+    Get Text    h1    contains    Desenvolva o potencial
 
 Menu Mobile Abre E Leva Para Workshops
     Abrir Site No Celular

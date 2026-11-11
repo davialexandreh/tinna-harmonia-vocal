@@ -6,45 +6,49 @@ import { Grid } from '@/components/ui/Grid';
 import { SecHead } from '@/components/ui/SecHead';
 import { Secao } from '@/components/ui/Secao';
 import { site } from '@/content/site';
-import { formatos } from '@/content/workshops';
+import { servicos } from '@/content/servicos';
 import styles from './home.module.css';
 
 /**
- * Ocupa o lugar do bloco de oferta/preço do protótipo. O produto que existe
- * hoje é o presencial; curso online entra quando for real.
+ * Os cinco serviços da Tinna, do individual online ao Kit Voz. Título e
+ * descrição vêm do material de divulgação dela. O detalhe do presencial em
+ * grupo continua na página /workshops/.
  */
 export function WorkshopsChamada() {
   return (
-    <Secao id="workshops">
+    <Secao id="servicos">
       <Container>
         <SecHead
           centro
           titulo={
             <>
-              Levo o trabalho <em>até a sua igreja</em>
+              Mais vozes <em>com propósito</em>
             </>
           }
-          descricao="Um encontro com o ministério inteiro, no lugar onde vocês já cantam todo domingo."
+          descricao="Desenvolva sua voz, descubra seu potencial e cante com mais segurança e liberdade."
         />
-        <Grid>
-          {formatos.map((formato) => (
-            <Card key={formato.titulo}>
-              <CardIcone nome={formato.icone} />
-              <h3>{formato.titulo}</h3>
-              <p>{formato.descricao}</p>
+        <Grid className={styles.gradeServicos}>
+          {servicos.map((servico) => (
+            <Card key={servico.titulo}>
+              <CardIcone nome={servico.icone} />
+              <h3>{servico.titulo}</h3>
+              {servico.modalidade && (
+                <span className={styles.modalidade}>{servico.modalidade}</span>
+              )}
+              <p>{servico.descricao}</p>
             </Card>
           ))}
         </Grid>
         <div className={styles.acaoCentral}>
           <WhatsAppCTA
-            mensagem={site.whatsapp.mensagens.workshop}
+            mensagem={site.whatsapp.mensagens.geral}
             tamanho="lg"
-            origem="home-workshops"
+            origem="home-servicos"
           >
-            Pedir orçamento
+            Falar com a Tinna
           </WhatsAppCTA>{' '}
           <Button href="/workshops/" variante="ghost" tamanho="lg">
-            Ver como funciona
+            Ver o treinamento em grupo
           </Button>
         </div>
       </Container>

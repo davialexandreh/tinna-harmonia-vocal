@@ -61,7 +61,7 @@ export function Header() {
                 tamanho="sm"
                 origem="header"
               >
-                Levar à minha igreja
+                Levar ao meu grupo
               </WhatsAppCTA>
             </span>
 
@@ -100,7 +100,7 @@ export function Header() {
             bloco
             origem="menu-mobile"
           >
-            Levar à minha igreja
+            Levar ao meu grupo
           </WhatsAppCTA>
         </div>
       </div>

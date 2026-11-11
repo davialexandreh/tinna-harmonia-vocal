@@ -17,6 +17,10 @@ export type NomeDeIcone =
   | 'ciclo'
   | 'conversa'
   | 'fone'
+  | 'pessoa'
+  | 'grupo'
+  | 'nota'
+  | 'presente'
   | 'tocar'
   | 'parar'
   | 'repetir'
@@ -72,6 +76,38 @@ const DESENHOS: Record<NomeDeIcone, Desenho> = {
       'M5 14.5v-2.2a7 7 0 0 1 14 0v2.2',
       'M3.4 15.4a1.9 1.9 0 0 1 1.9-1.9h1.4v6.2H5.3a1.9 1.9 0 0 1-1.9-1.9Z',
       'M20.6 15.4a1.9 1.9 0 0 0-1.9-1.9h-1.4v6.2h1.4a1.9 1.9 0 0 0 1.9-1.9Z',
+    ],
+  },
+  pessoa: {
+    tracos: ['M12 4a3.75 3.75 0 1 1 0 7.5A3.75 3.75 0 0 1 12 4Z', 'M5 20.5a7 7 0 0 1 14 0'],
+  },
+  // Três pessoas: o do meio à frente, como num naipe.
+  grupo: {
+    tracos: [
+      'M12 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Z',
+      'M6.5 20a5.5 5.5 0 0 1 11 0',
+      'M5.5 7.8a2.2 2.2 0 1 1 0 4.4 2.2 2.2 0 0 1 0-4.4Z',
+      'M18.5 7.8a2.2 2.2 0 1 1 0 4.4 2.2 2.2 0 0 1 0-4.4Z',
+      'M2 18a4 4 0 0 1 4.6-4',
+      'M22 18a4 4 0 0 0-4.6-4',
+    ],
+  },
+  // Duas colcheias ligadas: vozes que andam juntas.
+  nota: {
+    tracos: [
+      'M9 17.5V6l11-2.5v11.5',
+      'M9 9.6 20 7.1',
+      'M6.5 15a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z',
+      'M17.5 12.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z',
+    ],
+  },
+  presente: {
+    tracos: [
+      'M3.5 8h17v3.5h-17Z',
+      'M5 11.5h14v9H5Z',
+      'M12 8v12.5',
+      'M12 8C10.5 4.5 6.8 4 7.3 6.3 7.6 7.6 12 8 12 8Z',
+      'M12 8c1.5-3.5 5.2-4 4.7-1.7C16.4 7.6 12 8 12 8Z',
     ],
   },
   tocar: { tracos: [], massas: ['M8.5 5.2 18.5 12l-10 6.8Z'] },
